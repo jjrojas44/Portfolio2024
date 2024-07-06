@@ -260,3 +260,8 @@
   });
 
 })()
+
+function showImage(element) {
+  var imageDiv = element.nextElementSibling;
+  imageDiv.style.display = imageDiv.style.display === 'none' || imageDiv.style.display === '' ? 'block' : 'none';
+}

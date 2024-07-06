@@ -1899,3 +1899,67 @@ blockquote {
     margin-right: 0;
   }
 }
+
+.portfolio-image img {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  max-width: 100%;
+}
+
+.portfolio-info {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.portfolio-info:hover .portfolio-image img {
+  display: block;
+}
+
+portfolio-image img {
+  display: none;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-info {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 200px; /* Set a fixed height for uniformity */
+}
+
+.portfolio-info:hover .portfolio-image img {
+  display: block;
+}
+
+.portfolio-info h4, .portfolio-info p, .portfolio-info a.details-link {
+  z-index: 1;
+  position: relative;
+}
+
+.portfolio-info .portfolio-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-info .portfolio-image img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+.portfolio-info:hover .portfolio-image img {
+  display: block;
+}

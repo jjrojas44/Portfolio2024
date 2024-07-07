@@ -15,11 +15,13 @@ body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  transition: background 0.5s ease-in-out; /* Smooth transition for background */
 }
 
 h1, h2, h3, h4, h5 {
   font-family: "Helvetica Neue", sans-serif;
   margin: 0;
+  transition: color 0.3s ease; /* Smooth transition for color */
 }
 
 h2 {
@@ -43,16 +45,15 @@ h6 {
   display: inline-block;
 }
 
-
-
 a {
   color: #292929;
   text-decoration: none !important;
-  transition: all 0.5s ease-in-out 0s;
+  transition: all 0.3s ease-in-out; /* Smoother and quicker transition */
 }
 
 a:hover {
-  transition: all 0.5s ease-in-out 0s;
+  color: #b8a07e; /* Change color on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 p {
@@ -84,10 +85,13 @@ p {
   line-height: 50px;
   padding: 0 30px;
   text-transform: uppercase;
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth transitions */
 }
 
 .btn:hover, .btn:focus {
+  background: #b8a07e; /* Change background color on hover */
   color: #fff;
+  transform: translateY(-3px); /* Slightly move up on hover */
 }
 
 .padDiv {
@@ -117,11 +121,14 @@ p {
   margin: 0 0 25px 0;
   line-height: 14px;
   text-transform: uppercase;
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 .form-control:focus {
   box-shadow: none;
   outline: 0 none;
+  border-color: #b8a07e; /* Change border color on focus */
+  background-color: #f9f9f9; /* Change background color on focus */
 }
 
 .paddsection {
@@ -155,38 +162,114 @@ div.a {
   margin-top: 200px;
   font-size: 50px;
   padding: 60px;
+  animation: fadeInUp 1s ease-in-out forwards; /* Fade in up animation */
 }
- div.b{
- padding: 60px;
- }
 
- hr.new2 {
+div.b {
+  padding: 60px;
+  animation: fadeInLeft 1s ease-in-out forwards; /* Fade in left animation */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+hr.new2 {
   border-top: 1px dotted #b8a07e;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
+  animation-delay: 0.5s; /* Delay for the animation */
 }
 
-H9{
-  color:#b8a07e;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+H9 {
+  color: #b8a07e;
   font-size: 40px;
   line-height: 1.0;
-}
-  
-dt{
-  color:#b8a07e;
-  font-size: 30px;
+  animation: bounce 1s infinite; /* Bounce animation */
 }
 
-div.pictures{
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+dt {
+  color: #b8a07e;
+  font-size: 30px;
+  animation: fadeInRight 1s ease-in-out forwards; /* Fade in right animation */
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+div.pictures {
   width: 80%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+div.pictures:hover {
+  transform: translateY(-10px); /* Slightly move up on hover */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 12px 24px 0 rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
 }
 
 div.container {
   text-align: center;
   padding: 10px 20px;
+  animation: zoomIn 1s ease-in-out forwards; /* Zoom in animation */
 }
 
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -442,15 +525,38 @@ div.container {
   background: url("../img/uiuxbackground.png") repeat scroll center center/cover;
   height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+  position: relative; /* Ensure it's in the stacking context */
+  opacity: 0; /* Start with the hero section invisible */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 #hero .hero-content {
-  height: 100vh;
+  height: auto; /* Adjusted to fit the content */
   text-align: left;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease-in-out forwards 0.5s; /* Slide up animation with delay */
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content h1 {
@@ -459,6 +565,20 @@ div.container {
   margin-bottom: 10px;
   text-transform: uppercase;
   color: #fff;
+  opacity: 0;
+  animation: fadeInLeft 1s ease-in-out forwards 1s; /* Fade in from left animation with delay */
+  position: relative;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero-content p {
@@ -469,16 +589,70 @@ div.container {
   text-transform: capitalize;
   color: #fff;
   font-weight: 500;
+  opacity: 0;
+  animation: fadeInLeft 1s ease-in-out forwards 1.2s; /* Fade in from left animation with delay */
+  position: relative;
+}
+
+.hero-content .list-social {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-content .list-social li {
-  float: left;
   margin-right: 20px;
+  opacity: 0;
+  transform: scale(0);
+  animation: fadeInScale 1s ease-in-out forwards 1.4s; /* Scale up animation with delay */
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .hero-content .list-social li i {
   color: #fff;
   font-size: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .list-social li i:hover {
+  color: #b8a07e; /* Change to a highlight color */
+  transform: scale(1.2); /* Slightly increase the size on hover */
+}
+
+/* Parallax scrolling effect */
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/parallax-bg.png") no-repeat center center;
+  background-size: cover;
+  transform: translateZ(0);
+  transition: transform 0.5s ease-in-out;
+  z-index: -1; /* Behind the content */
+}
+
+#hero:hover .parallax {
+  transform: translateZ(-20px) scale(1.1);
+}
+
+/* Additional hover effect for the hero content */
+.hero-content:hover h1,
+.hero-content:hover p {
+  color: #b8a07e; /* Change text color on hover */
+}
+
+.hero-content:hover .list-social li i {
+  color: #b8a07e; /* Change icon color on hover */
+  transform: rotate(360deg) scale(1.5); /* Rotate and scale on hover */
 }
 
 /*--------------------------------------------------------------
@@ -541,11 +715,44 @@ div.container {
   height: auto;
   background: #f7f7f7;
   padding-top: 120px;
+  padding-bottom: 60px; /* Added padding for bottom */
+  position: relative; /* For background animations */
+  overflow: hidden; /* Hide overflow for animations */
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #b8a07e 0%, #f7f7f7 100%);
+  opacity: 0.2;
+  z-index: 1; /* Layer below content */
+  animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+  0%, 100% {
+    background-position: left top;
+  }
+  50% {
+    background-position: right bottom;
+  }
 }
 
 #about .div-img-bg {
   padding-bottom: 30px;
   border: 20px solid #b8a07e;
+  position: relative;
+  z-index: 2; /* Above the background */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#about .div-img-bg:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 #about .div-img-bg .about-img img {
@@ -556,12 +763,44 @@ div.container {
   height: 400px;
   -o-object-fit: cover;
   object-fit: cover;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+#about .div-img-bg:hover .about-img img {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+#about .about-descr {
+  position: relative;
+  z-index: 2; /* Above the background */
+  animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
 }
 
 #about .about-descr .p-heading {
   font-family: "Playfair Display", serif;
   font-size: 28px;
   text-align: left;
+  position: relative;
+}
+
+#about .about-descr .p-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #b8a07e;
+  animation: underline 1s ease-in-out; /* Underline animation */
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
 }
 
 #about .about-descr .separator {
@@ -569,6 +808,18 @@ div.container {
   margin-bottom: 0;
   text-align: left;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Services
@@ -737,57 +988,156 @@ div.container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  position: relative; /* For background animations */
+  overflow: hidden; /* Hide overflow for animations */
 }
+
+.portfolio-details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #b8a07e 0%, #f7f7f7 100%);
+  opacity: 0.2;
+  z-index: 1; /* Layer below content */
+  animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+  0%, 100% {
+    background-position: left top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+}
+
 .portfolio-details .portfolio-details-slider img {
-  width: 500;
-  height: 300;
+  width: 100%; /* Ensure responsive sizing */
+  max-width: 500px; /* Set max width */
+  height: 300px;
   object-fit: cover;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
+
+.portfolio-details .portfolio-details-slider img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #b8a07e;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet:hover,
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #b8a07e;
 }
+
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(75, 74, 74, 0.08);
+  background-color: #fff; /* Ensure contrast against the background */
+  position: relative;
+  z-index: 2; /* Above the background */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.portfolio-details .portfolio-info:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
+
+.portfolio-details .portfolio-info h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #b8a07e;
+  animation: underline 1s ease-in-out; /* Underline animation */
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
+
+.portfolio-details .portfolio-info ul li {
+  padding-left: 20px; /* Add padding for icons */
+  position: relative;
+}
+
+.portfolio-details .portfolio-info ul li::before {
+  content: '•'; /* Add bullet icon */
+  color: #b8a07e;
+  position: absolute;
+  left: 0;
+}
+
 .portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
+
 .portfolio-details .portfolio-description {
   padding-top: 30px;
+  position: relative;
+  z-index: 2; /* Above the background */
+  animation: fadeInUp 1s ease-in-out; /* Fade-in animation */
 }
+
 .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /*--------------------------------------------------------------
 # case study 

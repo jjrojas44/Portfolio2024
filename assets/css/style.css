@@ -1294,9 +1294,9 @@ div.pictures1 {
   align-items: center;
 }
 
-div.pictures2{
+div.pictures2 {
   width: 80%;
-  background: linear-gradient(to bottom right,  #898989, #b8a07e);
+  background: linear-gradient(to bottom right, #898989, #b8a07e);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px; 
   font-family: "Helvetica Neue", sans-serif;
@@ -1305,12 +1305,27 @@ div.pictures2{
   overflow: hidden;
 }
 
-div.pictures2:hover img {
-  transform: scale(1.05);
+div.pictures2 img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 5px;
 }
 
-div.pictures2:hover::before {
-  animation: animate 10s linear infinite;
+div.pictures2:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2); /* Brightens the image slightly */
+}
+
+/* Remove the black overlay */
+div.pictures2::before {
+  display: none;
+}
+
+@keyframes animate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 div.pictures3{

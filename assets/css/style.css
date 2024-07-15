@@ -871,6 +871,126 @@ div.container {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.portfolio-details {
+  padding-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-details .portfolio-details-slider img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #b8a07e;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #b8a07e;
+}
+
+.portfolio-info {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0 30px rgba(75, 74, 74, 0.08);
+  text-align: left;
+}
+
+.portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-info ul li + li {
+  margin-top: 10px;
+}
+
+.portfolio-description {
+  padding-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0 30px rgba(75, 74, 74, 0.08);
+  text-align: left;
+  padding: 30px;
+}
+
+.portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-description p {
+  margin: 0;
+}
+
+/* Swiper Styles */
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 800px; /* Adjust this to the maximum height you want */
+  object-fit: contain; /* Ensures the image fits without being cropped */
+  border-radius: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #b8a07e;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b8a07e;
+}
+
+/* Hover Effects */
+.portfolio-details-slider .swiper-slide img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Portfolio General Styles */
 #portfolio {
   position: relative;
   padding-bottom: 50px;
@@ -940,7 +1060,7 @@ div.container {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #portfolio .portfolio-item .portfolio-info {
@@ -993,121 +1113,7 @@ div.container {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-#portfolio {
-  position: relative;
-  padding-bottom: 50px;
-}
-
-#portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-#portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #999999;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
-  color: #b8a07e;
-}
-
-.portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.portfolio-item {
-  width: 300px;
-  height: 300px;
-  margin: 30px;
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-  transform: scale(1.05);
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-info {
-  opacity: 1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
-}
-
-.portfolio-info h4 {
-  font-size: 18px;
-  color: #666;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.portfolio-info p {
-  color: #999;
-  font-size: 14px;
-  margin: 0;
-}
-
-.details-link {
-  position: relative;
-  font-size: 16px;
-  color: #b8a07e;
-  margin-top: 10px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.details-link:hover {
-  color: #cab89f;
-}
-
-.portfolio-item:hover .portfolio-info {
-  opacity: 1;
-}
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1160,11 +1166,140 @@ h4 {
 
 .aside1 {
   float: right;
-  font-family: "Helvetica Neue", sans-serif; 
+  font-family: "Helvetica Neue", sans-serif;
   border: 2px solid #898989;
   padding: 10px;
   border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.aside1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.module1 {
+  text-align: center;
+}
+
+.module1 header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.module1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.module1 ul li {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.module1 ul li:hover {
+  color: #000;
+}
+
+/* Adding some animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.aside1 {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Base Styles */
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.styled-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .styled-image {
+  transform: scale(1.1);
+}
+
+/* Overlay for interactivity */
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(184, 160, 126, 0.2); /* Match the color from the rest of the CSS */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.image-container:hover::before {
+  opacity: 1;
+}
+
+/* Caption for additional interactivity */
+.image-container::after {
+  content: "CMS Logo";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
 
 .h9 {
   position: relative;
@@ -1295,31 +1430,52 @@ div.pictures1 {
 }
 
 div.pictures2 {
-  width: 80%;
+  width: 60%; /* More compact width */
   background: linear-gradient(to bottom right, #898989, #b8a07e);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px; /* Slightly smaller margin */
   font-family: "Helvetica Neue", sans-serif;
-  padding: 20px;
+  padding: 15px; /* More compact padding */
   position: relative;
   overflow: hidden;
+  border-radius: 10px; /* Slightly more rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth effects */
 }
 
 div.pictures2 img {
   width: 100%;
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
-  border-radius: 5px;
+  border-radius: 10px; /* Match container border radius */
+}
+
+div.pictures2:hover {
+  transform: scale(1.00); /* Slightly enlarges the entire container */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
 }
 
 div.pictures2:hover img {
-  transform: scale(1.1);
-  filter: brightness(1.2); /* Brightens the image slightly */
+  transform: scale(1.00); /* More noticeable zoom effect */
+  filter: brightness(1.1); /* Slightly reduced brightness effect */
 }
 
-/* Remove the black overlay */
-div.pictures2::before {
-  display: none;
+div.pictures2:hover::after {
+  content: "View Image";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+div.pictures2:hover::after {
+  opacity: 1;
 }
 
 @keyframes animate {

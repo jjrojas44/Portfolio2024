@@ -871,6 +871,7 @@ div.container {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+/* Container Styles */
 .container {
   text-align: center;
   padding: 20px;
@@ -967,8 +968,8 @@ div.container {
 
 .swiper-slide img {
   max-width: 100%;
-  max-height: 800px; /* Adjust this to the maximum height you want */
-  object-fit: contain; /* Ensures the image fits without being cropped */
+  max-height: 800px; /* Adjust to desired max height */
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -997,12 +998,11 @@ div.container {
 }
 
 #portfolio #portfolio-flters {
-  padding: 0;
+  padding: 2px 15px;
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
   border-radius: 50px;
-  padding: 2px 15px;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -1016,7 +1016,7 @@ div.container {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #999999;
+  color: #999;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -1026,20 +1026,17 @@ div.container {
   color: #b8a07e;
 }
 
-#portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
+/* Portfolio Grid */
 #portfolio .portfolio-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px; /* Added gap for better spacing */
 }
 
 #portfolio .portfolio-item {
   width: 300px;
   height: 300px;
-  margin: 30px;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -1122,6 +1119,33 @@ div.container {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #portfolio .portfolio-item {
+    width: 300px;
+    height: 300px;
+    margin: 0; /* Margin is handled by the row-gap and column-gap */
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  #portfolio .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 70px; /* Increase vertical spacing */
+    column-gap: 100px; /* Increase horizontal spacing */
   }
 }
 

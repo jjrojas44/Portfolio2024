@@ -1031,7 +1031,7 @@ div.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 80px; /* Increased gap for better horizontal spacing */
+  gap: 180px; /* Increased gap for better horizontal spacing */
 }
 
 #portfolio .portfolio-item {
@@ -1047,7 +1047,10 @@ div.container {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
-  margin-bottom: 30px; /* Added vertical spacing between items */
+  margin-bottom: 40px; /* Added vertical spacing between items */
+  margin-right: 20px; /* Horizontal spacing to the right */
+  margin-left: 20px;  /* Horizontal spacing to the left */
+
 }
 
 

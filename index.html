@@ -11,6 +11,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
 
 
 
@@ -384,42 +388,113 @@
       <div class="container">
         <div class="contact-block1">
           <div class="row">
-    
+            <!-- Left Section -->
             <div class="col-lg-6">
               <div class="contact-contact">
-    
-                <h2 class="mb-30"> Contact Form</h2>
-    
+                <h2 class="mb-30">Get in Touch</h2>
+                <p class="lead">
+                  Have a question or need more information? Feel free to reach out!
+                </p>
                 <ul class="contact-details">
-                  <li><span>+407-414-8769</span></li>
-                  <li><span>Juanrojas7812@gmail.com</span></li>
+                  <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+407-414-8769</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>Juanrojas7812@gmail.com</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Orlando, FL</span>
+                  </li>
                 </ul>
-    
               </div>
             </div>
-    
-            <form action="https://formspree.io/f/mnnnydjp" method="POST">
-              <div class="form-group contact-block1">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" placeholder="Message" required></textarea>
-              </div>
-              <input type="submit" class="btn btn-defeault btn-send" value="Send message">
-            </form>
-            
+            <!-- Right Section -->
+            <div class="col-lg-6">
+              <form 
+                action="https://formspree.io/f/mnnnydjp" 
+                method="POST" 
+                role="form" 
+                class="php-email-form shadow-lg p-4 rounded" 
+                id="contact-form"
+              >
+                <div class="row gy-3">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input 
+                        type="text" 
+                        name="name" 
+                        class="form-control" 
+                        id="name" 
+                        placeholder="Your Name" 
+                        required 
+                        aria-label="Your Name"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input 
+                        type="email" 
+                        class="form-control" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Your Email" 
+                        required 
+                        aria-label="Your Email"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        name="subject" 
+                        id="subject" 
+                        placeholder="Subject" 
+                        required 
+                        aria-label="Subject"
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <textarea 
+                        class="form-control" 
+                        name="message" 
+                        placeholder="Message" 
+                        required 
+                        aria-label="Message"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="loading">
+                      <i class="fas fa-spinner fa-spin"></i> Loading
+                    </div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      <i class="fas fa-check-circle"></i> Your message has been sent. Thank you!
+                    </div>
+                  </div>
+                  <div class="mt-0 text-center">
+                    <button 
+                      type="submit" 
+                      class="btn btn-send btn-gradient">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    ><!-- End Contact Section -->
+    <!-- End Contact Section -->
 
   </main><!-- End #main -->
 

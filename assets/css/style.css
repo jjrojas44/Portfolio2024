@@ -1813,7 +1813,7 @@ button[type="submit"].btn-send {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
   outline: none;
-  border-color: #18d26e;
+  border-color: #333;
 }
 
 #contact textarea {
@@ -1837,7 +1837,7 @@ button[type="submit"].btn-send {
 }
 
 .php-email-form .sent-message {
-  background: #18d26e;
+  background: #333;
 }
 
 .php-email-form .loading {
@@ -1854,7 +1854,7 @@ button[type="submit"].btn-send {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid #333;
   border-top-color: #fff;
   animation: animate-loading 1s linear infinite;
 }

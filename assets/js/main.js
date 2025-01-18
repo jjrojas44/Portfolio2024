@@ -265,3 +265,39 @@ function showImage(element) {
   var imageDiv = element.nextElementSibling;
   imageDiv.style.display = imageDiv.style.display === 'none' || imageDiv.style.display === '' ? 'block' : 'none';
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+
+  if (!form) {
+    console.error("Form not found in the document.");
+    return;
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent the default form submission
+    const formData = new FormData(form); // Gather form data
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json", // Ensure response is expected in JSON format
+        },
+      });
+
+      if (response.ok) {
+        form.innerHTML = `<p>Thank you for your message! We'll get back to you soon.</p>`;
+      } else {
+        const errorData = await response.json();
+        const errorMessage = errorData?.error || "Something went wrong. Please try again.";
+        form.innerHTML = `<p>${errorMessage}</p>`;
+      }
+    } catch (error) {
+      console.error("Error during form submission:", error); // Log the error for debugging
+      form.innerHTML = `<p>Oops! Something went wrong. Please try again later.</p>`;
+    }
+  });
+});
+

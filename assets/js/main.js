@@ -301,3 +301,153 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Get the modal and image elements
+const expandedImageContainer = document.getElementById('expanded-image');
+const expandedImage = document.getElementById('expanded-img');
+const closeButton = document.querySelector('.close-btn');
+
+// Get all clickable images
+const images = document.querySelectorAll('.clickable-image');
+
+// Add event listeners to each image
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        expandedImage.src = image.src;  // Set the clicked image as the expanded image
+        expandedImageContainer.style.display = 'flex';  // Show the expanded image container
+    });
+});
+
+// Close the expanded image when the close button is clicked
+closeButton.addEventListener('click', () => {
+    expandedImageContainer.style.display = 'none';  // Hide the expanded image container
+});
+
+// Close the expanded image container if the user clicks outside the image
+expandedImageContainer.addEventListener('click', (event) => {
+    if (event.target === expandedImageContainer) {
+        expandedImageContainer.style.display = 'none';  // Hide the expanded image container
+    }
+});
+
+// Filter portfolio items based on category
+document.querySelectorAll('#portfolio-flters li').forEach((filter) => {
+  filter.addEventListener('click', () => {
+    const filterValue = filter.textContent.toLowerCase();
+    document.querySelectorAll('.portfolio-item').forEach((item) => {
+      const itemCategory = item.querySelector('img').getAttribute('alt').toLowerCase();
+      if (filterValue === 'all' || itemCategory.includes(filterValue)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    document.querySelectorAll('#portfolio-flters li').forEach((el) => {
+      el.classList.remove('filter-active');
+    });
+    filter.classList.add('filter-active');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const carouselItems = document.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
+
+  function showImage(index) {
+    carouselItems.forEach((item, i) => {
+      item.classList.remove('active');
+      if (i === index) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  // Set the first image as active by default
+  showImage(currentIndex);
+
+  // Handle next and previous buttons
+  document.querySelector('.carousel-next').addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    showImage(currentIndex);
+  });
+
+  document.querySelector('.carousel-prev').addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    showImage(currentIndex);
+  });
+
+  // Optional: Auto-scroll every 5 seconds
+  setInterval(function() {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    showImage(currentIndex);
+  }, 5000);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselContainer = document.querySelector(".carousel-container");
+  const prevButton = document.querySelector(".carousel-prev");
+  const nextButton = document.querySelector(".carousel-next");
+  const items = document.querySelectorAll(".portfolio-card");
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const translateValue = -currentIndex * 100 + "%";
+    carouselContainer.style.transform = "translateX(" + translateValue + ")";
+  }
+
+  nextButton.addEventListener("click", function () {
+    if (currentIndex < items.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  // Auto-scroll feature
+  setInterval(() => {
+    if (currentIndex < items.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarousel();
+  }, 4000); // Change slides every 4 seconds
+});
+
+const prevButton = document.querySelector(".carousel-prev");
+const nextButton = document.querySelector(".carousel-next");
+const carouselInner = document.querySelector(".carousel-inner");
+
+let currentIndex = 0;
+const totalSlides = document.querySelectorAll(".portfolio-card").length;
+
+nextButton.addEventListener("click", () => {
+  if (currentIndex < totalSlides - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; // Loop back to first slide
+  }
+  updateCarousel();
+});
+
+prevButton.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalSlides - 1; // Loop to last slide
+  }
+  updateCarousel();
+});
+
+function updateCarousel() {
+  const offset = -currentIndex * 100; // Move carousel based on index
+  carouselInner.style.transform = `translateX(${offset}%)`;
+}
+
+

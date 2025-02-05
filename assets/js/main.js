@@ -301,33 +301,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Get the modal and image elements
-const expandedImageContainer = document.getElementById('expanded-image');
-const expandedImage = document.getElementById('expanded-img');
-const closeButton = document.querySelector('.close-btn');
-
-// Get all clickable images
-const images = document.querySelectorAll('.clickable-image');
-
-// Add event listeners to each image
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        expandedImage.src = image.src;  // Set the clicked image as the expanded image
-        expandedImageContainer.style.display = 'flex';  // Show the expanded image container
-    });
-});
-
-// Close the expanded image when the close button is clicked
-closeButton.addEventListener('click', () => {
-    expandedImageContainer.style.display = 'none';  // Hide the expanded image container
-});
-
-// Close the expanded image container if the user clicks outside the image
-expandedImageContainer.addEventListener('click', (event) => {
-    if (event.target === expandedImageContainer) {
-        expandedImageContainer.style.display = 'none';  // Hide the expanded image container
-    }
-});
 
 // Filter portfolio items based on category
 document.querySelectorAll('#portfolio-flters li').forEach((filter) => {
@@ -349,105 +322,79 @@ document.querySelectorAll('#portfolio-flters li').forEach((filter) => {
   });
 });
 
+// Additional carousel logic for handling next/prev buttons and auto-scrolling
 document.addEventListener("DOMContentLoaded", function() {
   const carouselItems = document.querySelectorAll('.carousel-item');
   let currentIndex = 0;
 
   function showImage(index) {
     carouselItems.forEach((item, i) => {
-      item.classList.remove('active');
-      if (i === index) {
-        item.classList.add('active');
-      }
+      item.style.display = (i === index) ? 'block' : 'none';
     });
   }
 
-  // Set the first image as active by default
-  showImage(currentIndex);
-
-  // Handle next and previous buttons
-  document.querySelector('.carousel-next').addEventListener('click', function() {
-    currentIndex = (currentIndex + 1) % carouselItems.length;
+  document.querySelector('.carousel-prev').addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
     showImage(currentIndex);
   });
 
-  document.querySelector('.carousel-prev').addEventListener('click', function() {
-    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  document.querySelector('.carousel-next').addEventListener('click', () => {
+    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
     showImage(currentIndex);
   });
 
-  // Optional: Auto-scroll every 5 seconds
-  setInterval(function() {
-    currentIndex = (currentIndex + 1) % carouselItems.length;
-    showImage(currentIndex);
-  }, 5000);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselContainer = document.querySelector(".carousel-container");
-  const prevButton = document.querySelector(".carousel-prev");
-  const nextButton = document.querySelector(".carousel-next");
-  const items = document.querySelectorAll(".portfolio-card");
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    const translateValue = -currentIndex * 100 + "%";
-    carouselContainer.style.transform = "translateX(" + translateValue + ")";
-  }
-
-  nextButton.addEventListener("click", function () {
-    if (currentIndex < items.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  prevButton.addEventListener("click", function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-
-  // Auto-scroll feature
   setInterval(() => {
-    if (currentIndex < items.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateCarousel();
-  }, 4000); // Change slides every 4 seconds
+    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+    showImage(currentIndex);
+  }, 3000);
+
+  showImage(currentIndex); // Show the first image initially
 });
 
-const prevButton = document.querySelector(".carousel-prev");
-const nextButton = document.querySelector(".carousel-next");
-const carouselInner = document.querySelector(".carousel-inner");
+// JavaScript for enlarging images when clicked outside the "More Details" box
+const portfolioItems = document.querySelectorAll('.portfolio-item img');
+const body = document.body;
 
-let currentIndex = 0;
-const totalSlides = document.querySelectorAll(".portfolio-card").length;
+portfolioItems.forEach(item => {
+  item.addEventListener('click', function(event) {
+    const imgSrc = event.target.src;
+    const modal = document.createElement('div');
+    modal.classList.add('image-modal');
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.classList.add('enlarged-image');
+    modal.appendChild(img);
+    body.appendChild(modal);
+    
+    modal.addEventListener('click', () => {
+      modal.remove(); // Removes the modal when clicked
+    });
+  });
+});
 
-nextButton.addEventListener("click", () => {
-  if (currentIndex < totalSlides - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0; // Loop back to first slide
+// Adding some styles for the modal dynamically
+const style = document.createElement('style');
+style.innerHTML = `
+  .image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
   }
-  updateCarousel();
-});
-
-prevButton.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalSlides - 1; // Loop to last slide
+  .enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
   }
-  updateCarousel();
-});
-
-function updateCarousel() {
-  const offset = -currentIndex * 100; // Move carousel based on index
-  carouselInner.style.transform = `translateX(${offset}%)`;
-}
-
-
+  .enlarged-image:hover {
+    transform: scale(1.05);
+  }
+`;
+document.head.appendChild(style);

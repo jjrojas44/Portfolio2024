@@ -79,77 +79,62 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/Sign-up.png" alt="Sign Up">
+                  <img src="assets/img/Sign-up.png" alt="Home Page" class="portfolio-slider-img">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/mainprofile.png" alt="Main Profile">
+                  <img src="assets/img/mainprofile.png" alt="Frame 364" class="portfolio-slider-img">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/mainpage.png" alt="Main Page">
+                  <img src="assets/img/settings.png" alt="Medicare Page" class="portfolio-slider-img">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/xbox news.png" alt="Xbox News">
+                  <img src="assets/img/xbox news.png" alt="Medicare Page" class="portfolio-slider-img">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/playstation news.png" alt="PlayStation News">
+                  <img src="assets/img/xbox dealss.png" alt="Medicare Page" class="portfolio-slider-img">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/nintendo news.png" alt="Nintendo News">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/pc news.png" alt="PC News">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/xbox reviews.png" alt="Xbox Reviews">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/playstation reviews.png" alt="PlayStation Reviews">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/nintendo reviews.png" alt="Nintendo Reviews">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/pc reviews.png" alt="PC Reviews">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/xbox dealss.png" alt="Xbox Deals">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/playstation dealss.png" alt="PlayStation Deals">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/nintendo dealss.png" alt="Nintendo Deals">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/pc dealss.png" alt="PC Deals">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/settings.png" alt="Settings">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/forum.png" alt="Forum">
+                  <img src="assets/img/forum.png" alt="Other Daphney" class="portfolio-slider-img">
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
+    
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Web Design</li>
-                <li><strong>Client</strong>: Self Design</li>
-                <li><strong>Project date</strong>: Jan, 2023</li>
+                <li><strong>Category:</strong> Web Design</li>
+                <li><strong>Client:</strong> CMS</li>
+                <li><strong>Project date:</strong> Feb, 2022</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>U-Game-U-Play</h2>
-              <p>An everything gaming news and reviews with links to deals design.</p>
+              <h2>Medicaid/Medicare website</h2>
+              <p>A redesign of a Medicaid/Medicare website.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    
     <!-- End Portfolio Details Section -->
 
     <div class="gutters">
@@ -196,8 +181,8 @@
     <h9>Value Added</h9>
 		    <p> A value added to the case study for "u-game-u-play" could be to implement a data-driven approach to content creation and user engagement. This could involve tracking user behavior and interests to understand which topics and games are most popular among the website's visitors. The website could also collect user reviews and feedback to refine further and personalize its content. Additionally, analytics and A/B testing could be leveraged to optimize the user experience and increase user engagement. Moreover, incorporating a reward system for active participation on the forum or submitting reviews can increase engagement and promote sharing of valuable and exciting content. By taking a data-driven approach and prioritizing personalization and user engagement, "u-game-u-play" can differentiate itself from other video game information websites and become a valuable resource for gamers and enthusiasts alike.</p>
 
-      <figure class="aside1">
-        <div class="module1">
+        <figure class="aside1">
+          <div class="module1">
           <header>
             <h9>Tools Used:</h9>
           </header>
@@ -251,8 +236,7 @@
 
         <h9>How Might We</h9>
         <hr class="new2">
-        <p> How might we develop an all-inclusive gaming application that caters to the specific requirements of a newly turned 29-year-old introverted front-end software developer, namely Steven? The objective is to provide Steven with a seamless and user-friendly experience that keeps him informed about the latest gaming news, releases, and deals while allowing him to plan his gaming budget and access extensive gaming coverage, all while accommodating his introverted personality traits and aversion to large crowds.</p>
-        <div class="pictures">
+        <p>How might we design an all-in-one gaming application that enhances the experience of a 29-year-old introverted front-end developer, Steven? Our goal is to create a seamless, user-friendly interface that delivers real-time gaming news, releases, and deals while allowing him to plan his gaming budget and stay engaged, all tailored to his introverted nature.</p>        <div class="pictures">
           <figure class="full">
           </div>
             </div>
@@ -269,9 +253,7 @@
     <h9>Problem Statement</h9>
     <hr class="new2">
   <p>
-    <p> Despite its original intention to provide the latest news and updates on video games and consoles/PC, u-game-u-play still needs to meet the high-quality expectations of its customers. As a result, our users have become dissatisfied with our services and are seeking alternative solutions to meet their needs. One of the main reasons for this dissatisfaction is u-game-u-play's inability to cater to the time constraints and need for immediate access to our customers' latest gaming news and console releases. This has caused a loss in business for u-game-u-play and a decrease in customer loyalty.
-      Therefore, this problem statement aims to find ways to improve u-game-u-play's services to meet the time needs and expectations of its customers by providing high-quality and time-friendly news updates on everything gaming, including the latest game releases, console releases, and deals. The objective is to ensure that our customers can have a relaxed and enjoyable experience on our app without feeling the need to rush or plan their time around tight windows for game releases or console updates. Ultimately, the goal is to improve customer satisfaction, increase business revenue, and establish u-game-u-play as a leading gaming news and updates provider.
-    </p>
+    <p>u-Game-U-Play fails to meet user expectations due to outdated updates and delayed news delivery. Gamers seek real-time access to information but are currently dissatisfied, leading to user churn. By implementing real-time news feeds and instant deal alerts, we can improve user retention, increase engagement, and establish our platform as a leader in gaming news.</p>
     <div class="pictures">
       <figure class="full">
       </div>
@@ -316,45 +298,39 @@
             <h9>StoryBoard</h9>
             <hr class="new2">
             <ul>
-              <li>Panel 1: Steven Young is seen browsing various websites for gaming information, scrolling through pages with frustration.</li>
-
-              <li>Panel 2: Steven expresses his dissatisfaction with the lack of a one-stop-shop for all his gaming needs to his friend.</li>
-              
-              <li>Panel 3: Steven's friend recommends U-Game-U-Play, a platform that offers a seamless user experience with comprehensive video game reviews and ratings, general gaming information, exclusive deals, and forums to connect with other gamers.</li>
-              
-              <li>Panel 4: Steven visits U-Game-U-Play and is impressed with the clear information architecture, intuitive navigation, and personalized recommendations.</li>
-              
-              <li>Panel 5: Steven is seen interacting with other gamers on the U-Game-U-Play forums, sharing his experiences and gaining new insights.</li>
-              
-              <li>Panel 6: Steven makes a purchase  on U-Game-U-Play and receives exclusive deals and offers that he couldn't find anywhere else.</li>
-              
-              <li>Panel 7: Steven shares his positive experience with his friend and recommends U-Game-U-Play to other gaming enthusiasts.</li>
-              
-              <li>Panel 8: U-Game-U-Play UX/UI designers analyze data and user research to continue improving the platform, with the ultimate goal of providing an optimal user experience for Steven and other gamers.</li>
-               </ul>
+              <li>Panel 1: Steven struggles to find accurate and timely gaming news across multiple platforms.</li>
+              <li>Panel 2: Frustrated, he discusses the issue with a friend.</li>
+              <li>Panel 3: His friend recommends u-Game-U-Play.</li>
+              <li>Panel 4: Steven explores the site, appreciating its intuitive layout and real-time updates.</li>
+              <li>Panel 5: He joins the forums, interacting with fellow gamers.</li>
+              <li>Panel 6: He takes advantage of exclusive deals found on the platform.</li>
+              <li>Panel 7: Impressed by the experience, he recommends u-Game-U-Play to others.</li>
+              <li>Panel 8: UX/UI designers analyze feedback to enhance the platform further.</li>
+            </ul>
                <div class="pictures2">
               <figure class="full">
                 <img src="assets/img/storyugame.png"/ width="1100" height="600"   >
                 <figcaption>   "Steven's Story: Enhancing the Gaming Experience for Tech-Savvy Gamers" - This storyboard UX/UI case study explores the pain points of Steven, a 23-year-old front-end software developers from Florida, and provides solutions to enhance the overall gaming experience for Steven and other users like him. By understanding Steven's needs and preferences, this study aims to create a modern, interactive, and user-friendly gaming platform that caters to the needs of tech-savvy gamers like Steven. The study is essential to improve the gaming experience and provide gamers with an engaging and immersive medium."   </figcaption>
               </div>            
 
-              <h9>Affinity Diagram</h9>
+              <h2>Affinity Diagram</h2>
               <hr class="new2">
-              <p>An affinity diagram could be useful for organizing and categorizing the ideas related to the concept of a website that deals with video game news, video game reviews, video game deals, video game scores, and a video game forum. Some reasons to use an affinity diagram in this context could include:</p>
+              <p>An affinity diagram is a powerful tool for organizing and categorizing ideas related to a website focused on video game news, reviews, deals, scores, and community discussions. Using an affinity diagram in this context offers several benefits:</p>
               <ul>
-                <li>Grouping similar ideas: The affinity diagram can help you group similar ideas together, such as news, reviews, deals, scores, and forum discussions. This can make it easier to see patterns and relationships between the different categories.</li>
-                <li>Identifying key themes: By organizing the ideas into categories, you can identify key themes that emerge, such as popular game genres or common concerns among gamers. This can help you focus your website's content and design around these themes.</li>
-                <li>Encouraging participation: By involving stakeholders in the process of creating the affinity diagram, you can encourage participation and collaboration. This can help ensure that the website's design and content meets the needs and interests of the target audience.</li>
-                <li>Generating new ideas: The process of creating an affinity diagram can also spark new ideas and insights. As you group ideas together and identify patterns, you may discover new opportunities or areas for innovation.</li>
-                <li>Visualizing complex information: An affinity diagram can provide a visual representation of complex information, making it easier to understand and communicate to others. This can be especially useful if you need to present the concept to others, such as investors or stakeholders.</li>
+                <li><strong>Grouping similar ideas:</strong> The affinity diagram helps organize related concepts, such as news, reviews, deals, scores, and forum discussions. This makes it easier to identify patterns and relationships between categories.</li>
+                <li><strong>Identifying key themes:</strong> Categorizing ideas allows you to uncover important trends, such as popular game genres or common gamer concerns. This insight helps shape the website’s content and design.</li>
+                <li><strong>Encouraging collaboration:</strong> Engaging stakeholders in creating an affinity diagram fosters collaboration, ensuring that the website aligns with the needs and interests of its audience.</li>
+                <li><strong>Sparking innovation:</strong> The process of grouping and analyzing ideas can lead to fresh insights and new opportunities for innovation within the website’s design and features.</li>
+                <li><strong>Visualizing complex information:</strong> An affinity diagram provides a clear visual representation of structured data, making it easier to communicate ideas to investors, stakeholders, and team members.</li>
               </ul>
               <div class="pictures2">
                 <figure class="full">
                   <img src="assets/img/affinpt1.png" width="1400" height="1100" style="margin-bottom: 20px;">
                   <img src="assets/img/affinp2.png" width="1400" height="1100" style="margin-bottom: 20px;">
-                  <figcaption>"Affinity Diagrams are an essential tool for UX/UI designers to organize data and insights from user research. In Steven's case, the diagram can help identify pain points and common themes that arise from his gaming experience. By analyzing and categorizing these insights, designers can create a user-friendly platform that caters to Steven's needs and preferences, resulting in an engaging and immersive gaming experience."</figcaption>
+                  <figcaption>Affinity diagrams are essential for UX/UI designers to structure insights from user research. In Steven’s case, the diagram helps identify pain points and trends in his gaming experience. By analyzing these insights, designers can build a user-friendly platform tailored to his needs, ensuring an engaging and immersive gaming experience.</figcaption>
                 </figure>
               </div>
+              
               
     </div>
      
@@ -371,8 +347,8 @@
 
   <h9>Research Objectives</h9>
   <hr class="new2">
-<p>I wrote a research objective to help define the purpose of the u-game-u-play and what it aims to achieve: general video game information, news, reviews, scores, deals, and an active video game forum. Having a clear research objective is essential for creating a successful website that meets the needs of your target audience and provides a great user experience.</p>
-<ul>
+  <p>The research objectives define the purpose of U-Game-U-Play, focusing on providing general video game information, news, reviews, scores, deals, and an active gaming forum. Establishing clear research objectives is crucial to ensuring the website meets the needs of its target audience while delivering a seamless user experience.</p>
+  <ul>
   <li>Focus: Defining a clear research objective involving video game information to help focus on what I want to achieve with u-game-u-play. It enables me to narrow my research questions with video games, which can help my target audience save time and resources.</li>
   <li>Understanding my Audience: A research objective will help me better understand my target audience, their interests, preferences, and habits related to video games. Knowing my audience, I can tailor my content and features to their needs, increasing engagement and driving traffic to your website.</li>
   <li>Competitor Analysis: Having a research objective can help me conduct a competitive analysis, which involves identifying and evaluating other websites that offer similar services. By doing so, I can gain insights into what works and doesn't work in the industry and use that knowledge to improve my website.</li>
@@ -391,7 +367,7 @@
   
 <h9>Empathy Map</h9>
 <hr class="new2">         
-<p>By creating an empathy map for a website concept that involves general video game news, reviews, scores, deals, and forums, you can gain insights into the motivations, pain points, and preferences of gamers and game enthusiasts.</p>
+<p>By developing an empathy map for U-Game-U-Play, we gain deeper insights into gamers’ motivations, frustrations, and preferences. Understanding user behavior enables us to design a platform that aligns with their needs, ensuring engaging content, intuitive navigation, and a strong community experience.</p>
 <ul>
   <li>To identify user needs: An empathy map can help you identify the needs of your users, such as what type of video game news and reviews they are interested in, what deals they are looking for, and what kind of forum discussions they participate in.</li>
   <li>To understand user behavior: By examining the behaviors of your target audience, you can design a website that caters to their preferences and habits. For example, if gamers prefer to read short, snappy news articles, you can create your website accordingly.</li>
@@ -408,7 +384,7 @@
 
       <h9>Competitor Analysis</h9>
       <hr class="new2">
-      <p>We made a competitor analysis to understand what kind of competition U-game-U-play will go up against and plan and identify opportunities to one-up the competition and find an edge. </p>
+      <p>Conducting a competitor analysis helps U-Game-U-Play identify strengths and weaknesses of similar platforms, enabling us to refine our approach. By analyzing market gaps and user expectations, we can implement features that enhance the gaming experience and differentiate our platform.</p>
       <div class="pictures2">
         <figure class="full">
           <img src="assets/img/_Competitor Analysis - Sheet1 (4)-1.png"/   >
@@ -417,8 +393,8 @@
 
       <h9>Site Map</h9>
       <hr class="new2">
-<p> We plotted a site map of the website, the different links, sections from the redesign, and what to add or take away to make a cleaner, time-effective, seamless redesign. </p>
-<div class="pictures2">
+      <p>The site map organizes U-Game-U-Play’s structure, outlining sections, navigation paths, and key features to streamline user interactions. By optimizing the layout, we ensure a time-efficient, intuitive, and engaging experience for gamers.</p>
+      <div class="pictures2">
   <figure class="full">
     <img src="assets/img/ugamesitemap.png"/ width="1100" height="1500" >
     <figcaption> "This Site Map UX/UI case study focuses on Steven, a 23-year-old front-end software developer from Florida. We aim to understand Steven's needs and preferences to create a user-friendly, immersive gaming platform that aligns with his interests and values. Creating a Site Map can provide a clear and concise navigation structure that allows Steven to quickly find the information he needs and enhance his gaming experience. Essential to stay ahead of the competition and keep Steven engaged with our platform."   </figcaption>

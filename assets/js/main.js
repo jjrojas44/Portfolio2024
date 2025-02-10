@@ -546,3 +546,31 @@ var swiper = new Swiper(".services-slider", {
     1280: { slidesPerView: 4 }
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const viewButtons = document.querySelectorAll(".view-image-btn");
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const closeModal = document.querySelector(".close-modal");
+
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const img = this.previousElementSibling; // Get the corresponding image
+      modalImage.src = img.src;
+      modal.style.display = "flex";
+    });
+  });
+
+  closeModal.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+

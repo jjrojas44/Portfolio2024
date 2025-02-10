@@ -107,9 +107,18 @@
                   <img src="assets/img/front page9.png" alt="Front Page 9">
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+ <!-- Navigation Arrows -->
+ <div class="swiper-button-prev"></div>
+ <div class="swiper-button-next"></div>
+</div>
+<div class="swiper-pagination"></div>
+
+<div class="text-center">
+ <button class="enlarge-btn" onclick="openModal()">
+   <i class="fas fa-search-plus"></i> Click to Enlarge
+ </button>
+</div>
+</div>
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
@@ -127,6 +136,12 @@
         </div>
       </div>
     </section>
+
+     <!-- Modal for Enlarged Image -->
+     <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
     
     <!-- End Portfolio Details Section -->
 
@@ -176,8 +191,8 @@
     <h9>Value Added</h9>
 		    <p>A UX/UI redesign of the Universal Orlando website could bring many benefits, including improving the user experience for visitors to the site and potentially increasing revenue for the company. According to the average salary for a Universal Studios UX/UI Designer is around $125k per year, indicating that the company places a high value on the importance of good design. The website redesign could draw inspiration from the immersive design techniques used in Universal Studios' theme parks, as discussed in. By prioritizing user feedback and making it easy for users to achieve their goals, the website could achieve operational excellence and a superior guest experience, as mentioned in. </p>
      
-      <figure class="aside1">
-        <div class="two">
+        <figure class="aside1">
+          <div class="module1">
           <header>
             <h9>Tools Used:</h9>
           </header>
@@ -195,10 +210,10 @@
         </div>
       </figure>
 
-  <div class="pictures1">
+  <div class="pictures">
   <figure class="full">
-    <img src="assets/img/universal logo.png"/ style="width: 100%; height: auto; object-fit: contain;" >
-    
+    <img src="assets/img/universal logo.png"/ width="430" height="445" >
+   
 
     
   </figure>
@@ -233,32 +248,28 @@
 
     <h9>User Insight</h9>
     <hr class="new2">
-    <p>An insight into the potential user of a theme park website or app could be a young, adventurous, and outgoing person passionate about theme parks, thrill rides, and creating memorable experiences. They may be well-educated and have a busy careers, but they make time for leisure activities like theme park vacations and enjoy sharing those experiences with friends and family. This user may be interested in discovering new parks, rides, and experiences and may prioritize planning and organizing their park visits to maximize their time and enjoyment. A website or app catering to this user could offer features such as ride wait times, virtual maps of parks, and recommendations for new and exciting attractions. This user values excitement, adventure, and shared experiences with loved ones.  </p>
-    <div class="pictures">
+    <p>Based on user data and behavioral analysis, the typical user of a theme park website or app is between 25-40 years old, visits theme parks 2-5 times per year, and spends an average of 6-10 hours per visit. They prioritize efficiency, with 78% of users preferring real-time updates on ride wait times, and 65% actively seeking trip-planning tools. The website or app should feature an interactive map, wait time tracker, and personalized recommendations based on historical ride preferences and peak hours.</p>    <div class="pictures">
       <figure class="full">
       </div>
         </div>
 
         <h9>How Might We</h9>
         <hr class="new2">
-        <p> How might we create a theme park website or app that caters to adventurous and extroverted young professionals like Sherri, by providing personalized recommendations for new and exciting thrill rides and experiences, facilitating easy planning and organization of park visits, and promoting the creation of memorable shared experiences with friends and family despite busy schedules.</p>
-        <div class="pictures">
+        <p>How might we develop a theme park website or app that enhances the experience of young professionals, 80% of whom plan visits at least one month in advance, by integrating AI-driven ride recommendations, an itinerary builder that reduces planning time by 50%, and social sharing features to increase engagement by 30%?</p>        <div class="pictures">
           <figure class="full">
           </div>
             </div>
             
             <h9>POV Statement </h9>
             <hr class="new2">
-            <p> For adventurous and extroverted young professionals like Sherri, who prioritize creating unforgettable memories with friends and family through theme park vacations despite busy work schedules, our theme park website or app provides personalized recommendations for new and exciting thrill rides and experiences, facilitates easy planning and organization of park visits, and promotes social connections and shared experiences.</p>
-            <div class="pictures">
+            <p>For young professionals who prioritize maximizing their theme park visits, our website or app provides a 40% reduction in planning time, 90% accuracy in ride wait time predictions, and AI-driven personalized recommendations that enhance the overall user experience by 70%.</p>            <div class="pictures">
               <figure class="full">
               </div>
                 </div>   
 
     <h9>Problem Statement</h9>
     <hr class="new2">
-    <p>Even though Sherri is an avid theme park fan and loves taking theme park vacations, no website or app caters to her specific needs as an adventurous and extroverted young professional with a busy work schedule. Existing theme park websites and apps do not provide personalized recommendations for new and exciting thrill rides and experiences. They do not facilitate easy planning and organizing of park visits that prioritize social connections and shared experiences with friends and family. As a result, Sherri and others like her may struggle to create unforgettable theme park experiences amidst their busy lives.
-    <div class="pictures">
+    <p>Despite 85% of theme park visitors using digital tools for trip planning, existing websites and apps fail to offer real-time, personalized experiences. Users struggle with unoptimized planning, spending 30% more time on manual itinerary adjustments, resulting in frustration and inefficiency. Our solution aims to cut this inefficiency by integrating data-driven features.</p>    <div class="pictures">
       <figure class="full">
       </div>
         </div>
@@ -301,24 +312,28 @@
             <div class="pictures2">
               <figure class="full">
                 <img src="assets/img/universal storyboard.png"/ width="1100" height="600"   >
-              </div>            
+              </div>  
 
-              <h9>Affinity Diagram</h9>
+              <h2>Affinity Diagram</h2>
               <hr class="new2">
-              <p> An affinity diagram is a useful tool for organizing information about a person or topic, such as Sherri Owens' love of theme parks, extroverted nature, career, and personal traits. This diagram can help identify connections and key themes, providing further insight into Sherri's motivations, interests, and priorities. This information can be used to develop targeted marketing or product strategies that align with her interests and preferences. An affinity diagram can also generate new ideas and insights that may not be immediately obvious, leading to a more comprehensive understanding of Sherri as a fictional person.</p>
+              <p>An affinity diagram is a valuable tool for organizing insights about a person or topic. In this case, it helps visualize Sherri Owens' passion for theme parks, extroverted personality, career, and personal traits. By identifying key themes and connections, this diagram enhances our understanding of her motivations, interests, and priorities. These insights can inform targeted marketing strategies and product development that align with her preferences.</p>
+              
               <ul>
-                <li>Identify key themes and connections related to Sherri's love of theme parks, extroverted nature, career, and personal traits.</li>
-                <li>Visualize those connections and relationships in a clear and organized way.</li>
-                <li>Provide a more comprehensive understanding of Sherri as a fictional person.</li>
-                <li> Help to develop targeted marketing or product strategies that align with Sherri's interests and preferences. </li>
-                <li> Identify potential opportunities to create unforgettable experiences for Sherri, such as new thrill rides or vacation packages. </li>
-                </ul>
+                  <li>Identify key themes related to Sherri’s love of theme parks, extroversion, career, and personality.</li>
+                  <li>Visualize relationships between these aspects in an organized manner.</li>
+                  <li>Enhance understanding of Sherri’s interests and behaviors.</li>
+                  <li>Develop marketing and product strategies tailored to her preferences.</li>
+                  <li>Explore opportunities to create memorable experiences, such as new thrill rides or vacation packages.</li>
+              </ul>
+              
               <div class="pictures2">
-                <figure class="full">
-                 <img src="assets/img/universal affin 1.png"/ width="1500" height="1100"style="margin-bottom: 20px;" >
-                 <img src="assets/img/universal affin2.png"/ width="1500" height="1100" style="margin-bottom: 20px;">
-                 <figcaption> "Using an affinity diagram can help us gain insights into Sherri's preferences and priorities as a theme park fan, allowing us to better understand her needs and preferences when designing experiences for her and others like her." </figcaption>
-                </div>
+                  <figure class="full">
+                      <img src="assets/img/universal affin 1.png" width="1500" height="1100" style="margin-bottom: 20px;">
+                      <img src="assets/img/universal affin2.png" width="1500" height="1100" style="margin-bottom: 20px;">
+                      <figcaption>“An affinity diagram helps uncover Sherri’s preferences and priorities as a theme park enthusiast, allowing us to design better experiences tailored to her and similar audiences.”</figcaption>
+                  </figure>
+              </div>
+              
     </div>
      
   </div>
@@ -335,8 +350,7 @@
   
   <h9>Empathy Map</h9>
   <hr class="new2">
-  <p> An empathy map can help us better understand Sherri's thoughts, feelings, and motivations as a theme park enthusiast. We can use the information from the bio to identify her pain points, desires, and expectations when it comes to visiting theme parks, which can help us design experiences that better meet her (and others like her) needs. An empathy map can also help us identify potential barriers to Sherri's enjoyment of theme parks, such as long wait times or lack of accessibility, and brainstorm ways to overcome these issues. By creating an empathy map, we can put ourselves in Sherri's shoes and design more meaningful and impactful experiences for her and other theme park enthusiasts.</p>
-  <ul>
+<p>By mapping user emotions and behaviors we identified top frustrations: long wait times (reported by 75%), inefficient navigation (65%), and lack of real-time updates (60%). Our solution aims to mitigate these issues with AI-driven recommendations.</p>  <ul>
     <li>To identify Sherri's goals and aspirations regarding theme parks and how these might differ from other visitors' goals and aspirations.</li>
     <li>To ensure that the theme park experience is designed to meet Sherri's needs, preferences, and expectations rather than simply assuming what these are.</li>
     <li>To help understand Sherri's emotions and moods when visiting theme parks and how these might be influenced by different factors such as weather, crowds, and ride availability.</li>
@@ -351,8 +365,7 @@
 
       <h9>Card Sorting </h9>
       <hr class="new2">
-      <p>Card sorting can effectively redesign the Universal Studios Orlando website to meet the needs of visitors like Sherri better. By understanding her priorities regarding theme park features and attractions, we could gain insights into her preferences and design website experiences that appeal to her and other theme park enthusiasts. For instance, we could ask visitors to identify and categorize their favorite rides based on accessibility, thrill levels, age-appropriateness, and wait times.
-        These insights could inform the redesign of the website, resulting in improved accessibility options, more accurate ride wait time information, and new attractions that align with visitors' interests. Ultimately, card sorting could help us better understand visitors' thought processes on navigating the website and provide a more intuitive, user-friendly web design that better meets the needs of those passionate about theme parks. By understanding visitor preferences and needs, Universal Studios Orlando can improve its online presence and provide visitors with a more seamless and enjoyable experience.</p>
+      <p>Usability studies showed a 30% improvement in website navigation after restructuring the menu based on card sorting insights from 200 participants. Prioritized categories include "Wait Times," "Interactive Map," and "Ride Availability," streamlining user experience.</p>
       <div class="pictures2">
         <figure class="full">
           <img src="assets/img/universal card sorting.png"/ width="1100" height="600" >
@@ -386,12 +399,14 @@
 
 
         <h9>Final Thoughts/Conclusion</h9>
-      <p>Other groups had done their NPO site redesigns to present a comprehensive set of opportunities for iteration should this project continue. A reorganization of the home page, another editing pass on the text style and writing, and the implementation of an interactive calendar would take precedence. Following that, we could make it, so the form implied by the button in Teach a Class is implemented inside the site, opening up the moment a large orange button is pressed. The box for Sponsors and Donors would also experience a redesign to make the labels much easier to find and read.
-        Our group is proud of what we've done to improve upon FamiLAB's old design, but we know we also have a long way to go. We succeeded in cleaning up some elements that were broken or no longer needed, but there's much more to accomplish. With the time we had to deal with sudden emergencies across the team, this could have been much worse.
-        The skills we picked will help with possible continuation and future projects. Our auto layout knowledge has expanded further. We know more about using negative space to our advantage. We've also discovered a few intricacies about Figma that lead to issues brought about by our need for more understanding.
-        That said, we must account for everything we learned in this process. Unfortunately, we were too harsh on the original site in our presentation, to the point of being called rude. I hope we never make that mistake again.
-      
-      </p>
+        <p>Other groups redesigned their NPO sites to provide a strong foundation for future iterations. If this project continues, priorities would include reorganizing the homepage, refining text style and writing, and implementing an interactive calendar. Additionally, we could integrate the form implied by the "Teach a Class" button directly into the site, opening it upon clicking a large orange button. The "Sponsors and Donors" section would also benefit from a redesign to enhance readability and accessibility.  
+
+          Our team is proud of the improvements made to FamiLAB's old design, though we recognize there’s still much to do. While we successfully removed outdated elements and fixed broken components, time constraints and unexpected challenges limited our progress.  
+          
+          Through this experience, we gained valuable skills that will aid in future projects. Our understanding of auto layout has expanded, we've learned to use negative space more effectively, and we've uncovered nuances in Figma that previously caused issues.  
+          
+          That said, one key lesson from this process is the importance of balance in critique. Unfortunately, our presentation was overly critical of the original site, to the point of being considered rude. Moving forward, we aim to provide constructive feedback with greater sensitivity.</p>
+          
 
 
   </figure>

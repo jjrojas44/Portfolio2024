@@ -398,3 +398,151 @@ style.innerHTML = `
   }
 `;
 document.head.appendChild(style);
+
+// Lightbox functionality
+document.querySelectorAll("#portfolio .portfolio-item img").forEach(img => {
+  img.addEventListener("click", function() {
+    openLightbox(this.src);
+  });
+});
+
+function openLightbox(src) {
+  let lightbox = document.createElement("div");
+  lightbox.classList.add("lightbox");
+  lightbox.innerHTML = `
+    <span class="close" onclick="document.body.removeChild(this.parentElement)">&times;</span>
+    <img src="${src}" alt="Enlarged Image">
+  `;
+  document.body.appendChild(lightbox);
+}
+
+function openModal() {
+  var activeSlide = document.querySelector(".swiper-slide-active img"); // Get active image
+  if (!activeSlide) return;
+
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = activeSlide.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+// Initialize Swiper with pagination dots
+var swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
+// Open Modal on Button Click
+function openModal() {
+  var activeSlide = document.querySelector(".swiper-slide-active img"); // Get active image
+  if (!activeSlide) return;
+
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = activeSlide.src;
+}
+
+// Close Modal
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+
+var swiper = new Swiper('.swiper', {
+  loop: true,
+  autoplay: {
+    delay: 3000, // Auto-scroll every 3 seconds
+    disableOnInteraction: false, // Continues autoplay even after clicking
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: false, // Ensures all bullets are always visible
+  },
+});
+
+function openModal() {
+  var modal = document.getElementById("imageModal");
+  var img = document.querySelector(".swiper-slide-active img"); // Get currently active image
+  var modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+var swiper = new Swiper(".portfolio-details-slider", {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+function openModal() {
+  var modal = document.getElementById("imageModal");
+  var img = document.querySelector(".swiper-slide-active img"); // Get currently active image
+  var modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".pictures img");
+
+  images.forEach(img => {
+      img.addEventListener("mouseover", function () {
+          this.style.filter = "brightness(1.2)";
+      });
+
+      img.addEventListener("mouseout", function () {
+          this.style.filter = "brightness(1)";
+      });
+  });
+});
+
+var swiper = new Swiper(".services-slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 800,
+  effect: "slide",
+  breakpoints: {
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+    1280: { slidesPerView: 4 }
+  }
+});

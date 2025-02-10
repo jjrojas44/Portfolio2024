@@ -825,112 +825,83 @@ div.container {
 # Services
 --------------------------------------------------------------*/
 #services {
-  background: #f7f7f7;
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
   position: relative;
   padding-bottom: 80px;
+  overflow: hidden;
 }
 
-.services-block span {
-  margin: 10px 0;
+/* Boxed Service Block */
+.services-block {
+  text-align: center;
+  padding: 25px;
+  border: 2px solid #b8a07e;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 280px;
   position: relative;
-  font-size: 13px;
-  color: #292929;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-  text-transform: uppercase;
-  display: block;
+  overflow: hidden;
 }
 
-.services-block .separator {
-  margin: 0;
-  font-size: 13px;
-  line-height: 22px;
+.services-block:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Icon Styling */
 .services-block i {
-  font-size: 44px;
+  font-size: 55px;
   color: #b8a07e;
-  line-height: 44px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto 12px;
 }
 
+.services-block:hover i {
+  transform: scale(1.1);
+  color: #ff7f50;
+}
+
+/* Boxed Title */
+.services-block span {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid #b8a07e;
+  border-radius: 8px;
+  background: rgba(184, 160, 126, 0.1);
+  color: #333;
+  transition: background 0.3s ease-in-out;
+}
+
+.services-block:hover span {
+  background: rgba(255, 127, 80, 0.2);
+}
+
+/* Swiper Pagination */
 .services-slider .swiper-pagination {
   margin-top: 30px;
   position: relative;
 }
+
 .services-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #b8a07e;
-}
-.services-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #b8a07e;
-}
-
-.portfolio-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding: 20px 0;
-  white-space: nowrap;
-  scrollbar-width: none;
-}
-
-.portfolio-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.portfolio-item {
-  flex: 0 0 auto;
-  width: 300px; /* Adjust width as needed */
-  scroll-snap-align: start;
+  width: 14px;
+  height: 14px;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
-  padding: 15px;
-  border: 1px solid #ddd;
+  border: 2px solid #b8a07e;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.portfolio-item:hover {
-  transform: scale(1.05);
+.services-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background: #b8a07e;
+  transform: scale(1.4);
+  box-shadow: 0 0 8px rgba(184, 160, 126, 0.6);
 }
-
-.portfolio-image {
-  width: 100%;
-  height: 200px; /* Adjust as needed */
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.portfolio-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0;
-  color: #333;
-}
-
-.portfolio-description {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.portfolio-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.portfolio-link:hover {
-  color: #0056b3;
-}
-
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -940,6 +911,8 @@ div.container {
 /* Portfolio Grid */
 /* Portfolio Grid */
 /* Portfolio Grid */
+
+
 #portfolio .portfolio-container {
   display: flex;
   flex-wrap: wrap;
@@ -974,14 +947,154 @@ div.container {
 
 #portfolio .portfolio-item img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
+  
   transition: transform 0.3s ease;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  color: #e0d4b8 !important;
+  transition: 0.3s;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  color: white !important;
+}
+
+
+#portfolio-details .portfolio-slider-img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#portfolio-details .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 750px; /* Ensures uniform slide height */
+}
+
+.enlarge-btn {
+  background-color: #e0d4b8;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.enlarge-btn i {
+  font-size: 20px;
+}
+
+.enlarge-btn:hover {
+  background-color: #cbbfa5;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make Enlarged Image Fit Properly */
+.modal-content {
+  max-width: 90vw;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Swiper Pagination Styling - Centered & Synced */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background-color: #e0d4b8; /* Match button color */
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+/* Active Dot - Glow Effect */
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+  transform: scale(1.2); /* Slightly larger active dot */
+}
+
+/* Portfolio Item Hover Effect */
 #portfolio .portfolio-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 #portfolio .portfolio-item .portfolio-info {
@@ -1094,6 +1207,49 @@ div.container {
 /*--------------------------------------------------------------
 # case study 
 --------------------------------------------------------------*/
+.new2 {
+  border: none;
+  height: 20px; /* Thick Line */
+  background: linear-gradient(90deg, #fff, #ffecb3, #b89e72, #f9f9f9);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(255, 236, 179, 0.9);
+  animation: pulseGlow 2s infinite alternate ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.new2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -200%;
+  width: 150%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%);
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { left: -200%; }
+  50% { left: 150%; }
+  100% { left: 200%; }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px rgba(255, 236, 179, 0.9); }
+  100% { box-shadow: 0 0 40px rgba(184, 158, 114, 1); }
+}
+
+.new2:hover {
+  height: 20px; /* Expands even more on Hover */
+  background: linear-gradient(90deg, #fff, #ffecb3, #b89e72, #f9f9f9);
+  box-shadow: 0 0 35px rgba(255, 236, 179, 1);
+}
+
+
+
 .gutters {
   padding: 10px;
   border: 20px;
@@ -1130,61 +1286,64 @@ h4 {
   margin-right: auto;
 }
 
+/* Aside Container - Modern Look */
 .aside1 {
   float: right;
-  font-family: "Helvetica Neue", sans-serif;
-  border: 2px solid #898989;
-  padding: 10px;
-  border-radius: 10px;
-  background: #f5f5f5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Subtle animated glow effect on hover */
 .aside1:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
 }
 
-.module1 {
-  text-align: center;
-}
-
-.module1 header h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
+/* Module Styling */
 .module1 ul {
-  list-style: none;
+  list-style: none; /* Remove default bullets */
   padding: 0;
+  margin: 0;
 }
 
 .module1 ul li {
   font-size: 16px;
-  color: #555;
-  margin: 5px 0;
-  transition: color 0.3s ease-in-out;
+  color: #444;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.module1 ul li:hover {
-  color: #000;
+/* Cool custom icon before each list item */
+.module1 ul li::before {
+  content: "✦";  /* Change this to any cool symbol */
+  font-size: 18px;
+  color: #ff6600; /* Eye-catching color */
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Adding some animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Animated hover effect */
+.module1 ul li:hover::before {
+  transform: rotate(360deg) scale(1.2);
+  color: #ff4500;
 }
 
-.aside1 {
-  animation: fadeIn 1s ease-in-out;
+/* Last item in the list shouldn’t have a border */
+.module1 ul li:last-child {
+  border-bottom: none;
 }
 
 /* Base Styles */

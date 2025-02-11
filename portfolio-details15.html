@@ -73,55 +73,69 @@
 
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-8">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                  <div class="swiper-slide">
-                    <img src="assets/img/MArriott.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/beginn.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/middle.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/end.png" alt="Slider Image 1">
-                  </div>
-
-                
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/marr beg.png" alt="Home Page" class="portfolio-slider-img">
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marr mid.png" alt="Frame 364" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marr mid 2.png" alt="Medicare Page" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marr mid 3.png" alt="Other Daphney" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marr mid 4.png" alt="Other Daphney" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/marr end.png" alt="Other Daphney" class="portfolio-slider-img">
+                </div>
               </div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <div class="col-lg-4">
-              <div class="portfolio-info">
-                <h3>Project Information</h3>
-                <ul>
-                  <li><strong>Category</strong>: Web Design </li>
-                  <li><strong>Client</strong>: Project</li>
-                  <li><strong>Project Date</strong>: Aug, 2024</li>
-                </ul>
-              </div>
-            <div class="portfolio-description">
-              <h2>Marriott Website Redesign</h2>
-              <p>
-                "One-of-a-One Marriott design recreation where I tested my skills by mimicking the professional design approach of Marriott's brand. This project challenged me to replicate the sophisticated, user-focused elements that make their digital experiences engaging and seamlessly navigable."
-              </p>
+            <div class="swiper-pagination"></div>
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
     
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web Design </li>
+                <li><strong>Client</strong>: Project</li>
+                <li><strong>Project Date</strong>: Aug, 2024</li>
+              </ul>
+            </div>
+          <div class="portfolio-description">
+            <h2>Marriott Website Redesign</h2>
+            <p>
+              "One-of-a-One Marriott design recreation where I tested my skills by mimicking the professional design approach of Marriott's brand. This project challenged me to replicate the sophisticated, user-focused elements that make their digital experiences engaging and seamlessly navigable."
+            </p>
+            </div>
+          </div>
         </div>
-    
       </div>
     </section>
-    <!-- End Portfolio Details Section -->
-
+    
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
   
   </figure>
   

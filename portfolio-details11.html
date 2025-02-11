@@ -81,35 +81,45 @@
                 <div class="swiper-slide">
                   <img src="assets/img/juraasic park.jpg" alt="Slider Image 1">
                 </div>
-              
-              
-              
               </div>
-              <div class="swiper-pagination"></div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
+    
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Graphic Design</li>
-                <li><strong>Client</strong>: Project</li>
-                <li><strong>Project Date</strong>: Feb, 2024</li>
+                <li><strong>Category:</strong> Graphic Design</li>
+                <li><strong>Client:</strong> Project</li>
+                <li><strong>Project date:</strong> Feb, 2024</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Jurassic park Poster </h2>
-              <p>
-                This graphic design captures the thrilling essence of the original Jurassic Park movie, featuring the characters Tim and Lex Murphy hiding in a foggy jungle teeming with dinosaurs. Utilizing dramatic lighting and deep shadows, the poster creates a sense of suspense and wonder, immersing viewers in a world where nature and prehistoric creatures coexist. The combination of eerie fog and vibrant colors enhances the mystical atmosphere, making it a striking homage to the beloved franchise.
-              </p>
+              <h2>Jurassic Park Poster</h2>
+              This graphic design captures the thrilling essence of the original Jurassic Park movie, featuring the characters Tim and Lex Murphy hiding in a foggy jungle teeming with dinosaurs. Utilizing dramatic lighting and deep shadows, the poster creates a sense of suspense and wonder, immersing viewers in a world where nature and prehistoric creatures coexist. The combination of eerie fog and vibrant colors enhances the mystical atmosphere, making it a striking homage to the beloved franchise.
             </div>
           </div>
-        
         </div>
-        
-        </div>
-        
+      </div>
     </section>
+    
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    
     <!-- End Portfolio Details Section -->
     
    

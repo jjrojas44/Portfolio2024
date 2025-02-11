@@ -74,35 +74,34 @@
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
-    
         <div class="row gy-4">
-    
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-    
                 <div class="swiper-slide">
-                  <img src="assets/img/mainnnn.png" alt="">
+                  <img src="assets/img/Home page cms.png" alt="Home Page" class="portfolio-slider-img">
                 </div>
-    
                 <div class="swiper-slide">
-                  <img src="assets/img/shop.png" alt="">
+                  <img src="assets/img/MY MEDICARE.png" alt="Frame 364" class="portfolio-slider-img">
                 </div>
-    
                 <div class="swiper-slide">
-                  <img src="assets/img/blog.png" alt="">
+                  <img src="assets/img/GEN info.png" alt="Medicare Page" class="portfolio-slider-img">
                 </div>
-    
                 <div class="swiper-slide">
-                  <img src="assets/img/hub.png" alt="">
+                  <img src="assets/img/CMS medicaidd.png" alt="Other Daphney" class="portfolio-slider-img">
                 </div>
-    
-                <div class="swiper-slide">
-                  <img src="assets/img/blogggy.png" alt="">
-                </div>
-    
               </div>
-              <div class="swiper-pagination"></div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
     
@@ -127,6 +126,12 @@
     
       </div>
     </section>
+
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
     <!-- End Portfolio Details Section -->
 
     <div class="gutters">

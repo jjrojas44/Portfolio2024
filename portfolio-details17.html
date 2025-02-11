@@ -11,7 +11,12 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                       <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -73,442 +78,414 @@
 
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-8">
-              <div class="portfolio-details-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-
-                    <div class="swiper-slide">
-                        <img src="assets/img/Universal studios front cover.jpg" alt="Slider Image 1">
-                      </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/universal studios back cover.jpg" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 1.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 2 v2.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 3.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 4.png" alt="Slider Image 1">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 5.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 6.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 7.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/MAIN MENU 8.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/PAUSE.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/STORE.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/LOADING SCREEN.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/LOAD YOUR GAME.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/create a character.png" alt="Slider Image 1">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="assets/img/controls.png" alt="Slider Image 1">
-                  </div>
-
-
-                
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/Universal studios front cover.jpg" alt="Universal Studios Front Cover" class="portfolio-slider-img">
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                  <img src="assets/img/universal studios back cover.jpg" alt="Universal Studios Back Cover" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/MAIN MENU 1.png" alt="Main Menu 1" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/PAUSE.png" alt="Pause Screen" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/LOADING SCREEN.png" alt="Loading Screen" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/LOAD YOUR GAME.png" alt="Load Your Game Screen" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/create a character.png" alt="Create a Character Screen" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/controls.png" alt="Controls Screen" class="portfolio-slider-img">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/STORE.png" alt="Store Screen" class="portfolio-slider-img">
+                </div>
               </div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <div class="col-lg-4">
-              <div class="portfolio-info">
-                <h3>Project Information</h3>
-                <ul>
-                  <li><strong>Category</strong>: Video Game Design </li>
-                  <li><strong>Client</strong>: Project</li>
-                  <li><strong>Project Date</strong>: Nov, 2024</li>
-                </ul>
-              </div>
-            <div class="portfolio-description">
-              <h2>Universal Studios worlds of wounder</h2>
-              <p>
-                The conceptual sequel to the first Universal Studios video game, "Universal Studios Worlds of Wonder," is a design for an immersive theme park experience. 
-              </p>
+            <div class="swiper-pagination"></div>
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
     
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category:</strong> Video Game Design</li>
+                <li><strong>Client:</strong> Project</li>
+                <li><strong>Project Date:</strong> Nov, 2024</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Universal Studios: Worlds of Wonder</h2>
+              <p>The conceptual sequel to the first Universal Studios video game, "Universal Studios Worlds of Wonder," is a design for an immersive theme park experience.</p>
+            </div>
+          </div>
         </div>
-    
       </div>
     </section>
+    
+    
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    
     <!-- End Portfolio Details Section -->
 
     <div class="gutters">
  
-        <div class="patelco">
-          <h1>Case Study: </h1>
-          <div class="secondheader"></div>
-               <h9> Universal Studios worlds of wounder </h9> </div>
-    </div>
-  </header>
-  <article>
-    <figure  class="aside1">
-      <div-one class="module1">
-        <header>
-          <h9>Activities&nbsp;</h9>
-        </header>
-        <ul>
-          <li>Persona /Affinity Diagram/How Might We</li>
-          <li>Swot Analysis/I Like,I Wish,What If/journey Map</li>
-          <li>UI Style Guide/Mood Board/Flowchart</li>
-          <li>/Paper Prototype/LO-FI Wireframe/HI-FI Wireframe/Summary</li>
-        </ul>
-      </div>
-    </figure>
-  
-    <h9>Brief</h9>
-    <p> 
-        The conceptual sequel to the first Universal Studios video game, "Universal Studios Worlds of Wonder," is a design for an immersive and interactive theme park adventure. This sequel brings players into a virtual recreation of Universal Studios, allowing them to explore famous attractions, engage in park-themed quests, and unlock secrets hidden throughout. 
-        
-        
-        
-        
-        
-        
-        
-    </p>
-    <dl>
-       
-   <h9>Project</h9>
-    <p>Video Game Design Concept 
-    </p>
-    <dl>
-      
-     <h9>Role</h9>
-      <p>Solo Design</pp>
-    </dl>
-    <h9>Time</h9>
-        <p>2 Week Project</p>
-  
-  
-      </dl>
-      <h9>Value Added</h9>
-              <p>"Universal Studios Worlds of Wonder" is an immersive theme park video game where players explore a digital Universal Studios, completing park-themed quests and challenges with intuitive, modern design.</p>
-  
-        <figure class="aside1">
-          <div class="module1">
-            <header>
-              <h9>Tools Used:</h9>
-            </header>
-        <ul>
-          <li>
-          Figma
-          </li>
-          <li>
-          Figjam
-          </li>
-          <li>
-          Photoshop
-          </li>
-          <li>
-        Illustrator
-            </li>
-          </ul>
-          </div>
-        </figure>
-  
-    <div class="pictures1">
-    <figure class="full">
-      <img src="assets/img/2ssws2 1.png"/ width="500" height="455" >
-      
-   
-      
-    </figure>
-    </div>
-  
-    
-    <figure class="aside1">
-      <div class="two">
-      </div>
-    </figure>
-  
-  
-    <h9>Persona</h9>
-  
-    <hr class="new2">
-  
-    <div class="pictures2">
-      <figure class="full">
-        <img src="assets/img/personaaaa.png"/>
-      </figure>
+      <div class="patelco">
+        <h7>Case Study:</h7>
+        <div class="secondheader"> 
+          <h9> Universal Studios worlds of wounder </h9>
     </div>
 
-    <h9>User Insight</h9>
-    <hr class="new2">
-    <p>
-      <p>Players want to feel the same excitement and thrill of exploring a real-life Universal Studios theme park, but with the added sense of adventure and discovery that only a video game can provide. They crave an experience that goes beyond simply replicating the park, seeking a journey filled with hidden secrets, unique challenges, and interactions with their favorite movie characters—something they can't get in a physical visit. They want to be the heroes of their own park story, where every corner has a surprise and every attraction feels like a personal adventure.
-      </p>
-      <div class="pictures">
-        <figure class="full">
-        </div>
-          </div>
+
+  </div>
+</header>
+<article>
+  <figure  class="aside1">
+    <div-one class="module1">
+      <header>
+        <h9>Activities&nbsp;</h9>
+      </header>
+      <ul>
+        <li>Persona /Affinity Diagram/How Might We</li>
+        <li>Swot Analysis/I Like,I Wish,What If/journey Map</li>
+        <li>UI Style Guide/Mood Board/Flowchart</li>
+        <li>/Paper Prototype/LO-FI Wireframe/HI-FI Wireframe/Summary</li>
+      </ul>
+    </div>
+  </figure>
+  <h9>Brief</h9>
+  <p> 
+      The conceptual sequel to the first Universal Studios video game, "Universal Studios Worlds of Wonder," is a design for an immersive and interactive theme park adventure. This sequel brings players into a virtual recreation of Universal Studios, allowing them to explore famous attractions, engage in park-themed quests, and unlock secrets hidden throughout. 
+
+      
+  </p>
+  <dl>
+<h9>Project</h9>
+< <p>Video Game Design Concept 
+</p>
+<dl>
+  
+ <h9>Role</h9>
+  <p>Solo Design</pp>
+</dl>
+<h9>Time</h9>
+    <p>2 Week Project</p>
+
+
+  </dl>
+  <h9>Value Added</h9>
+          <p>"Universal Studios Worlds of Wonder" is an immersive theme park video game where players explore a digital Universal Studios, completing park-themed quests and challenges with intuitive, modern design.</p>
+
+<figure class="aside1">
+<div class="module1">
+<header>
+<h9>Tools Used:</h9>
+</header>
+<ul>
+  <li>
+  Figma
+  </li>
+  <li>
+  Figjam
+  </li>
+  <li>
+  Photoshop
+  </li>
+  <li>
+Illustrator
+    </li>
+  </ul>
+</div>
+</figure>
+
+<div class="pictures1">
+  <figure class="full">
+    <img src="assets/img/2ssws2 1.png"/ width="500" height="455" >
+    
+ 
+    
+  </figure>
+  </div>
+
+  
+  <figure class="aside1">
+    <div class="two">
+    </div>
+  </figure>
+
+
+  <h9>Persona</h9>
+
+  <hr class="new2">
+
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/personaaaa.png"/>
+    </figure>
+  </div>
+
+  <h9>User Insight</h9>
+  <hr class="new2">
+  <p>
+    <p>Players want to feel the same excitement and thrill of exploring a real-life Universal Studios theme park, but with the added sense of adventure and discovery that only a video game can provide. They crave an experience that goes beyond simply replicating the park, seeking a journey filled with hidden secrets, unique challenges, and interactions with their favorite movie characters—something they can't get in a physical visit. They want to be the heroes of their own park story, where every corner has a surprise and every attraction feels like a personal adventure.
     </p>
     <div class="pictures">
       <figure class="full">
       </div>
-        </div> 
+        </div>
+  </p>
+  <div class="pictures">
+    <figure class="full">
+    </div>
+      </div> 
 
-        <h9>POV statement</h9>
-        <hr class="new2">
-        <p>
-          <p>Danny Ruiz, a 26-year-old graphic designer and theme park enthusiast living in Orlando, needs a visually stunning and interactive video game that authentically captures the thrill and atmosphere of Universal Studios. As a creative, detail-oriented, and tech-savvy individual, he’s drawn to environments that are both aesthetically impressive and immersive, with a focus on storytelling that mirrors his favorite theme park adventures. Danny wants an experience that lets him relive and explore Universal Studios in new and unexpected ways, while also tapping into his passion for design and creativity, engaging him with challenges that feel rewarding and visually appealing.
-          </p>
-          <div class="pictures">
-            <figure class="full">
-            </div>
-              </div>
+      <h9>POV statement</h9>
+      <hr class="new2">
+      <p>
+        <p>Danny Ruiz, a 26-year-old graphic designer and theme park enthusiast living in Orlando, needs a visually stunning and interactive video game that authentically captures the thrill and atmosphere of Universal Studios. As a creative, detail-oriented, and tech-savvy individual, he’s drawn to environments that are both aesthetically impressive and immersive, with a focus on storytelling that mirrors his favorite theme park adventures. Danny wants an experience that lets him relive and explore Universal Studios in new and unexpected ways, while also tapping into his passion for design and creativity, engaging him with challenges that feel rewarding and visually appealing.
         </p>
         <div class="pictures">
           <figure class="full">
           </div>
-            </div> 
-
-  
-  
-        <h9>How Might We</h9>
-        <hr class="new2">
-        <p>How might we recreate the excitement of Universal Studios in a digital format that feels just as immersive and thrilling as the real-life theme park?
-
-            How might we design intuitive game controls and interfaces that make it easy for players of all ages to navigate a virtual theme park?
-            
-            How might we incorporate educational elements about Universal Studios’ history and attractions in a fun and engaging way within the game?
-            
-            How might we include personalization features that allow players to customize their virtual theme park experience to reflect their favorite attractions and interests?
-            
-            How might we balance the challenge and fun factor in the game to ensure it appeals to both dedicated gamers and casual players looking for a lighthearted adventure?
-           </p>
-        <div class="pictures">
-          <figure class="full">
-          </div>
             </div>
+      </p>
+      <div class="pictures">
+        <figure class="full">
+        </div>
+          </div> 
 
+
+
+      <h9>How Might We</h9>
+      <hr class="new2">
+      <p>How might we recreate the excitement of Universal Studios in a digital format that feels just as immersive and thrilling as the real-life theme park?
+
+          How might we design intuitive game controls and interfaces that make it easy for players of all ages to navigate a virtual theme park?
+          
+          How might we incorporate educational elements about Universal Studios’ history and attractions in a fun and engaging way within the game?
+          
+          How might we include personalization features that allow players to customize their virtual theme park experience to reflect their favorite attractions and interests?
+          
+          How might we balance the challenge and fun factor in the game to ensure it appeals to both dedicated gamers and casual players looking for a lighthearted adventure?
+         </p>
+      <div class="pictures">
+        <figure class="full">
+        </div>
+          </div>
+
+          
+          
+            <h9>SWOT Analysis </h9>
+            <hr class="new2">
             
+            <div class="pictures">
+              <figure class="full">
+                <ul>
+                  <li><strong>Strengths:</strong>
+                    <ul>
+                      <li>Strong Brand Recognition - Universal Studios is a well-established brand with a global fanbase, attracting both theme park enthusiasts and gamers.</li>
+                      <li>Immersive Theme - The game leverages popular Universal Studios attractions and characters, creating an appealing and familiar experience.                        </li>
+                      <li>Multigenerational Appeal - The game targets a broad audience, from younger fans of Universal’s animated characters to adults nostalgic for classic movies.</li>
+                      <li>Engaging Visual Design - The conceptual design features a colorful and immersive game world, capturing the magic of the real-life theme park.</li>
+                    </ul>
+                  </li>
+                  
+                  <li><strong>Weaknesses:</strong>
+                    <ul>
+                      <li>High Expectations - Fans of the Universal brand will have high expectations, which might make it challenging to fully meet their desires for both a theme park experience and a compelling game.</li>
+                      <li>Competition - There are many well-established theme park and adventure video games, making it hard to stand out in a crowded market.</li>
+                      <li>Development Costs - Creating a high-quality game that does justice to the Universal Studios experience could be expensive in terms of time, resources, and technology.</li>
+                    </ul>
+                  </li>
+                  
+                  <li><strong>Opportunities:</strong>
+                    <ul>
+                      <li>Growing Gaming Market - The video game industry continues to expand, with a surge in interest for immersive, open-world games that Worlds of Wonder aims to be.</li>
+                      <li>Cross-Media Potential - Opportunities to tie in the game with movies, merchandise, and theme park events, creating a larger multimedia universe.</li>
+                      <li>Innovative Gameplay Features - Potential to introduce unique elements like VR/AR experiences, multiplayer modes, or customizations to differentiate from competitors.</li>
+                      <li>Educational Value - Integrating behind-the-scenes insights about Universal’s history and filmmaking could attract educational interest and expand the audience.</li>
+                    </ul>
+                  </li>
+                  
+                  <li><strong>Threats:</strong>
+                    <ul>
+                      <li>Market Saturation - The theme park and simulation game genre has many competitors, which could overshadow Worlds of Wonder.
+                      </li>
+                      <li>Technological Challenges - Incorporating advanced technology like AR/VR might lead to technical difficulties or higher hardware requirements, limiting accessibility.</li>
+                      <li>Negative Brand Association - If the game fails to meet quality expectations, it could damage the Universal Studios brand or generate backlash from fans.</li>
+                      <li>Rapid Changes in Consumer Preferences - Trends in gaming can shift quickly, and the design might need constant adaptation to remain relevant.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </figure>
+            </div>
             
-              <h9>SWOT Analysis </h9>
+
+              <h9>Problem Statement</h9>
               <hr class="new2">
-              
-              <div class="pictures">
-                <figure class="full">
-                  <ul>
-                    <li><strong>Strengths:</strong>
-                      <ul>
-                        <li>Strong Brand Recognition - Universal Studios is a well-established brand with a global fanbase, attracting both theme park enthusiasts and gamers.</li>
-                        <li>Immersive Theme - The game leverages popular Universal Studios attractions and characters, creating an appealing and familiar experience.                        </li>
-                        <li>Multigenerational Appeal - The game targets a broad audience, from younger fans of Universal’s animated characters to adults nostalgic for classic movies.</li>
-                        <li>Engaging Visual Design - The conceptual design features a colorful and immersive game world, capturing the magic of the real-life theme park.</li>
-                      </ul>
-                    </li>
-                    
-                    <li><strong>Weaknesses:</strong>
-                      <ul>
-                        <li>High Expectations - Fans of the Universal brand will have high expectations, which might make it challenging to fully meet their desires for both a theme park experience and a compelling game.</li>
-                        <li>Competition - There are many well-established theme park and adventure video games, making it hard to stand out in a crowded market.</li>
-                        <li>Development Costs - Creating a high-quality game that does justice to the Universal Studios experience could be expensive in terms of time, resources, and technology.</li>
-                      </ul>
-                    </li>
-                    
-                    <li><strong>Opportunities:</strong>
-                      <ul>
-                        <li>Growing Gaming Market - The video game industry continues to expand, with a surge in interest for immersive, open-world games that Worlds of Wonder aims to be.</li>
-                        <li>Cross-Media Potential - Opportunities to tie in the game with movies, merchandise, and theme park events, creating a larger multimedia universe.</li>
-                        <li>Innovative Gameplay Features - Potential to introduce unique elements like VR/AR experiences, multiplayer modes, or customizations to differentiate from competitors.</li>
-                        <li>Educational Value - Integrating behind-the-scenes insights about Universal’s history and filmmaking could attract educational interest and expand the audience.</li>
-                      </ul>
-                    </li>
-                    
-                    <li><strong>Threats:</strong>
-                      <ul>
-                        <li>Market Saturation - The theme park and simulation game genre has many competitors, which could overshadow Worlds of Wonder.
-                        </li>
-                        <li>Technological Challenges - Incorporating advanced technology like AR/VR might lead to technical difficulties or higher hardware requirements, limiting accessibility.</li>
-                        <li>Negative Brand Association - If the game fails to meet quality expectations, it could damage the Universal Studios brand or generate backlash from fans.</li>
-                        <li>Rapid Changes in Consumer Preferences - Trends in gaming can shift quickly, and the design might need constant adaptation to remain relevant.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </figure>
-              </div>
-              
-  
-                <h9>Problem Statement</h9>
-                <hr class="new2">
-                <p>
-                  <p>Universal Studios fans and gamers are seeking a more immersive and engaging way to experience the excitement of the theme park beyond physical visits. Current theme park video games often lack the depth and interactivity that truly capture the unique atmosphere of Universal Studios. Players need a digital experience that not only brings the park's iconic attractions to life but also offers a seamless blend of adventure, storytelling, and exploration, creating a sense of wonder and connection to the brand.
-                  </p>
-                  <div class="pictures">
-                    <figure class="full">
-                    </div>
-                      </div>
+              <p>
+                <p>Universal Studios fans and gamers are seeking a more immersive and engaging way to experience the excitement of the theme park beyond physical visits. Current theme park video games often lack the depth and interactivity that truly capture the unique atmosphere of Universal Studios. Players need a digital experience that not only brings the park's iconic attractions to life but also offers a seamless blend of adventure, storytelling, and exploration, creating a sense of wonder and connection to the brand.
                 </p>
                 <div class="pictures">
                   <figure class="full">
                   </div>
-                    </div> 
-        
-                    <h9>I Like, I Wish, What If</h9>
-                    <hr class="new2">  
-                    <div class="pictures">
-                      <figure class="full">
-                        <ul>
-                          <li><strong>I Like:</strong>
-                            <ul>I like how the game captures the iconic atmosphere of Universal Studios with its detailed environments.
-                              <li>I like the way the gameplay feels engaging, making it fun to explore different attractions virtually.</li>
-                              <li>I like the idea of including hidden secrets and Easter eggs related to the theme park for players to discover.</li>
-                              <li>I like the use of characters and mascots from Universal Studios to guide and interact with players.</li>
-                            </ul>
-                          </li>
-                    
-                          <li><strong>I Wish:</strong>
-                            <ul>
-                              <li>I wish the game offered more customization options for characters and the player's in-game experience.</li>
-                              <li>I wish there were more interactive challenges tied to specific rides, like unique mini-games for each attraction.</li>
-                              <li>I wish the game allowed for multiplayer exploration so friends could experience the park together virtually.</li>
-                              <li>I wish there were seasonal updates in the game that reflect the real-life changes at Universal Studios (e.g., Halloween Horror Nights).</li>
-                            </ul>
-                          </li>
-                    
-                          <li><strong>What If:</strong>
-                            <ul>
-                              <li>What if the game had a dynamic weather system that changed the atmosphere of the park in real-time?</li>
-                              <li>What if players could earn rewards in the game that could be redeemed for discounts or exclusive content at real-life Universal Studios parks?</li>
-                              <li>What if the game allowed players to create their own custom rides or attractions within a sandbox mode?</li>
-                              <li>What if the game had a VR mode, allowing players to fully immerse themselves in the theme park experience?</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </figure>
                     </div>
-                    
-        
-          <h9>Journey Map</h9>
-          <hr class="new2">
-          <div class="pictures2">
-            <figure class="full">
-              <img src="assets/img/jorn.png" width="1250" height="800"   />
-            </div>
-  
-                
-      </div>
-       
-    </div>
-  </div>
-  
-    </figure>
-    </div>
-    <h2> </h2>
-    <div class="under">
-      <figure class="aside">
-      <div class="two">
-    </figure>
-  
-    
-    <h9>Mood Board</h9>
-    <hr class="new2">
-      <div class="pictures2">
-      <figure class="full">
-        <img src="assets/img/moo.png"/ width="1100" height="600" style="margin-bottom: 20px;"      >
-      </div>
-        </div>
-  
-        
+              </p>
+              <div class="pictures">
+                <figure class="full">
+                </div>
+                  </div> 
+      
+                  <h9>I Like, I Wish, What If</h9>
+                  <hr class="new2">  
+                  <div class="pictures">
+                    <figure class="full">
+                      <ul>
+                        <li><strong>I Like:</strong>
+                          <ul>I like how the game captures the iconic atmosphere of Universal Studios with its detailed environments.
+                            <li>I like the way the gameplay feels engaging, making it fun to explore different attractions virtually.</li>
+                            <li>I like the idea of including hidden secrets and Easter eggs related to the theme park for players to discover.</li>
+                            <li>I like the use of characters and mascots from Universal Studios to guide and interact with players.</li>
+                          </ul>
+                        </li>
+                  
+                        <li><strong>I Wish:</strong>
+                          <ul>
+                            <li>I wish the game offered more customization options for characters and the player's in-game experience.</li>
+                            <li>I wish there were more interactive challenges tied to specific rides, like unique mini-games for each attraction.</li>
+                            <li>I wish the game allowed for multiplayer exploration so friends could experience the park together virtually.</li>
+                            <li>I wish there were seasonal updates in the game that reflect the real-life changes at Universal Studios (e.g., Halloween Horror Nights).</li>
+                          </ul>
+                        </li>
+                  
+                        <li><strong>What If:</strong>
+                          <ul>
+                            <li>What if the game had a dynamic weather system that changed the atmosphere of the park in real-time?</li>
+                            <li>What if players could earn rewards in the game that could be redeemed for discounts or exclusive content at real-life Universal Studios parks?</li>
+                            <li>What if the game allowed players to create their own custom rides or attractions within a sandbox mode?</li>
+                            <li>What if the game had a VR mode, allowing players to fully immerse themselves in the theme park experience?</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </figure>
+                  </div>
+                  
+      
+        <h9>Journey Map</h9>
+        <hr class="new2">
+        <div class="pictures2">
+          <figure class="full">
+            <img src="assets/img/jorn.png" width="1250" height="800"   />
+          </div>
 
-      <h9>HI-FI Fidelity Prototyping</h9>
-    <hr class="new2">
-    <div class="pictures2">
-      <figure class="full">
-        <img src="assets/img/Frame 6.png"/>
-      </div>
-
+              
+    </div>
      
-        
-    
-  
-  
-    <hr class="new2">
-  
-  
-  </figure>
-  
   </div>
+</div>
+
+  </figure>
+  </div>
+  <h2> </h2>
+  <div class="under">
+    <figure class="aside">
+    <div class="two">
+  </figure>
+
+  
+  <h9>Mood Board</h9>
+  <hr class="new2">
+    <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/moo.png"/ width="1100" height="600" style="margin-bottom: 20px;"      >
+    </div>
+      </div>
+
+      
+
+    <h9>HI-FI Fidelity Prototyping</h9>
+  <hr class="new2">
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/Frame 6.png"/>
+    </div>
+
+   
+      
+  
+
+
+  <hr class="new2">
+
+
+</figure>
+
+</div>
 </div>
 </article>
 </main>
 
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <div id="footer" class="text-center">
-    <div class="container">
-      <div class="socials-media text-center">
+<!-- ======= Footer ======= -->
+<div id="footer" class="text-center">
+  <div class="container">
+    <div class="socials-media text-center">
 
-        <ul class="list-unstyled">
-          <li><a href="https://medium.com/@juanrojas7812/about"><i class="bi bi-medium"></i></a></li>
-          <li><a href="https://dribbble.com/rojas_design"><i class="bi bi-dribbble"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/juan-rojas444/"><i class="bi bi-linkedin"></i></a></li>
-          <li><a href="https://www.behance.net/JUANROJAS44_"><i class="fab fa-behance"></i></a></li>
+      <ul class="list-unstyled">
+        <li><a href="https://medium.com/@juanrojas7812/about"><i class="bi bi-medium"></i></a></li>
+        <li><a href="https://dribbble.com/rojas_design"><i class="bi bi-dribbble"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/juan-rojas444/"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="https://www.behance.net/JUANROJAS44_"><i class="fab fa-behance"></i></a></li>
 
-        </ul>
-
-      </div>
-
-      <p>&copy; Copyright Juan Rojas. All rights reserved.</p>
-
-      <div class="credits">
+      </ul>
 
     </div>
-  </div><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <p>&copy; Copyright Juan Rojas. All rights reserved.</p>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <div class="credits">
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  </div>
+</div><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 
 </body>
 

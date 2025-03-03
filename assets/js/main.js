@@ -486,9 +486,10 @@ function closeModal() {
 var swiper = new Swiper(".portfolio-details-slider", {
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 5000, // Increase delay for better readability
     disableOnInteraction: false,
   },
+  speed: 1200, // Slows down transition for smooth effect
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -497,7 +498,17 @@ var swiper = new Swiper(".portfolio-details-slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  slidesPerView: 1, // Ensures only one slide is visible at a time
+  spaceBetween: 0, // Prevents overlap or partial visibility
+  centeredSlides: true, // Keeps the active slide centered
+  effect: "slide", // Ensures a smooth sliding effect
+  allowTouchMove: true, // Enables user interaction without breaking autoplay
+  loopAdditionalSlides: 1, // Prevents glitches when looping
+  longSwipes: true, // Ensures intentional swipes
+  longSwipesRatio: 0.5, // Adjusts swipe threshold
+  preventInteractionOnTransition: true, // Prevents rapid swipes from skipping images
 });
+
 
 function openModal() {
   var modal = document.getElementById("imageModal");

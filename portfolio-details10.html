@@ -79,43 +79,52 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/project titanic postcard1final 1.png" alt="Slider Image 1">
+                  <img src="assets/img/Jacks.png" alt="Home Page" class="portfolio-slider-img">
                 </div>
               
-              
+                <div class="swiper-slide">
+                  <img src="assets/img/jp vs jw.jpg" alt="Other Daphney" class="portfolio-slider-img">
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+        
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
+    
+    
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Graphic Design</li>
-                <li><strong>Client</strong>: Project</li>
-                <li><strong>Project Date</strong>: Dec, 2023</li>
+                <li><strong>Category:</strong> Graphic Design</li>
+                <li><strong>Client:</strong> Project</li>
+                <li><strong>Project date:</strong> Feb, 2025</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Titanic Post-Card</h2>
-              <p>
-                This Titanic-themed postcard design captures a nostalgic moment from a young passenger’s perspective, writing a heartfelt letter to his parents, Rose and Winston, aboard the Titanic. Inspired by early 1900s aesthetics, the postcard utilizes vintage typography, aged paper textures, and a muted color palette to reflect the era’s atmosphere. Created as part of a graphic design assignment, this piece showcases my attention to historical details and storytelling through visual elements.
-
-
-
-
-
-
-
-              </p>
+              <h2>Disney Graphic Designs</h2>
+              <p> A collection of graphic designs inspired by various Disney IPs, showcasing unique artwork and creative interpretations of beloved worlds. </p>
             </div>
           </div>
-        
         </div>
-        
-        </div>
-        
+      </div>
     </section>
+    
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    
     <!-- End Portfolio Details Section -->
     
    
@@ -133,7 +142,7 @@
     <div class="container">
       <div class="socials-media text-center">
 
-       
+     
         <ul class="list-unstyled">
           <li><a href="https://medium.com/@juanrojas7812/about"><i class="bi bi-medium"></i></a></li>
           <li><a href="https://dribbble.com/rojas_design"><i class="bi bi-dribbble"></i></a></li>
@@ -141,6 +150,7 @@
           <li><a href="https://www.behance.net/JUANROJAS44_"><i class="fab fa-behance"></i></a></li>
 
         </ul>
+
       </div>
 
       <p>&copy; Copyright Juan Rojas. All rights reserved.</p>

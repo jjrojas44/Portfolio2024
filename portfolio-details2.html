@@ -40,10 +40,9 @@
 
       <a href="index.html" class="logo"><img src="assets/img/logo (2).png" alt="" class="img-fluid"></a>
      
-
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto " href="#header">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link active  scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -75,353 +74,63 @@
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
-
         <div class="row gy-4">
-
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
-                  <img src="assets/img/gamermain.png" alt="">
+                  <img src="assets/img/Naruto UI.jpg" alt="Home Page" class="portfolio-slider-img">
                 </div>
-
                 <div class="swiper-slide">
-                  <img src="assets/img/setting.png" alt="">
+                  <img src="assets/img/Naruto UI.jpg" alt="Other Daphney" class="portfolio-slider-img">
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/gamerscoop pic 2.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/gamerscoop pic 3.png" alt="">
-                </div>
-
               </div>
-              <div class="swiper-pagination"></div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+        
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
-
+    
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Wireframe/Graphic Design</li>
-                <li><strong>Client</strong>: GamerScoop</li>
-                <li><strong>Project date</strong>: JAN, 2022</li>
+                <li><strong>Category:</strong> Video Game Design</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>> YOUR GAMER DREAM TO BUILD A GAMER TEAM.</h2>
-              <p>
-                Gaming news across all platforms and all genres while creating a community for gamers to connect. 
-              </p>
+              <h2>
+                Inventory UI</h2>
+              <p>Explore a collection of unique **Inventory UI** designs, each tailored to different game styles. From grid-based layouts to weight-based systems, this case study showcases various approaches to creating engaging and visually striking **Inventory Menus** in video games.
+                 </p>
             </div>
           </div>
-
         </div>
-
       </div>
-    </section><!-- End Portfolio Details Section -->
-
-    <div class="gutters">
- 
-      <div class="patelco">
-        <h7>Case Study</h7>
-        <div class="secondheader"> 
-    </div>
-
-    <div class="b">
-    <img src="assets/img/gamerscoop.png" width="460" height="345" alt="">
-    </div>
-
-
-  </div>
-</header>
-<article>
-  <figure class="aside1">
-    <div class="module1">
-      <header>
-        <h9>Activities</h9>
-      </header>
-      <ul>
-        <li>User Interviews/Research/User persona</li>
-        <li>Proto/Personas</li>
-        <li>Affinity Diagram/Empathy Map</li>
-        <li>User Insight/Statement/Ideation/Feature Prioritization Matrix</li>
-        <li>Value Proposition/StoryBoard/</li>
-        <li>Competitor Analysis/</li>
-        <li>Wireframes</li>
-      </ul>
-    </div>
-  </figure>
-
-  <dl>
-  <h9>The Problem</h9>
-  <p>Users need an app for everything gaming news and new game/console release as they sometimes miss the window of release, and also have a gaming community to belong to and feel accepted. 
-  </p>
-  <h9>Solution</h9>
-  <p>Create an app that focuses on gaming news across all platforms and all genres while creating a community for gamers to connect 
-  </p>
-
-  <h9>Project</h9>
-  <p>Non Profit Redesign
-  </p>
-  <dl>
-  
-   <h9>Roles</h9>
-    <p>User Research/WireFrame Designer</pp>
-  </dl>
-  <h9>Time</h9>
-      <p>6 Week Project</p>
-  
-      <figure class="aside1">
-        <div class="module1">
-          <header>
-            <h9>Tools Used:</h9>
-          </header>
-      <ul>
-        <li>
-        Figma
-        </li>
-        <li>
-        Trello
-        </li>
-        <li>
-        Google Drive
-        </li>
-        <li>
-        Zoom
-        </li>
-        <li>
-        Excel
-        </li>
-        <li>
-        Powerpoint
-        </li>
-        </ul>
-        </div>
-      </figure>
-
-  <div class="pictures">
-  <figure class="full">
-    <img src="assets/img/pog.png"/>
+    </section>
     
-    <h9>Concept  Advertisement for Gamerscoop</h9>
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
     
-  </figure>
-  </div>
-
-  <hr class="new2">
-
-    <h9>User Research</h9>
-  <figure class="aside1">
-    <div class="two">
-    </div>
-  </figure>
-
-  <h9>Proto-Persona</h9>
-
-  <div class="pictures">
-    <figure class="full">
-      <img src="assets/img/protopersona1.png"/>
-    </div>
-    </figure>
-
-<h9>Interview Plan/Interview Transcript
-</h9>
- 
-<p>For our interviews, we sought to discover the preferred gaming method, thoughts, and opinions based on the gaming scene and the chances of making friends online. 
-</p>
-<P> In this research project, we planned and conducted three interviews with potential users of ages 24-46.
-</P>
-
-<h9>Script and Interview Notes</h9>
-<p><a href="https://docs.google.com/spreadsheets/d/167Ipg9kRMC9hqOkVp2IVSbAtpJ7rpwgd/edit#gid=252035460
-  ">Link To Interview Notes</a></p>  
-
-  <h9>Affinity Diagram</h9>
-  <p>We used an affinity diagram to organize many ideas about the gaming scene, video games, and gaming communities into their natural relationships. The organized output from a brainstorming session led us to several ideas on how to proceed with Gamerscoop. Using the affinity diagram to generate, organize, and consolidate information related to Gamerscoop. After we developed ideas, we grouped them according to their affinity or similarity.</p>
-  <div class="pictures">
-    <figure class="full">
-      <img src="assets/img/affnitydia.png"/>
-    </div>
-     
-  </div>
-</div>
- 
-<h9>Link To Affinity Diagram</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=0%3A1&t=vj21gq6C3rfev7xU-0">Link To Affinity Diagram</a></p>  
-
-  
-  </figure>
-  </div>
-  <h2> </h2>
-  <div class="under">
-    <figure class="aside">
-    <div class="two">
-  </figure>
-  
-  <h9>Empathy Map</h9>
-  <p> We constructed an empathy map to understand potential users' behavior of gamerscoop, but also visually communicate those findings within our group, uniting the team under one shared deeper understanding of our users.</p>
-  <div class="pictures">
-    <figure class="full">
-      <img src="assets/img/Main page for Figma (3).png"/  width="1100" height="600">
-      <img src="assets/img/Main page for Figma (4).png"/ width="1100" height="600" >
-    </div>
-      </div>
-
-      <h9>Link To Empathy Map</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=0%3A1&t=vj21gq6C3rfev7xU-0">Link To Empathy Map</a></p>  
-
-<h9>User Persona</h9>
-<p> Our user Cassandra was used to have a better understanding and empathy with the end-users and to Gain a perspective to help us have a deeper understanding of potential users of gamerscoop to join a safe gaming community.</p>
-<div class="pictures">
-  <figure class="full">
-    <img src="assets/img/Main page for Figma (6).png"/ width="1100" height="600" >
-    <img src="assets/img/Main page for Figma (7).png"/ width="1100" height="600" >
-  </div>
-
-  <hr class="new2">
-
-  <h9>Define And Ideate</h9>
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div>
-
-  <h9>User Insight</h9>
-  <p> Cassandra is a 28 yr RNA nurse looking for a new game to play with her friends. She's seeking a competitive game where she can challenge herself to reach the top game ranks. Cassandra wants a nontoxic gaming community to meet like-minded people and find casual gaming. She wants to balance her gaming work life. 
-  </p>
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div>
-
-      <h9>Problem Statement</h9>
-  <p> Users need an app for everything gaming news and new game/console release as they sometimes miss the window of release and have a community to belong to and feel accepted.
-  </p>
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div>
-
-      <h9>Ideation</h9>
-  <p> We generated ideas on how we could bring gamers together and grow a community on gamerscoop</p>
-  <div class="pictures">
-    <figure class="full">
-      <img src="assets/img/idea.png"/  >
-    </div>
-
-    <h9>Link To Ideation</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=0%3A1&t=6dyU7GXXc2LAJg0H-0">Link To Ideation</a></p>  
-
-<h9>Feature Prioritization Matrix</h9>
-<p> We ranked and organized features of gamerscoop and the viability of what to add and features to make based on customer wants, needs, the amount of time and cost, and technical viability.</p>
-<div class="pictures">
-  <figure class="full">
-    <img src="assets/img/have.png"/ width="800" height="500"  >
-  </div>
-
-  <h9>Feature Prioritization Matrix</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=26%3A2033&t=6dyU7GXXc2LAJg0H-0">Link To Feature Prioritization Matrix</a></p>  
-
-<h9>Value Proposition</h9>
-<p>We created a gaming news app for all consoles/PC and of all genres that can make the user feel they're a part of a like, minded community where they can meet and make friends and get the latest news on everything from  video game updates and video game releases.</p>
-<div class="pictures">
-  <figure class="full">
-    <img src="assets/img/valueprop.png"/ >
-  </div>
-
-  <h9>Value Proposition</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=26%3A2033&t=6dyU7GXXc2LAJg0H-0">Link To Value Proposition</a></p>  
-
-<h9>User Scenerio</h9>
-<p> Cassandra is a 28 yr RNA nurse looking for a new game to play with her friends. She's seeking a competitive game where she can challenge herself to reach the top game ranks. Cassandra wants a nontoxic gaming community to meet like-minded people and find casual gaming. She wants to balance her gaming work life. </p>
-<div class="pictures">
-  <figure class="full">
-    <img src="assets/img/Main page for Figma (10).png"/ width="800" height="500" >
-  </div>
-
-  <h9>User Scenerio</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=49%3A1950&t=6dyU7GXXc2LAJg0H-0"> Link To UserScenerio</a></p>
-
-<h9>StoryBoard</h9>
-<p> Based on our users' needs, we decided to prioritize the news aspect of the app, along with the community part as well. Furthermore, due to their busy schedule, we wanted to make something that would keep the user up to date on the latest and greatest news of the gaming world.
-</p>
-<div class="pictures">
-  <figure class="full">
-    <img src="assets/img/Main page for Figma (11).png"/ width="900" height="700"  >
-  </div>
-
-  <h9>StoryBoard</h9>
-<p><a href="https://www.figma.com/file/xCgiu3wBnUNMLXkJxS5rNy/Main-page-for-Figma?node-id=0%3A1&t=6dyU7GXXc2LAJg0H-0"> Link To StoryBoard</a></p>  
-
-<hr class="new2">
-
-<h9>Prototype</h9>
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div>
-
-    <h9>Competitor Analysis</h9>
-<p>We made a competitor analysis to understand what kind of competition gamerscoop will go up against and plan and identify opportunities to one-up the competition and find an edge. </p>
-<div class="pictures">
-  <figure class="full">
-    <img src="assets/img/Main page for Figma (11).png"/ width="900" height="700"  >
-  </div>
-
-  <h9>Competitor Analysis</h9>
-<p><a href="https://docs.google.com/spreadsheets/d/1ZhdOgNMXgKp3kHlqFK1ZCSLGaljv8n3QLjV6b7X4SEQ/edit#gid=1200966956
-  "> Link To Competitor Analysis</a></p>  
-
-
-    <h9>Lofi Sketches/Hi-Fi Invision/Wireframes</h9>
-  <p>Lo-fi and Hi-Fi sketches which we made to plan out the design of our Wireframe</p>
-  <div class="pictures">
-    <figure class="full">
-      <img src="assets/img/splash screen.png"/>
-    </div>
-
-  <h9>Iterations Made Based on User Test</h9>
-  <p><a href="https://www.figma.com/file/oikZu2pNMu8kN2iree09Pg/Wireframing?node-id=143%3A4485&t=6JAaQ83x2Fplo0ep-0"> Iterations Made Based on User Test</a></p> 
-
-
-  <hr class="new2">
-
-  <h9>Testing And Iterations</h9>
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div>
-
-      <h9>Guerilla Testing Plan & Notes</h9>
-      <p>During our tests, we found the user struggling to see where to go to log in. So, we made an offline variant to our top online bar.
-        It is not easy to find where to go for our forum area.
-      </p>
-      <div class="pictures">
-        <figure class="full">
-        </div>
-      
-        <h9>Guerilla Testing Plan & Notes</h9>
-      <p><a href="https://docs.google.com/spreadsheets/d/10UeFNFXDmLtfiPXYGFaIziVHROF6fbi_/edit#gid=1943762619
-        ">Link To Guerilla Testing Plan & Notes</a></p> 
-        
-        <h9>Final Thoughts/Conclusion</h9>
-      <p>We have to have more information and make our wireframes easier to read and more user-friendly. Have more information on the slide and treat the presentation as a story next time. Have a closing slide to close out the presentation and have answers to questions ready. 
-        Be more informative with wireframes walkthrough and be more open with fixing clickable buttons and fixing lag regarding moving through the app. 
-      </p>
-      <div class="pictures">
-        <figure class="full">
-        </div>
+    <!-- End Portfolio Details Section -->
+    
+   
 
   </figure>
   
   </div>
 </div>
-</article>
 </main>
 
   </main><!-- End #main -->
@@ -431,6 +140,7 @@
     <div class="container">
       <div class="socials-media text-center">
 
+     
         <ul class="list-unstyled">
           <li><a href="https://medium.com/@juanrojas7812/about"><i class="bi bi-medium"></i></a></li>
           <li><a href="https://dribbble.com/rojas_design"><i class="bi bi-dribbble"></i></a></li>

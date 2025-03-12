@@ -79,43 +79,56 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/WElcome.png" alt="Slider Image 1">
+                  <img src="assets/img/Universal studios front cover.jpg" alt="Home Page" class="portfolio-slider-img">
                 </div>
-              
                 <div class="swiper-slide">
-                  <img src="assets/img/Gift.png" alt="Slider Image 2">
+                  <img src="assets/img/universal studios back cover.jpg" alt="Medicare Page" class="portfolio-slider-img">
                 </div>
-              
                 <div class="swiper-slide">
-                  <img src="assets/img/guest listttt.png" alt="Slider Image 3">
+                  <img src="assets/img/HALO INFINITE FRONT BBOX.jpg" alt="Medicare Page" class="portfolio-slider-img">
                 </div>
-              
+                <div class="swiper-slide">
+                  <img src="assets/img/halo infinite back cover.jpg" alt="Other Daphney" class="portfolio-slider-img">
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
+    
+              <!-- Navigation Arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+        
+    
+            <div class="text-center">
+              <button class="enlarge-btn" onclick="openModal()">
+                <i class="fas fa-search-plus"></i> Click to Enlarge
+              </button>
             </div>
           </div>
+    
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong>: Graphic Design</li>
-                <li><strong>Client</strong>: Rojas Family</li>
-                <li><strong>Project Date</strong>: Sep, 2023</li>
+                <li><strong>Category:</strong> Graphic Design</li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Quinceañera Designs</h2>
-              <p>
-                Created the welcome sign, gift sign, and guest list for the Quinceañera celebration.
-              </p>
+              <h2>
+                Video Game Box Covers</h2>
+              <p> A collection of graphic designs inspired by the box art of physical video game copies, featuring front and back cover concepts
+                 </p>
             </div>
           </div>
-        
         </div>
-        
-        </div>
-        
+      </div>
     </section>
+    
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    
     <!-- End Portfolio Details Section -->
     
    
@@ -133,7 +146,7 @@
     <div class="container">
       <div class="socials-media text-center">
 
-       
+     
         <ul class="list-unstyled">
           <li><a href="https://medium.com/@juanrojas7812/about"><i class="bi bi-medium"></i></a></li>
           <li><a href="https://dribbble.com/rojas_design"><i class="bi bi-dribbble"></i></a></li>

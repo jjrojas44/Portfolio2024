@@ -192,12 +192,25 @@ div.b {
   }
 }
 
-hr.new2 {
-  border-top: 1px dotted #b8a07e;
+hhr.new2 {
+  border: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    to right,
+    #b8a07e 0%,
+    #b8a07e 48%,
+    transparent 48%,
+    transparent 52%,
+    #b8a07e 52%,
+    #b8a07e 100%
+  );
   opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
-  animation-delay: 0.5s; /* Delay for the animation */
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
+
+
+
 
 @keyframes fadeIn {
   to {

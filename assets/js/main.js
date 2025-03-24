@@ -584,4 +584,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function showUI(type) {
+  const title = document.getElementById('uiTitle');
+  const description = document.getElementById('uiDescription');
+
+  if (type === 'inventory') {
+      title.innerText = "Inventory UI";
+      description.innerText = "Explore a collection of unique Inventory UI designs, tailored to different game styles...";
+  } else if (type === 'battlepass') {
+      title.innerText = "Battle Pass UI";
+      description.innerText = "An innovative Battle Pass UI experience that enhances progression tracking...";
+  }
+}
+
+
+ddocument.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".ui-tab").forEach(button => {
+      button.addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default link behavior
+          const targetPage = this.getAttribute("href");
+          window.location.assign(targetPage); // Navigate to the page
+      });
+  });
+});
+
+
+var swiper = new Swiper(".swiper", {
+  loop: true,
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+});
+
 

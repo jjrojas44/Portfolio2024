@@ -1013,6 +1013,41 @@ div.container {
   background-color: #cbbfa5;
 }
 
+.ui-tab {
+  background-color: #4a90e2; /* Vibrant blue */
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ui-tab i {
+  font-size: 20px;
+}
+
+.ui-tab:hover {
+  background-color: #3578c9; /* Darker blue */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ui-tabs {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
 /* Modal Styling */
 .modal {
   display: none;

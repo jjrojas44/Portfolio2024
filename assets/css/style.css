@@ -1612,35 +1612,35 @@ div.pictures1 {
 }
 
 div.pictures2 {
-  width: 75%;
-  background: linear-gradient(to bottom right, #7f7f7f, #b0a08e);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  width: 65%; /* Reduced width for a more focused presentation */
+  background: linear-gradient(to bottom right, #8c8c8c, #b8a896);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   font-family: "Helvetica Neue", sans-serif;
-  padding: 15px;
+  padding: 12px;
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 div.pictures2 img {
-  width: 100%;
-  height: 300px;
+  width: 95%; /* Slightly smaller than full width for spacing */
+  height: 260px; /* Reduced height for a more refined look */
   object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-  border-radius: 12px;
+  border-radius: 10px;
   opacity: 0;
-  animation: fadeIn 0.6s ease-in-out forwards;
-  filter: brightness(1.1) contrast(1.2);
+  animation: fadeIn 0.5s ease-in-out forwards;
+  filter: brightness(1.05) contrast(1.15);
 }
 
-/* Animation to make images load smoothly */
+/* Smooth fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1652,20 +1652,15 @@ div.pictures2 img {
   }
 }
 
-div.pictures2 {
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
 div.pictures2:hover {
-  transform: scale(1.00);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35), 0 14px 28px rgba(0, 0, 0, 0.3);
-  background-color: #c5b6a0;
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), 0 10px 24px rgba(0, 0, 0, 0.25);
+  background-color: #d1c2ab;
 }
 
 div.pictures2:hover img {
-  transform: scale(.92);
-  filter: brightness(1.0) contrast(1.4);
+  transform: scale(0.96);
+  filter: brightness(1) contrast(1.2);
 }
 
 /* View Image Button */

@@ -1612,7 +1612,7 @@ div.pictures1 {
 }
 
 div.pictures2 {
-  width: 65%; /* Reduced width for a more focused presentation */
+  width: 75%; /* Reduced width for a more focused presentation */
   background: linear-gradient(to bottom right, #8c8c8c, #b8a896);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
@@ -1630,7 +1630,7 @@ div.pictures2 {
 }
 
 div.pictures2 img {
-  width: 95%; /* Slightly smaller than full width for spacing */
+  width: 75%; /* Slightly smaller than full width for spacing */
   height: 260px; /* Reduced height for a more refined look */
   object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;

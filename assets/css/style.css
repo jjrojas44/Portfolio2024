@@ -991,6 +991,25 @@ div.container {
   height: 750px; /* Ensures uniform slide height */
 }
 
+.video-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
 .enlarge-btn {
   background-color: #e0d4b8;
   color: #fff;

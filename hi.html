@@ -174,3 +174,147 @@ In contrast, the bottom half showcases the sleek, modern aesthetic of *Jurassic 
     </div>
   </div>
 </section>
+
+
+<!-- Tabs Navigation -->
+<div class="container my-4">
+  <ul class="nav nav-tabs justify-content-center" id="graphicTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="disney-tab" data-bs-toggle="tab" data-bs-target="#disney" type="button" role="tab">Disney Graphics</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="universal-tab" data-bs-toggle="tab" data-bs-target="#universal" type="button" role="tab">Universal Studios</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="videogame-tab" data-bs-toggle="tab" data-bs-target="#videogame" type="button" role="tab">Video Game Box Covers</button>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content pt-4" id="graphicTabsContent">
+    
+    <!-- Disney Graphics -->
+    <div class="tab-pane fade show active" id="disney" role="tabpanel">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/csrs ;;+land.jpg" alt="Inventory UI - 1" class="portfolio-slider-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/villains land.jpg" alt="Inventory UI - 2" class="portfolio-slider-img">
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="text-center">
+            <button class="enlarge-btn" onclick="openModal()">
+              <i class="fas fa-search-plus"></i> Click to Enlarge
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project Information</h3>
+            <ul>
+              <li><strong>Category:</strong> Graphic Design</li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>Disney Graphics</h2>
+            <p>Different graphic designs centered around Disney IPs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Universal Studios -->
+    <div class="tab-pane fade" id="universal" role="tabpanel">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/jp vs jw.jpg" alt="Battle Pass UI - 1" class="portfolio-slider-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/Jacks.png" alt="Battle Pass UI - 2" class="portfolio-slider-img">
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="text-center">
+            <button class="enlarge-btn" onclick="openModal()">
+              <i class="fas fa-search-plus"></i> Click to Enlarge
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project Information</h3>
+            <ul>
+              <li><strong>Category:</strong> Graphic Design</li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>Universal Studios Graphic Designs</h2>
+            <p>Different graphic designs centered around Universal Studios IPs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Game Box Covers -->
+    <div class="tab-pane fade" id="videogame" role="tabpanel">
+      <div class="row gy-4">
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/Universal studios front cover.jpg" alt="Home Page" class="portfolio-slider-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/universal studios back cover.jpg" alt="Medicare Page" class="portfolio-slider-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/HALO INFINITE FRONT BBOX.jpg" alt="Halo Infinite Front" class="portfolio-slider-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/halo infinite back cover.jpg" alt="Halo Infinite Back" class="portfolio-slider-img">
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="text-center">
+            <button class="enlarge-btn" onclick="openModal()">
+              <i class="fas fa-search-plus"></i> Click to Enlarge
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="portfolio-info">
+            <h3>Project Information</h3>
+            <ul>
+              <li><strong>Category:</strong> Graphic Design</li>
+            </ul>
+          </div>
+          <div class="portfolio-description">
+            <h2>Video Game Box Covers</h2>
+            <p>A collection of graphic designs inspired by physical video game box art, including front and back cover concepts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>

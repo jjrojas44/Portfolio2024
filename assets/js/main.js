@@ -617,4 +617,129 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Swiper
+  const swiper = new Swiper('.swiper', {
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 
+  // Get the lock button and video elements
+  const lockButtons = document.querySelectorAll('.lock-button');
+  const videos = document.querySelectorAll('.portfolio-video');
+
+  // Function to disable swiper pagination when video is playing
+  function lockSwiper() {
+    swiper.allowTouchMove = false; // Disable swipe interactions
+    swiper.pagination.disable(); // Disable pagination
+  }
+
+  // Function to unlock swiper when video ends
+  function unlockSwiper() {
+    swiper.allowTouchMove = true; // Re-enable swipe interactions
+    swiper.pagination.enable(); // Enable pagination
+  }
+
+  // Set up event listeners for all videos
+  videos.forEach((video) => {
+    // Lock swiper when video is played
+    video.addEventListener('play', function () {
+      lockSwiper();
+    });
+
+    // Unlock swiper when video ends
+    video.addEventListener('ended', function () {
+      unlockSwiper();
+    });
+  });
+
+  // Button click handler to lock or unlock swiper
+  lockButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      // Check if the swiper is locked or not
+      if (swiper.allowTouchMove) {
+        lockSwiper(); // Lock swiper
+        button.textContent = "Unlock Video"; // Change button text
+      } else {
+        unlockSwiper(); // Unlock swiper
+        button.textContent = "Lock Video"; // Change button text
+      }
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.video-slide');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (current < slides.length - 1) {
+      current++;
+      showSlide(current);
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (current > 0) {
+      current--;
+      showSlide(current);
+    }
+  });
+
+  // Optional: Disable buttons while playing
+  slides.forEach(slide => {
+    const video = slide.querySelector('video');
+    video.addEventListener('play', () => {
+      nextBtn.disabled = true;
+      prevBtn.disabled = true;
+    });
+    video.addEventListener('ended', () => {
+      nextBtn.disabled = false;
+      prevBtn.disabled = false;
+    });
+    video.addEventListener('pause', () => {
+      nextBtn.disabled = false;
+      prevBtn.disabled = false;
+    });
+  });
+
+  // Initialize with the first slide
+  showSlide(current);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("videoTrack");
+  const slides = document.querySelectorAll(".video-slide");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+});

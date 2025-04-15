@@ -991,6 +991,163 @@ div.container {
   height: 750px; /* Ensures uniform slide height */
 }
 
+/* General Styling for Portfolio Section */
+#portfolio-details .portfolio-video {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Manual Slider Container */
+.custom-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-display-area {
+  width: 100%;
+  position: relative;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-slide.active {
+  display: flex;
+}
+
+/* Navigation Buttons */
+.manual-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background-color: #0083b4;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #005f80;
+}
+
+.manual-slider {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.video-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  max-height: 650px;
+  height: 100%;
+}
+
+.video-container video {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.video-container.active {
+  display: flex;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.navigation-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.video-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+  background: #000;
+  border-radius: 10px;
+}
+
+.video-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%; /* 4 videos × 100% */
+}
+
+.video-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-slide video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.carousel-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #555;
+}
+
+
 .video-wrapper {
   width: 100%;
   height: auto;
@@ -1008,6 +1165,52 @@ div.container {
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+.lock-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.lock-button:focus {
+  outline: none;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+
+.swiper-pagination {
+  pointer-events: none;
+}
+
+.lock-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.lock-button:focus {
+  outline: none;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
 
 
 .enlarge-btn {

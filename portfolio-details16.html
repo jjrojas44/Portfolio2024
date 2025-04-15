@@ -74,78 +74,95 @@
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
-        <!-- Inventory UI Section -->
-        <div class="row gy-4">
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/Group 41 (1).png" alt="Inventory UI - 1" class="portfolio-slider-img">
+    
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs mb-4" id="portfolioTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventory" type="button" role="tab">Inventory UI</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="battlepass-tab" data-bs-toggle="tab" data-bs-target="#battlepass" type="button" role="tab">Battle Pass UI</button>
+          </li>
+        </ul>
+    
+        <!-- Tab Content -->
+        <div class="tab-content" id="portfolioTabsContent">
+    
+          <!-- Inventory UI Tab -->
+          <div class="tab-pane fade show active" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img src="assets/img/Group 41 (1).png" alt="Inventory UI - 1" class="portfolio-slider-img">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/Group 42.png" alt="Inventory UI - 2" class="portfolio-slider-img">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/Group 42.png" alt="Inventory UI - 2" class="portfolio-slider-img">
+                <div class="text-center">
+                  <button class="enlarge-btn" onclick="openModal()">
+                    <i class="fas fa-search-plus"></i> Click to Enlarge
+                  </button>
                 </div>
               </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-            <div class="text-center">
-              <button class="enlarge-btn" onclick="openModal()">
-                <i class="fas fa-search-plus"></i> Click to Enlarge
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category:</strong> Video Game UI</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Inventory UI</h2>
-              <p>Explore different **Inventory UI** designs, ranging from grid-based layouts to weight-based systems.</p>
-            </div>
-          </div>
-        </div>
-    
-        <hr class="new2"> <!-- Divider Between Sections -->
-    
-        <!-- Battle Pass UI Section -->
-        <div class="row gy-4">
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/naruto BP.jpg" alt="Battle Pass UI - 1" class="portfolio-slider-img">
+              <div class="col-lg-4">
+                <div class="portfolio-info">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category:</strong> Video Game UI</li>
+                  </ul>
                 </div>
-                
+                <div class="portfolio-description">
+                  <h2>Inventory UI</h2>
+                  <p>Explore different <strong>Inventory UI</strong> designs, ranging from grid-based layouts to weight-based systems.</p>
+                </div>
               </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-            <div class="text-center">
-              <button class="enlarge-btn" onclick="openModal()">
-                <i class="fas fa-search-plus"></i> Click to Enlarge
-              </button>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category:</strong> Video Game UI</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Battle Pass UI</h2>
-              <p>Explore a collection of **Battle Pass UI** designs, focusing on progression, rewards, and player engagement.</p>
+    
+          <!-- Battle Pass UI Tab -->
+          <div class="tab-pane fade" id="battlepass" role="tabpanel" aria-labelledby="battlepass-tab">
+            <div class="row gy-4">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img src="assets/img/naruto BP.jpg" alt="Battle Pass UI - 1" class="portfolio-slider-img">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <div class="text-center">
+                  <button class="enlarge-btn" onclick="openModal()">
+                    <i class="fas fa-search-plus"></i> Click to Enlarge
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="portfolio-info">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category:</strong> Video Game UI</li>
+                  </ul>
+                </div>
+                <div class="portfolio-description">
+                  <h2>Battle Pass UI</h2>
+                  <p>Explore a collection of <strong>Battle Pass UI</strong> designs, focusing on progression, rewards, and player engagement.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+    
+        </div> <!-- End of tab-content -->
+    
       </div>
     </section>
-    
     
     <!-- Modal for Enlarged Image -->
     <div id="imageModal" class="modal" onclick="closeModal()">

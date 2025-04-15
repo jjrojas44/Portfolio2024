@@ -80,31 +80,38 @@
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/P1.jpg" alt="Project Image 1">
+                  <img src="assets/img/P1.jpg" alt="Project Image 1" onclick="openImageModal(this)">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/front page2.png" alt="Front Page 2">
+                  <img src="assets/img/front page2.png" alt="Front Page 2" onclick="openImageModal(this)">
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page3.png" alt="Front Page 3">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page3.png" alt="Front Page 3" onclick="openImageModal(this)">
+               
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page4.png" alt="Front Page 4">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page4.png" alt="Front Page 4" onclick="openImageModal(this)">
+                
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page 5.png" alt="Front Page 5">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page 5.png" alt="Front Page 5" onclick="openImageModal(this)">
+                 
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page6.png" alt="Front Page 6">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page6.png" alt="Front Page 6" onclick="openImageModal(this)">
+                 
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page7.png" alt="Front Page 7">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page7.png" alt="Front Page 7" onclick="openImageModal(this)">
+                
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page8.png" alt="Front Page 8">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page8.png" alt="Front Page 8" onclick="openImageModal(this)">
+                
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page9.png" alt="Front Page 9">
+                <div class="swiper-slide text-center">
+                  <img src="assets/img/front page9.png" alt="Front Page 9" onclick="openImageModal(this)">
+               
                 </div>
               </div>
  <!-- Navigation Arrows -->
@@ -113,10 +120,9 @@
 </div>
 
 
-<div class="text-center">
- <button class="enlarge-btn" onclick="openModal()">
-   <i class="fas fa-search-plus"></i> Click to Enlarge
- </button>
+<div id="imageModal" class="image-modal">
+  <span class="close" onclick="closeImageModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
 </div>
 </div>
           <div class="col-lg-4">

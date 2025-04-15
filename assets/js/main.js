@@ -743,3 +743,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateCarousel();
 });
+
+function openModalFromButton(button) {
+  const slider = button.closest('.row').querySelector('.swiper');
+  const activeSlide = slider.querySelector('.swiper-slide.swiper-slide-active img');
+
+  if (activeSlide) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = activeSlide.src;
+    modalImg.alt = activeSlide.alt || "Enlarged Image";
+  }
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+function openImageModal(imgElement) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = imgElement.src;
+}
+
+function closeImageModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+// Optional: Close modal on outside click
+window.onclick = function(event) {
+  var modal = document.getElementById("imageModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}

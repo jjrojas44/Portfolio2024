@@ -3939,6 +3939,26 @@ textarea.form-control-lg {
   cursor: default;
 }
 
+/* Default tab text color */
+.nav-tabs .nav-link {
+  color: rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  border: none;
+}
+
+/* Active tab text color */
+.nav-tabs .nav-link.active {
+  color: #e0d4b8;
+  background-color: transparent;
+  border: none;
+}
+
+/* Optional: Add hover effect if you want */
+.nav-tabs .nav-link:hover {
+  color: #e0d4b8;
+}
+
+
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
 }
@@ -3948,19 +3968,24 @@ textarea.form-control-lg {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+  color: rgba(255, 255, 255, 0.2); /* Inactive tab text color */
 }
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
   isolation: isolate;
 }
+
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
   background-color: transparent;
   border-color: transparent;
 }
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #e0d4b8; /* Active tab text color */
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }

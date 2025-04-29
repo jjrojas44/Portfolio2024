@@ -1951,7 +1951,7 @@ div.pictures2:hover .view-image-btn {
 
 
 div.pictures3 {
-  width: 95%; /* Reduced width for a more focused presentation */
+  width: 95%;
   background: linear-gradient(to bottom right, #8c8c8c, #b8a896);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
@@ -1961,22 +1961,26 @@ div.pictures3 {
   overflow: hidden;
   border-radius: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
   display: flex;
+  flex-wrap: wrap; /* Important — allows images to wrap */
   justify-content: center;
-  align-items: center;
   gap: 16px;
 }
 
+div.pictures3 figure.full {
+  margin: 0;
+}
+
 div.pictures3 img {
-  width: 75%; /* Slightly smaller than full width for spacing */
-  height: 260px; /* Reduced height for a more refined look */
+  width: 120px;
+  height: auto;
   object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   border-radius: 10px;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out forwards;
   filter: brightness(1.05) contrast(1.15);
+  display: block;
 }
 
 /* Smooth fade-in animation */
@@ -1992,7 +1996,7 @@ div.pictures3 img {
 }
 
 div.pictures3:hover {
-  transform: scale(0.95);
+  transform: scale(0.98);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), 0 10px 24px rgba(0, 0, 0, 0.25);
   background-color: #d1c2ab;
 }
@@ -2024,11 +2028,6 @@ div.pictures3:hover .view-image-btn {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-
-
-
-
-
 
 .view-image-btn:active {
   transform: scale(0.97);

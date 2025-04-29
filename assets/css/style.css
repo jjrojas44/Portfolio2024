@@ -1992,13 +1992,13 @@ div.pictures3 img {
 }
 
 div.pictures3:hover {
-  transform: scale(0.70);
+  transform: scale(0.95);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), 0 10px 24px rgba(0, 0, 0, 0.25);
   background-color: #d1c2ab;
 }
 
 div.pictures3:hover img {
-  transform: scale(0.70);
+  transform: scale(1.03);
   filter: brightness(1) contrast(1.2);
 }
 

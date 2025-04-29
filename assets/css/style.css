@@ -1951,7 +1951,7 @@ div.pictures2:hover .view-image-btn {
 
 
 div.pictures3 {
-  width: 95%;
+  width: 100%;
   background: linear-gradient(to bottom right, #8c8c8c, #b8a896);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
@@ -1962,9 +1962,11 @@ div.pictures3 {
   border-radius: 14px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   display: flex;
-  flex-wrap: wrap; /* Important — allows images to wrap */
-  justify-content: center;
-  gap: 16px;
+  /* Important — allows images to wrap */
+  justify-content: flex-start;
+  white-space: nowrap; /* Prevents images from wrapping into a new line */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  gap: 1px;
 }
 
 div.pictures3 figure.full {
@@ -1972,8 +1974,8 @@ div.pictures3 figure.full {
 }
 
 div.pictures3 img {
-  width: 120px;
-  height: auto;
+  width: 280px;
+  height: 160px;
   object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   border-radius: 10px;

@@ -2017,7 +2017,22 @@ figure.full img {
 }
 
 
+.figma-embed-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+}
 
+.figma-embed-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 4px;
+}
 
 
 

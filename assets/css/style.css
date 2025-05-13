@@ -2004,7 +2004,17 @@ div.pictures-container .pictures2 {
 
 
 
+figure.full {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
 
+figure.full img {
+  width: 45%;
+  flex: 0 0 auto;
+}
 
 
 

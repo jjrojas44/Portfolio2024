@@ -991,6 +991,50 @@ div.container {
   height: 750px; /* Ensures uniform slide height */
 }
 
+.case-study-gallery {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.case-study-gallery .main-image {
+  text-align: center;
+}
+
+.case-study-gallery .main-image img {
+  width: 35%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.case-study-gallery .thumbnail-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.case-study-gallery .thumbnail-pagination .thumb {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.case-study-gallery .thumbnail-pagination .thumb img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.case-study-gallery .thumbnail-pagination .thumb img:hover {
+  transform: scale(1.05);
+}
+
+
 /* General Styling for Portfolio Section */
 #portfolio-details .portfolio-video {
   width: 100%;

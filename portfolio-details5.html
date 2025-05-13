@@ -76,52 +76,46 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
         <div class="row gy-4">
+          
+          <!-- Main Gallery Section -->
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/P1.jpg" alt="Project Image 1" onclick="openImageModal(this)">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/front page2.png" alt="Front Page 2" onclick="openImageModal(this)">
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page3.png" alt="Front Page 3" onclick="openImageModal(this)">
-               
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page4.png" alt="Front Page 4" onclick="openImageModal(this)">
-                
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page 5.png" alt="Front Page 5" onclick="openImageModal(this)">
-                 
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page6.png" alt="Front Page 6" onclick="openImageModal(this)">
-                 
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page7.png" alt="Front Page 7" onclick="openImageModal(this)">
-                
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page8.png" alt="Front Page 8" onclick="openImageModal(this)">
-                
-                </div>
-                <div class="swiper-slide text-center">
-                  <img src="assets/img/front page9.png" alt="Front Page 9" onclick="openImageModal(this)">
-               
-                </div>
+            <div class="gallery-container">
+              <div class="main-image">
+                <img id="displayedImage" src="assets/img/P1.jpg" alt="Main Image">
               </div>
- <!-- Navigation Arrows -->
- <div class="swiper-button-prev"></div>
- <div class="swiper-button-next"></div>
-</div>
-
-
-
-</div>
+              <div class="thumbnail-pagination mt-3">
+                <button class="thumb" onclick="changeImage('assets/img/P1.jpg')">
+                  <img src="assets/img/P1.jpg" alt="Thumb 1">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page2.png')">
+                  <img src="assets/img/front page2.png" alt="Thumb 2">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page3.png')">
+                  <img src="assets/img/front page3.png" alt="Thumb 3">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page4.png')">
+                  <img src="assets/img/front page4.png" alt="Thumb 4">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page 5.png')">
+                  <img src="assets/img/front page 5.png" alt="Thumb 5">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page6.png')">
+                  <img src="assets/img/front page6.png" alt="Thumb 6">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page7.png')">
+                  <img src="assets/img/front page7.png" alt="Thumb 7">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page8.png')">
+                  <img src="assets/img/front page8.png" alt="Thumb 8">
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/front page9.png')">
+                  <img src="assets/img/front page9.png" alt="Thumb 9">
+                </button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Portfolio Info Section -->
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
@@ -136,9 +130,11 @@
               <p>A redesign of the Universal Studios website.</p>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
+    
 
      <!-- Modal for Enlarged Image -->
      
@@ -155,29 +151,28 @@
   </div>
 </header>
 <article>
- 
-    <h9> Project Overview</h9>
-    <ul>
-        <li> <strong>Project Name:</strong> Universal Studios Website Redesign</li>
-        <li> <strong>Role:</strong> UX/UI Designer (Solo Designer)</li>
-        <li> <strong>Tools Used:</strong> Figma, Adobe XD, Photoshop, Google Drive/Docs, Coolors</li>
-        <li> <strong>Timeline:</strong> 5 Weeks</li>
-        <li> <strong>Objective:</strong> Enhance usability, navigation, and booking experience while modernizing the website's design for a seamless user journey.</li>
-    </ul>
-</section>
-     
-    </dl>
-    <h9>Value Added</h9>
-		    <p>The Universal Orlando website would benefit from a UX/UI redesign that creates an improved user experience through simple navigation while avoiding excessive text. The combination of visual cues and smooth interactions enables users to locate information easily which leads them through their journey without difficulty.</p>
-     
-
-  <div class="pictures">
-  <figure class="full">
-    <img src="assets/img/download (30).jpg"/ width="400" height="425" >
-   
-
-    
-  </figure>
+  <div style="display: flex; align-items: center; gap: 40px; font-family: sans-serif;">
+    <!-- Image Section -->
+    <div>
+      <img src="assets/img/download (30).jpg" alt="Universal Studios Redesign Screenshot" style="width: 350px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" />
+    </div>
+  
+    <!-- Project Overview Text Section -->
+    <div>
+      <h9 style="font-size: 28px; margin-bottom: 20px;">Project Overview</h9>
+      <ul style="list-style: none; padding: 0; line-height: 1.8;">
+        <li><strong>Project Name:</strong> Universal Studios Website Redesign</li>
+        <li><strong>Role:</strong> UX/UI Designer (Solo Designer)</li>
+        <li><strong>Tools Used:</strong> Figma, Adobe XD, Photoshop, Google Drive/Docs, Coolors</li>
+        <li><strong>Timeline:</strong> 5 Weeks</li>
+        <li><strong>Objective:</strong> Enhance usability, navigation, and booking experience while modernizing the website's design for a seamless user journey.</li>
+      </ul>
+      <h9 style="font-size: 22px; margin-top: 20px;">Value Added</h9>
+      <p style="max-width: 500px; line-height: 1.6;">
+        The Universal Orlando website would benefit from a UX/UI redesign that creates an improved user experience through simple navigation while avoiding excessive text. 
+        The combination of visual cues and smooth interactions enables users to locate information easily, leading them through their journey without difficulty.
+      </p>
+    </div>
   </div>
 
   <figure class="aside1">
@@ -201,241 +196,148 @@
   </ul>
 
 
- <h9>Research & User Insights</h9> 
+  <h2>Research</h2>
 
- <hr class="new2">
-
-    <h9>Persona</h9>
-
-  <hr class="new2">
-
-  <div class="pictures2">
-    <figure class="full">
-      <img src="assets/img/universalredesignUserPersona (2).png"/ width="920" height="700" >
+<div class="section centered">
+  <h3 class="section-title">Persona</h3>
+  <div class="pictures-container">
+    <div class="pictures2">
+      <img src="assets/img/universalredesignUserPersona (2).png" width="920" height="700">
     </div>
-    </figure>
-
-    <h9>User Insight</h9>
-    <hr class="new2">
-    <p>Emily Carter, a 34-year-old marketing manager from Orlando, is very detail-oriented and wants a seamless, visually engaging and information-rich digital experience. She is a mother and values efficiency, clear navigation and well-structured content when planning trips for her family. However, she finds the current Universal Studios website overwhelming and difficult to navigate, which makes trip planning more frustrating than exciting.</p>        <figure class="full">
-      </div>
-        </div>
-
-        <h9>How Might We</h9>
-        <hr class="new2">
-        <ul>
-          <li><strong>Create a streamlined and visually intuitive Universal Studios website</strong> that makes trip planning effortless for detail-oriented users like Emily.</li>
-          <li><strong>Enhance the booking process</strong> to be more user-friendly, reducing the time and effort required to find relevant information.</li>
-          <li><strong>Provide a personalized experience</strong> that caters to both Emily’s professional expectations for usability and her personal needs as a busy mom.</li>
-      </ul>
-        <figure class="full">
-          </div>
-            </div>
-            
-            <h9>POV Statement </h9>
-            <hr class="new2">
-            As a marketing manager and mother, Emily Carter requires a more intuitive and structured Universal Studios website because she finds the current site overwhelming and difficult to navigate. We can ensure that Emily can quickly find what she needs without frustration by creating a streamlined, user-friendly interface with clear navigation and efficient trip-planning tools, making her planning experience as enjoyable as the trip itself.       <figure class="full">
-              </div>
-                </div>   
-
-   
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div> 
-      
-      <h9>I like,I Wish,What If </h9>
-      <hr class="new2">
-      <div class="pictures2">
-        <figure class="full">
-          <img src="assets/img/i like universal studios.png"/>
-        </div>
-       
-        <h9>Feature Prioritization Matrix</h9>
-        <hr class="new2">
-        <div class="pictures2">
-          <figure class="full">
-            <img src="assets/img/feature universal.png"/>
-          </div>
-
-          <h9>Value Proposition Canvas</h9>
-          <hr class="new2">
-        <div class="pictures2">
-          <figure class="full">
-            <img src="assets/img/value universal.png"/>
-          </div> 
-
-      
-              
-    </div>
-     
   </div>
 </div>
 
-  </figure>
+<div class="section centered">
+  <h3 class="section-title">User Insight</h3>
+  <p class="center-text">Emily Carter, a 34-year-old marketing manager from Orlando, is very detail-oriented and wants a seamless, visually engaging and information-rich digital experience...</p>
+</div>
+
+<div class="section centered">
+  <h3 class="section-title">How Might We</h3>
+  <ul>
+    <li><strong>Create a streamlined and visually intuitive Universal Studios website</strong> that makes trip planning effortless for detail-oriented users like Emily.</li>
+    <li><strong>Enhance the booking process</strong> to be more user-friendly, reducing the time and effort required to find relevant information.</li>
+    <li><strong>Provide a personalized experience</strong> that caters to both Emily’s professional expectations for usability and her personal needs as a busy mom.</li>
+  </ul>
+</div>
+
+<div class="section centered">
+  <h3 class="section-title">POV Statement</h3>
+  <p class="center-text">As a marketing manager and mother, Emily Carter requires a more intuitive and structured Universal Studios website because she finds the current site overwhelming and difficult to navigate...</p>
+</div>
+
+<div class="section centered">
+  <h3 class="section-title">Feature Prioritization Matrix</h3>
+  <div class="pictures-container">
+    <div class="pictures2">
+      <img src="assets/img/feature universal.png">
+    </div>
   </div>
-  <h2> </h2>
-  <div class="under">
-    <figure class="aside">
-    <div class="two">
-  </figure>
-
-  
-  <h9>Empathy Map</h9>
-  <hr class="new2">
-
-  <div class="pictures2">
-    <figure class="full">
-      <img src="assets/img/Blue Yellow Simple Empathy Map Brainstorm.png"/ width="1100" height="600" style="margin-bottom: 20px;"    >
-    </div>
-      </div>
-
-      <h9>UI Style Guide</h9>
-      <hr class="new2">
-      <div class="pictures2">
-        <figure class="full">
-          <img src="assets/img/styleguideo.png"/   >
-        </div>
-
-
-      <h9>Card Sorting </h9>
-      <hr class="new2">
-      <div class="pictures2">
-        <figure class="full">
-          <img src="assets/img/universal card sorting.png"/ width="1100" height="600" >
-        </div>
-          </div>
-
-          <hr class="new2">
-
-    <h9>Wireframe & Design Evolution</h9>
-
-    <hr class="new2">
-
-        
-          <h9>Low Fidelity</h9>
-          <hr class="new2">
-          <div class="pictures2">
-            <figure class="full">
-              <img src="assets/img/main page.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/introduction.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/Frame 9.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/Frame 8.png" width="1300" height="700" style="margin-bottom: 20px;">
-            </figure>
-          </div>
-
-
-          
-          <h9>High Fidelity</h9>
-          <hr class="new2">
-          <div class="pictures2">
-            <figure class="full">
-              <img src="assets/img/P1.jpg" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/front page4.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/front page2.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/front page3.png" width="1300" height="700" style="margin-bottom: 20px;">
-            </figure>
-          </div>
-          
-          <h9>Interactive Prototype</h9>
-          <hr class="new2">
-          
-          <p>
-             Experience the <strong>interactive prototype</strong> of the <span class="highlight">Universal Studios redesign</span>.
-          </p>
-          
-         
-          <video controls width="100%">
-            <source src="assets/videos/universal-redesign.mp4" type="video/mp4">
-           
-          </video>
-        
-
-          <h9>Iteration: First Iteration vs. Final Iteration</h9>
-
-          <hr class="new2">
-
-<!-- Iteration Group (Both First & Final Inside One Div) -->
-
-    <div class="pictures2">
-        <!-- First Iteration -->
-        <figure class="full">
-          
-            <img src="assets/img/MacBook Pro 16_ - 1.png" width="1300" height="700" alt="First Iteration 1">
-       
-        </figure>
-
-        <!-- Final Iteration -->
-        
-        <figure class="full">
-            <img src="assets/img/Universalfrontpage.png" width="1300" height="700" alt="Final Iteration 1">
-               <figcaption> First Iteration: Initial Concept & Layout</figcaption>  
-        </figure>
-    </div>
 </div>
 
-<!-- Iteration 2 -->
-
+<div class="section centered">
+  <h3 class="section-title">Empathy Map</h3>
+  <div class="pictures-container">
     <div class="pictures2">
-        <!-- First Iteration -->
-        <figure class="full">
-            <img src="assets/img/P1.jpg" width="1300" height="700" alt="First Iteration 2">
-           
-        </figure>
-
-        <!-- Final Iteration -->
-       
-        <figure class="full">
-            <img src="assets/img/front page2.png" width="1300" height="700"  alt="Final Iteration 2">
-            <figcaption> Final Iteration: Polished & Refined Design</figcaption>
-        </figure>
+      <img src="assets/img/Blue Yellow Simple Empathy Map Brainstorm.png" width="1100" height="600">
     </div>
-</div> 
-
-
-<h9>Universal Studios Website vs. My Redesign</h9>
-<hr class="new2">
-
-<p class="comparison-description">
-    A side-by-side comparison of the <span class="highlight">original Universal Studios website</span> and my <strong>modern redesign</strong>.
-</p>
-
-<!-- Comparison Section (Before & After) -->
-
-    <div class="pictures2">
-        <!-- Original Universal Studios Site -->
-        <figure class="full">
-            <img src="assets/img/front page3 orignal.png" width="1300" height="700" alt="Original Universal Studios Site">
-           
-        </figure>
-
-        <!-- My Redesign -->
-        
-        <figure class="full">
-            <img src="assets/img/front page7 orignal.png"width="1300" height="700"  alt="My Universal Redesign">
- <figcaption>Original Universal Studios Website</figcaption>
-        </figure>
-    </div>
+  </div>
 </div>
 
-<!-- Comparison 2: Navigation -->
-
+<div class="section centered">
+  <h3 class="section-title">UI Style Guide</h3>
+  <div class="pictures-container">
     <div class="pictures2">
-        <!-- Original Site Navigation -->
-        <figure class="full">
-            <img src="assets/img/front page3.png"width="1300" height="700"  alt="Original Navigation">
-          
-        </figure>
-
-        <!-- My Redesigned Navigation -->
-      
-        <figure class="full">
-            <img src="assets/img/front page7.png"width="1300" height="700"  alt="Redesigned Navigation">
-        <figcaption>My redesign</figcaption>
-        </figure>
+      <img src="assets/img/styleguideo.png">
     </div>
+  </div>
 </div>
 
+<h2>Wireframe & Design Evolution</h2>
+
+<div class="section centered">
+  <h3 class="section-title">Low Fidelity</h3>
+  <div class="pictures-container">
+    <div class="pictures2"><img src="assets/img/Frame 9.png"></div>
+    <div class="pictures2"><img src="assets/img/Frame 8.png"></div>
+  </div>
+
+  <h3 class="section-title">High Fidelity</h3>
+  <div class="pictures-container">
+    <div class="pictures2"><img src="assets/img/P1.jpg"></div>
+    <div class="pictures2"><img src="assets/img/front page3.png"></div>
+  </div>
+
+  <h3 class="section-title">Interactive Prototype</h3>
+  <p class="center-text">Experience the <strong>interactive prototype</strong> of the <span class="highlight">Universal Studios redesign</span>.</p>
+  <video controls width="100%">
+    <source src="assets/videos/universal-redesign.mp4" type="video/mp4">
+  </video>
+
+  <h3 class="section-title">Iteration: First Iteration vs. Final Iteration</h3>
+  <div class="pictures-container">
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/MacBook Pro 16_ - 1.png">
+        <figcaption>First Iteration: Initial Concept & Layout</figcaption>
+      </figure>
+    </div>
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/Universalfrontpage.png">
+      </figure>
+    </div>
+  </div>
+
+  <div class="pictures-container">
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/P1.jpg">
+      </figure>
+    </div>
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/front page2.png">
+        <figcaption>Final Iteration: Polished & Refined Design</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <h3 class="section-title">Universal Studios Website vs. My Redesign</h3>
+  <p class="center-text">A side-by-side comparison of the <span class="highlight">original Universal Studios website</span> and my <strong>modern redesign</strong>.</p>
+
+  <div class="pictures-container">
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/front page3 orignal.png">
+        <figcaption>Original Universal Studios Website</figcaption>
+      </figure>
+    </div>
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/front page7 orignal.png">
+      </figure>
+    </div>
+  </div>
+
+  <div class="pictures-container">
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/front page3.png">
+      </figure>
+    </div>
+    <div class="pictures2">
+      <figure class="full">
+        <img src="assets/img/front page7.png">
+        <figcaption>My Redesign</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</div>
 
 
 

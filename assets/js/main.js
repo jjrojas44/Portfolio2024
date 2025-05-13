@@ -780,3 +780,6 @@ window.onclick = function(event) {
   }
 }
 
+function changeImage(imageSrc) {
+  document.getElementById('displayedImage').src = imageSrc;
+}

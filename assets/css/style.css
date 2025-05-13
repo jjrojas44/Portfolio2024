@@ -1584,6 +1584,24 @@ div.container {
 }
 
 
+.section-title {
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.new2 {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
 
 h4 {
   color: #496071;
@@ -1874,39 +1892,41 @@ div.pictures1 {
 }
 
 div.pictures2 {
-  width: 75%; /* Reduced width for a more focused presentation */
+  width: 85%;
+  max-width: 1110px;
   background: linear-gradient(to bottom right, #8c8c8c, #b8a896);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
-  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  margin: 24px auto;
   font-family: "Helvetica Neue", sans-serif;
-  padding: 12px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 10px; /* Reduced border radius */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 div.pictures2 img {
-  width: 75%; /* Slightly smaller than full width for spacing */
-  height: 260px; /* Reduced height for a more refined look */
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, filter 0.25s ease, opacity 0.4s ease;
   opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-  filter: brightness(1.05) contrast(1.15);
+  animation: fadeIn 0.6s ease-in-out forwards;
+  filter: brightness(1.05) contrast(1.1) saturate(1.05);
 }
 
-/* Smooth fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
@@ -1915,38 +1935,84 @@ div.pictures2 img {
 }
 
 div.pictures2:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3), 0 10px 24px rgba(0, 0, 0, 0.25);
+  transform: scale(1.015); /* Reduced hover scale */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4); /* Reduced shadow size */
   background-color: #d1c2ab;
 }
 
 div.pictures2:hover img {
-  transform: scale(0.96);
-  filter: brightness(1) contrast(1.2);
+  transform: scale(0.98); /* Reduced image scale on hover */
+  filter: brightness(1.08) contrast(1.2) saturate(1.1);
 }
 
-/* View Image Button */
 .view-image-btn {
   position: absolute;
-  bottom: 12px;
+  bottom: 18px;
   left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 6px;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
   font-size: 15px;
   border: none;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
 }
 
 div.pictures2:hover .view-image-btn {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+@media (max-width: 600px) {
+  div.pictures2 {
+    width: 92%;
+    padding: 14px;
+  }
+
+  div.pictures2 img {
+    max-height: none;
+  }
+}
+
+/* New layout for multiple images */
+div.pictures-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+div.pictures-container .pictures2 {
+  width: 48%; /* Adjust width to allow multiple images side by side */
+}
+
+@media (max-width: 900px) {
+  div.pictures-container .pictures2 {
+    width: 90%; /* Adjust to fit 2 images in a row */
+  }
+}
+
+@media (max-width: 600px) {
+  div.pictures-container .pictures2 {
+    width: 100%; /* Stack vertically on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1966,7 +2032,7 @@ div.pictures3 {
   justify-content: flex-start;
   white-space: nowrap; /* Prevents images from wrapping into a new line */
   overflow-x: auto; /* Allows horizontal scrolling if needed */
-  gap: 1px;
+  gap: px;
 }
 
 div.pictures3 figure.full {
@@ -2030,6 +2096,69 @@ div.pictures3:hover .view-image-btn {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+
+.gallery-container {
+  text-align: center;
+}
+
+.main-image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.thumbnail-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumb {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.thumb img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.thumb img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .view-image-btn:active {
   transform: scale(0.97);

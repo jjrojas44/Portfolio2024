@@ -832,3 +832,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Optionally, you can programmatically activate a tab when the page loads.
   new bootstrap.Tab(gamesTabButton).show(); // Activate the "Video Game Box Covers" tab by default
 });
+
+function changeImage(imageSrc) {
+  var displayedImage = document.getElementById("displayedImage");
+  displayedImage.src = imageSrc;
+}
+
+function changeImage(imageSrc) {
+  document.getElementById("displayedImage").src = imageSrc;
+}

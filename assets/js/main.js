@@ -783,3 +783,18 @@ window.onclick = function(event) {
 function changeImage(imageSrc) {
   document.getElementById('displayedImage').src = imageSrc;
 }
+
+
+
+function changeInventoryImage(imagePath) {
+  document.getElementById('inventoryDisplayedImage').src = imagePath;
+}
+
+function changeProductImage(imagePath) {
+  document.getElementById('productDisplayedImage').src = imagePath;
+}
+
+function changeWebImage(imagePath) {
+  document.getElementById('webDisplayedImage').src = imagePath;
+}
+

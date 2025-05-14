@@ -814,3 +814,21 @@ function changeBattlePassImage(imagePath) {
   document.getElementById('battlePassDisplayedImage').src = imagePath;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const gamesTabButton = document.getElementById('games-tab');
+  const miscTabButton = document.getElementById('misc-tab');
+
+  // Activate the respective tabs
+  gamesTabButton.addEventListener('click', function() {
+      const gamesTab = new bootstrap.Tab(gamesTabButton);
+      gamesTab.show();
+  });
+
+  miscTabButton.addEventListener('click', function() {
+      const miscTab = new bootstrap.Tab(miscTabButton);
+      miscTab.show();
+  });
+
+  // Optionally, you can programmatically activate a tab when the page loads.
+  new bootstrap.Tab(gamesTabButton).show(); // Activate the "Video Game Box Covers" tab by default
+});

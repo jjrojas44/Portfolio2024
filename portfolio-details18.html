@@ -95,17 +95,19 @@
           <div class="tab-pane fade show active" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/coming_soon.jpg" alt="Inventory UI - 1" class="portfolio-slider-img">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/coming_soon.jpg" alt="Inventory UI - 2" class="portfolio-slider-img">
-                    </div>
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <img id="displayedImage" src="assets/img/coming_soon.jpg" alt="Main Image" class="portfolio-slider-img">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeImage('assets/img/coming_soon.jpg')">
+                      <img src="assets/img/coming_soon.jpg" alt="Thumb 1">
+                    </button>
+                    <button class="thumb" onclick="changeImage('assets/img/coming_soon.jpg')">
+                      <img src="assets/img/coming_soon.jpg" alt="Thumb 2">
+                    </button>
+                    <!-- Add more thumbnail buttons as needed -->
+                  </div>
                 </div>
               </div>
               <div class="col-lg-4">
@@ -127,17 +129,19 @@
           <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/coming_soon.jpg" alt="Product UI - 1" class="portfolio-slider-img">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/coming_soon.jpg" alt="Product UI - 2" class="portfolio-slider-img">
-                    </div>
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <img id="productDisplayedImage" src="assets/img/coming_soon.jpg" alt="Product UI Main" class="portfolio-slider-img">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeProductImage('assets/img/coming_soon.jpg')">
+                      <img src="assets/img/coming_soon.jpg" alt="Product UI - 1">
+                    </button>
+                    <button class="thumb" onclick="changeProductImage('assets/img/coming_soon.jpg')">
+                      <img src="assets/img/coming_soon.jpg" alt="Product UI - 2">
+                    </button>
+                    <!-- Add more thumbnails here as needed -->
+                  </div>
                 </div>
               </div>
               <div class="col-lg-4">
@@ -159,14 +163,16 @@
           <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/mission logs.png" alt="Web UI - 1" class="portfolio-slider-img">
-                    </div>
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <img id="webDisplayedImage" src="assets/img/mission logs.png" alt="Web UI Main" class="portfolio-slider-img">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeWebImage('assets/img/mission logs.png')">
+                      <img src="assets/img/mission logs.png" alt="Web UI - 1">
+                    </button>
+                    <!-- Add more thumbnails here if needed -->
+                  </div>
                 </div>
               </div>
               <div class="col-lg-4">

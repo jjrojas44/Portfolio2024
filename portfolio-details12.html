@@ -77,59 +77,60 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/start.png" alt="Project Image 1">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/main menu 1.png" alt="Front Page 2">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/load menu.png" alt="Front Page 3">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/character.png" alt="Front Page 2">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/overworld.png" alt="Front Page 2">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/overworld map.png" alt="Front Page 4">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/controls.png" alt="Front Page 6">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/pauce.png" alt="Front Page 7">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/LOADING SCREEN 2.png" alt="Front Page 7">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/LOAD YOUR GAME x.png" alt="Front Page 8">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/bttf.png" alt="Front Page 8">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/jawing 1.png" alt="Front Page 8">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/jaws.png" alt="Front Page 8">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/game jurassic.png" alt="Front Page 9">
-                </div>
+            <div class="gallery-container">
+              <!-- Main Displayed Image -->
+              <div class="main-image">
+                <img id="displayedImage" src="assets/img/start.png" alt="Main Image" />
               </div>
- <!-- Navigation Arrows -->
- <div class="swiper-button-prev"></div>
- <div class="swiper-button-next"></div>
-</div>
-
-
-
-</div>
+          
+              <!-- Thumbnail Buttons -->
+              <div class="thumbnail-pagination mt-3">
+                <button class="thumb" onclick="changeImage('assets/img/start.png')">
+                  <img src="assets/img/start.png" alt="Thumb 1" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/main menu 1.png')">
+                  <img src="assets/img/main menu 1.png" alt="Thumb 2" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/load menu.png')">
+                  <img src="assets/img/load menu.png" alt="Thumb 3" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/character.png')">
+                  <img src="assets/img/character.png" alt="Thumb 4" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/overworld.png')">
+                  <img src="assets/img/overworld.png" alt="Thumb 5" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/overworld map.png')">
+                  <img src="assets/img/overworld map.png" alt="Thumb 6" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/controls.png')">
+                  <img src="assets/img/controls.png" alt="Thumb 7" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/pauce.png')">
+                  <img src="assets/img/pauce.png" alt="Thumb 8" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/LOADING SCREEN 2.png')">
+                  <img src="assets/img/LOADING SCREEN 2.png" alt="Thumb 9" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/LOAD YOUR GAME x.png')">
+                  <img src="assets/img/LOAD YOUR GAME x.png" alt="Thumb 10" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/bttf.png')">
+                  <img src="assets/img/bttf.png" alt="Thumb 11" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/jawing 1.png')">
+                  <img src="assets/img/jawing 1.png" alt="Thumb 12" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/jaws.png')">
+                  <img src="assets/img/jaws.png" alt="Thumb 13" />
+                </button>
+                <button class="thumb" onclick="changeImage('assets/img/game jurassic.png')">
+                  <img src="assets/img/game jurassic.png" alt="Thumb 14" />
+                </button>
+              </div>
+            </div>
+          </div>
+          
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project Information</h3>
@@ -163,31 +164,28 @@
   </div>
 </header>
 <article>
+
+  <div style="display: flex; align-items: center; gap: 40px; font-family: sans-serif;">
+    <!-- Image Section -->
+    <div>
+      <img src="assets/img/2ssws2 1.png" alt="Universal Studios Redesign Screenshot" style="width: 350px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" />
+    </div>
+  
  
-    <h9> Project Overview</h9>
-    <ul>
+    <div>
+      <h9 style="font-size: 28px; margin-bottom: 20px;">Project Overview</h9>
+      <ul style="list-style: none; padding: 0; line-height: 1.8;">
         <li> <strong>Project Name:</strong> Halo Infinite Requiem (Hypothetical Sequel)</li>
-        <li> <strong>Role:</strong> UX/UI Designer (Solo Designer)</li>
-        <li> <strong>Tools Used:</strong> Figma,Photoshop,Illustrator,Gameuidatabase,itch.io,kenney.nl,spriters-resource</li>
-        <li> <strong>Timeline:</strong> 3 Weeks</li>
-        <li> <strong>Objective:</strong> To create a nostalgic yet fresh visual design that captures the thrill of theme park exploration, cinematic adventure.</li>
-    </ul>
-</section>
-     
-    </dl>
-    <h9>Value Added</h9>
-		    <p>The game features a nostalgic yet modern gameplay interface that combines retro pixel art with intuitive UI design, which was enhanced through AI-assisted collaboration for faster, cohesive visuals.</p>
-     
-
-  <div class="pictures">
-  <figure class="full">
-    <img src="assets/img/2ssws2 1.png"/ width="400" height="425" >
-   
-
-    
-  </figure>
+    <li> <strong>Role:</strong> UX/UI Designer (Solo Designer)</li>
+    <li> <strong>Tools Used:</strong> Figma,Photoshop,Illustrator,Gameuidatabase,itch.io,kenney.nl,spriters-resource</li>
+    <li> <strong>Timeline:</strong> 3 Weeks</li>
+    <li> <strong>Objective:</strong> To create a nostalgic yet fresh visual design that captures the thrill of theme park exploration, cinematic adventure.</li>
+</ul>
+      <h9 style="font-size: 22px; margin-top: 20px;">Value Added</h9>
+      <p style="max-width: 500px; line-height: 1.6;">
+        The game features a nostalgic yet modern gameplay interface that combines retro pixel art with intuitive UI design, which was enhanced through AI-assisted collaboration for faster, cohesive visuals.</p>
+    </div>
   </div>
-
   <figure class="aside1">
     <div class="two">
     </div>
@@ -215,158 +213,124 @@
 </ul>
 
 
- <h9>Research & User Insights</h9> 
+<h2>Research</h2>
+<hr class="new2">
 
- <hr class="new2">
-
-    <h9>Persona</h9>
-
-  <hr class="new2">
-
-  <div class="pictures2">
-    <figure class="full">
-      <img src="assets/img/mydisneyexperienceUserPersona (4).png"/ width="920" height="700" >
+<div class="section centered">
+  <h3 class="section-title">Persona</h3>
+  <div class="pictures-container">
+    <div class="pictures2">
+      <img src="assets/img/mydisneyexperienceUserPersona (4).png" width="920" height="700">
     </div>
-    </figure>
+  </div>
+</div>
 
-    <h9>User Insight</h9>
-    <hr class="new2">
-    <p> Alex seeks a gaming experience which brings back his childhood memories of Universal Studios while providing substantial family-friendly gameplay that he can play with his young child because for him, nostalgia is not just about reliving the past, it is about sharing that magic with the next generation.
+<div class="section centered">
+  <h3 class="section-title">User Insight</h3>
+  <p class="center-text">Alex seeks a gaming experience which brings back his childhood memories of Universal Studios while providing substantial family-friendly gameplay that he can play with his young child because for him, nostalgia is not just about reliving the past — it’s about sharing that magic with the next generation.</p>
+</div>
 
-    </p>        <figure class="full">
-      </div>
-        </div>
+<div class="section centered">
+  <h3 class="section-title">How Might We</h3>
+  <ul>
+    <li><strong>Design a charm-filled progression system</strong> that rewards exploration, creativity, and teamwork through unlockable retro collectibles, concept art, and themed attractions.</li>
+    <li><strong>Expand themed worlds and biomes</strong> with diverse environments inspired by classic Universal rides and movies, encouraging exploration and delighting nostalgic players.</li>
+    <li><strong>Enhance local and online co-op modes</strong> to make it easy and fun for families to play together, with intuitive controls, drop-in play, and shared achievements.</li>
+  </ul>
+</div>
 
-        <h9>How Might We</h9>
-        <hr class="new2">
-        <ul>
-          <li><strong>Design a charm-filled progression system</strong> that rewards exploration, creativity, and teamwork through unlockable retro collectibles, concept art, and themed attractions.</li>
-          <li><strong>Expand themed worlds and biomes</strong> with diverse environments inspired by classic Universal rides and movies, encouraging exploration and delighting nostalgic players.</li>
-          <li><strong>Enhance local and online co-op modes</strong> to make it easy and fun for families to play together, with intuitive controls, drop-in play, and shared achievements.</li>
-        </ul>
-        <figure class="full">
-          <!-- Optional image or media content could go here -->
-        </figure>
-
-        <h9>SWOT Analysis</h9>
-        <hr class="new2">
-        <ul>
-          <li><strong>Strengths:</strong> 
-            <ul>
-              <li>Strong nostalgic appeal through retro aesthetics and theme park-inspired world design.</li>
-              <li>Family-friendly co-op gameplay that’s easy to pick up but rewarding for all ages.</li>
-              <li>Creative integration of Universal Studios IPs, offering rich storytelling and iconic settings.</li>
-            </ul>
-          </li>
-        
-          <li><strong>Weaknesses:</strong> 
-            <ul>
-              <li>Risk of being perceived as style-over-substance if gameplay depth isn’t prioritized.</li>
-              <li>Potential hardware limitations for more expansive retro-style visuals or features.</li>
-              <li>Niche appeal may limit reach beyond retro or theme park enthusiast audiences.</li>
-            </ul>
-          </li>
-        
-          <li><strong>Opportunities:</strong> 
-            <ul>
-              <li>Blending old-school pixel art charm with modern game polish to attract a wider audience.</li>
-              <li>Collaborations with Universal brands (e.g., Jurassic Park, Classic Monsters) for themed levels and cross-promotion.</li>
-              <li>Creating a community-driven hub for sharing levels, art, or mods inspired by theme park creativity.</li>
-            </ul>
-          </li>
-        
-          <li><strong>Threats:</strong> 
-            <ul>
-              <li>Oversaturation in the retro-style indie game market leading to comparisons or overlooked releases.</li>
-              <li>Difficulty balancing simplicity for kids with depth for adult players like Alex.</li>
-              <li>High expectations from nostalgic players demanding authenticity in theme and design.</li>
-            </ul>
-          </li>
-        </ul>
-        
-<figure class="full">
-  <!-- Optional image or media content could go here -->
-</figure>
-
-        
-            <h9>POV Statement </h9>
-            <hr class="new2">
-            Alex, a nostalgic tech-savvy dad, wants to relive and share the Universal Studios experience through gameplay because he wants to reconnect with his childhood memories while creating new ones with his own child.
-            <figure class="full">
-              </div>
-                </div>   
-
-   
-  <div class="pictures">
-    <figure class="full">
-    </div>
-      </div> 
-      <h9>I Like, I Wish & What If</h9>
-      <hr class="new2">
-      
-      <h9>I Like</h9>
+<div class="section centered">
+  <h3 class="section-title">SWOT Analysis</h3>
+  <ul>
+    <li><strong>Strengths:</strong>
       <ul>
-        <li><strong>I Like the retro art direction</strong>—pixel-perfect design and nostalgic vibes make the game feel both familiar and fresh.</li>
-        <li><strong>I Like the theme park-inspired worlds</strong>—each level feels like an attraction, full of color, wonder, and charm.</li>
-        <li><strong>I Like the accessible co-op gameplay</strong>—easy to pick up and play with my kid, making family gaming fun and stress-free.</li>
-        <li><strong>I Like the creative character designs and animations</strong>—they feel alive and full of personality, just like a park parade.</li>
+        <li>Strong nostalgic appeal through retro aesthetics and theme park-inspired world design.</li>
+        <li>Family-friendly co-op gameplay that’s easy to pick up but rewarding for all ages.</li>
+        <li>Creative integration of Universal Studios IPs, offering rich storytelling and iconic settings.</li>
       </ul>
-      
-      <h9>I Wish</h9>
+    </li>
+    <li><strong>Weaknesses:</strong>
       <ul>
-        <li><strong>I Wish levels had more secrets and interactive elements</strong> that rewarded curiosity and exploration like a real theme park.</li>
-        <li><strong>I Wish the UI felt more intuitive and magical,</strong> blending classic charm with modern usability for all ages.</li>
-        <li><strong>I Wish there were more unlockable cosmetics and collectibles,</strong> giving me and my kid fun reasons to replay stages.</li>
-        <li><strong>I Wish boss fights were more dynamic and creative,</strong> tapping into the theatrical flair of classic park villains.</li>
+        <li>Risk of being perceived as style-over-substance if gameplay depth isn’t prioritized.</li>
+        <li>Potential hardware limitations for more expansive retro-style visuals or features.</li>
+        <li>Niche appeal may limit reach beyond retro or theme park enthusiast audiences.</li>
       </ul>
-      
-      <h9>What If</h9>
+    </li>
+    <li><strong>Opportunities:</strong>
       <ul>
-        <li><strong>What if each world had a ride-style finale level,</strong> where gameplay turns into a thrilling, cinematic adventure?</li>
-        <li><strong>What if the game let players build their own mini-attractions,</strong> using creative tools inspired by classic theme park design?</li>
-        <li><strong>What if the soundtrack shifted dynamically,</strong> like park audio, to match where you are or what you’re doing?</li>
-        <li><strong>What if retro characters from different eras made surprise cameos,</strong> tying together decades of gaming and park nostalgia?</li>
+        <li>Blending old-school pixel art charm with modern game polish to attract a wider audience.</li>
+        <li>Collaborations with Universal brands (e.g., Jurassic Park, Classic Monsters) for themed levels and cross-promotion.</li>
+        <li>Creating a community-driven hub for sharing levels, art, or mods inspired by theme park creativity.</li>
       </ul>
-      
+    </li>
+    <li><strong>Threats:</strong>
+      <ul>
+        <li>Oversaturation in the retro-style indie game market leading to comparisons or overlooked releases.</li>
+        <li>Difficulty balancing simplicity for kids with depth for adult players like Alex.</li>
+        <li>High expectations from nostalgic players demanding authenticity in theme and design.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="section centered">
+  <h3 class="section-title">POV Statement</h3>
+  <p class="center-text">Alex, a nostalgic tech-savvy dad, wants to relive and share the Universal Studios experience through gameplay because he wants to reconnect with his childhood memories while creating new ones with his own child.</p>
+</div>
+
+
+
       <figure class="full">
         <!-- Optional image or media content could go here -->
       </figure>
       
-      <h9>Feature Prioritization Matrix</h9>
-<hr class="new2">
-<ul>
-  <li><strong>Prioritize magical, high-impact features</strong> like ride-style replayable missions, theme park biomes, and whimsical storytelling to delight both new and returning players.</li>
-  <li><strong>Balance feasibility with fun and flair</strong>—focus on mechanics that capture classic arcade excitement while staying simple and intuitive for casual players and families.</li>
-  <li><strong>Enhance co-op and social experiences</strong> by adding couch co-op, in-game photo ops, and celebratory mini-events like fireworks after boss battles.</li>
-  <li><strong>Refine core mechanics with retro charm</strong>—tighten platforming, brighten visuals, and add playful AI behavior that mirrors cartoonish mischief and fun.</li>
-</ul>
-<figure class="full">
-  <!-- Optional image: theme park-style feature matrix or visual of retro UI -->
-</figure>
+      
 
-<h9>Value Proposition Canvas</h9>
-<hr class="new2">
-<ul>
-  <li><strong>Define the experience as “Gaming meets Theme Park Adventure”</strong>—a retro reimagining of Halo where every level feels like a ride and every mission a memory.</li>
+<div class="section centered">
+  <h3 class="section-title">Feature Prioritization Matrix</h3>
+  <ul>
+    <li><strong>Prioritize magical, high-impact features</strong> like ride-style replayable missions, theme park biomes, and whimsical storytelling to delight both new and returning players.</li>
+    <li><strong>Balance feasibility with fun and flair</strong>—focus on mechanics that capture classic arcade excitement while staying simple and intuitive for casual players and families.</li>
+    <li><strong>Enhance co-op and social experiences</strong> by adding couch co-op, in-game photo ops, and celebratory mini-events like fireworks after boss battles.</li>
+    <li><strong>Refine core mechanics with retro charm</strong>—tighten platforming, brighten visuals, and add playful AI behavior that mirrors cartoonish mischief and fun.</li>
+  </ul>
+  <div class="pictures-container">
+    <div class="pictures2">
+      <img src="assets/img/feature universal.png">
+    </div>
+  </div>
+</div>
+
+<div class="section centered">
+  <h3 class="section-title">Value Proposition Canvas</h3>
+  <ul>
+    <li><strong>Define the experience as “Gaming meets Theme Park Adventure”</strong>—a retro reimagining of Halo where every level feels like a ride and every mission a memory.</li>
   <li><strong>Boost player joy</strong> through collectible skins, nostalgic unlocks, arcade-style scoreboards, and silly cheat codes that bring back the fun of classic gaming.</li>
   <li><strong>Address common gripes</strong> by making the game family-accessible, lowering grind, and focusing on short, punchy, replayable missions perfect for short sessions.</li>
   <li><strong>Expand community engagement</strong> with park-pass style battle passes, fan-voted attractions (new levels), and timed events like “80s Night” or “Cartoon Chaos Week.”</li>
-</ul>
+  </ul>
+  <div class="pictures-container">
+    <div class="pictures2">
+    </div>
+  </div>
+</div>
 
       <figure class="full">
           <!-- Optional image or media content could go here -->
       </figure>
+
+
+      <div class="section centered">
+        <h3 class="section-title">Affinity Diagram</h3>
+        <div class="pictures-container">
+          <div class="pictures2">
+            <img src="assets/img/affin universal.png">
+          </div>
+        </div>
+      </div>    
       
 
-              <h9>Affinity Diagram</h9>
-              <hr class="new2">
-              
-              <div class="pictures2">
-                  <figure class="full">
-                      <img src="assets/img/affin universal.png" width="1500" height="1100" style="margin-bottom: 20px;">
-                  
-                  </figure>
-              </div>
+            
               
     </div>
      
@@ -378,144 +342,157 @@
   <h2> </h2>
   <div class="under">
     <figure class="aside">
-    <div class="two">
+    
   </figure>
+
+
+
+  <div class="section centered">
+    <h3 class="section-title">Empathy Map</h3>
+    <div class="pictures-container">
+      <div class="pictures2">
+        <img src="assets/img/map uni.png" width="1100" height="600">
+      </div>
+    </div>
+  </div>
+
+  <div class="section centered">
+    <h3 class="section-title">journey Map</h3>
+    <div class="pictures-container">
+      <div class="pictures2">
+        <img src="assets/img/uni journey map.png" width="1100" height="600">
+      </div>
+    </div>
+  </div>
+
+  <div class="section centered">
+    <h3 class="section-title">Mood Board</h3>
+    <div class="pictures-container">
+      <div class="pictures2">
+        <img src="assets/img/moooood.png" width="1100" height="600">
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+      
+
+    <h2>Wireframe & Design Evolution</h2>
 
   
-  <h9>Empathy Map</h9>
-  <hr class="new2">
-
-  <div class="pictures2">
-    <figure class="full">
-      <img src="assets/img/map uni.png"/ width="1100" height="600" style="margin-bottom: 20px;"    >
+    <h3 class="section-title">High Fidelity</h3>
+    <div class="pictures-container">
+      <div class="pictures2"><img src="assets/img/jaws.png"></div>
+      <div class="pictures2"><img src="assets/img/bttf.png"></div>
     </div>
-      </div>
+  
 
-      <h9>Journey Map</h9>
-<hr class="new2">
-
-<div class="pictures2">
-  <figure class="full">
-    <img src="assets/img/uni journey map.png" width="1100" height="600" style="margin-bottom: 20px;">
-  </figure>
-</div>
-
-
-<h9>Mood Board</h9>
-<hr class="new2">
-
-<div class="pictures2">
-  <figure class="full">
-    <img src="assets/img/moooood.png" width="1100" height="600" style="margin-bottom: 20px;">
-  </figure>
-</div>
-
-
-
-          <hr class="new2">
-
-    <h9>Wireframe & Design Evolution</h9>
-
-    <hr class="new2">
-
-
-          
-          <h9>High Fidelity</h9>
-          <hr class="new2">
-          <div class="pictures2">
-            <figure class="full">
-              <img src="assets/img/game jurassic.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/jaws.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/bttf.png" width="1300" height="700" style="margin-bottom: 20px;">
-              <img src="assets/img/pauce.png" width="1300" height="700" style="margin-bottom: 20px;">
-            </figure>
-          </div>
-
+         
+   
           
           
-          <hr class="new2">
-
-          <h9>Iteration: First Iteration vs. Final Iteration</h9>
-
-          <hr class="new2">
+          
 
 <!-- Iteration Group (Both First & Final Inside One Div) -->
 
-    <div class="pictures2">
-        <!-- First Iteration -->
-        <figure class="full">
-          
-            <img src="assets/img/create a character.png" width="1300" height="700" alt="First Iteration 1">
-       
-        </figure>
 
-        <!-- Final Iteration -->
-        
-        <figure class="full">
-            <img src="assets/img/MAIN MENU 3.png" width="1300" height="700" alt="Final Iteration 1">
-               <figcaption> First Iteration: Initial Concept & Layout</figcaption>  
-        </figure>
-    </div>
+<h3 class="section-title">Iteration: First Iteration vs. Final Iteration</h3>
+<div class="pictures-container">
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/create a character.png">
+      <figcaption>First Iteration: Initial Concept & Layout</figcaption>
+    </figure>
+  </div>
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/MAIN MENU 3.png">
+      <figcaption>First Iteration: Initial Concept & Layout</figcaption>
+
+    </figure>
+  </div>
 </div>
+
+
+<div class="pictures-container">
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/character.png"">
+      <figcaption>Final Iteration: Polished & Refined Design</figcaption>
+
+    </figure>
+  </div>
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/load menu.png">
+      <figcaption>Final Iteration: Polished & Refined Design</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+
+
+
+</figure>
+
+
+
 
 <!-- Iteration 2 -->
 
-    <div class="pictures2">
-        <!-- First Iteration -->
-        <figure class="full">
-            <img src="assets/img/character.png" width="1300" height="700" alt="First Iteration 2">
-           
-        </figure>
-
-        <!-- Final Iteration -->
-       
-        <figure class="full">
-            <img src="assets/img/load menu.png" width="1300" height="700"  alt="Final Iteration 2">
-            <figcaption> Final Iteration: Polished & Refined Design</figcaption>
-        </figure>
-    </div>
-</div> 
+   
 
 
-<h9>Universal Studios Theme Park Adventure vs. Universal Studios: Worlds of Wonder</h9>
-<hr class="new2">
 
-<p class="comparison-description">
-    A side-by-side comparison of the <span class="highlight">original Universal Studios Theme Park Adventure</span> and my <strong>hypothetical sequel, Universal Studios: Worlds of Wonder</strong>.
-</p>
+<h3 class="section-title">Universal Studios Website vs. My Redesign</h3>
+  <p class="center-text">A side-by-side comparison of the <span class="highlight">original Universal Studios Theme Park Adventure</span> and my <strong>hypothetical sequel, Universal Studios: Worlds of Wonder</strong>.</p>
+
 
 
 <!-- Comparison Section (Before & After) -->
-
-<div class="pictures2">
-    <!-- Original Halo Infinite -->
+<div class="pictures-container">
+  <div class="pictures2">
     <figure class="full">
-        <img src="assets/img/download (90).jpg" width="1300" height="700" alt="Original Halo Infinite">
-        <figcaption></figcaption>
+      <img src="assets/img/download (90).jpg">
+      <figcaption>Universal Studios theme park adventure</figcaption>
     </figure>
-
-    <!-- Halo Infinite Requiem -->
+  </div>
+  <div class="pictures2">
     <figure class="full">
-        <img src="assets/img/main menu uni.jpg" width="1300" height="700" alt="Halo Infinite Requiem">
-        <figcaption>Universal Studios theme park adventure </figcaption>
+      <img src="assets/img/main menu uni.jpg">
+      <figcaption>Universal Studios theme park adventure</figcaption>
+
     </figure>
+  </div>
 </div>
+
+<div class="pictures-container">
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/overworld.png">
+      <figcaption>Universal Studios Worlds Of Wounder</figcaption>
+
+    </figure>
+  </div>
+  <div class="pictures2">
+    <figure class="full">
+      <img src="assets/img/main menu 1.png">
+      <figcaption>Universal Studios Worlds Of Wounder</figcaption>
+    </figure>
+  </div>
+</div>
+</div>
+
+
 
 <!-- Comparison 2: Gameplay & Features -->
 
-<div class="pictures2">
-    <!-- Halo Infinite Gameplay -->
-    <figure class="full">
-        <img src="assets/img/overworld.png" width="1300" height="700" alt="Halo Infinite Gameplay">
-        <figcaption></figcaption>
-    </figure>
-
-    <!-- Halo Infinite Requiem Gameplay -->
-    <figure class="full">
-        <img src="assets/img/main menu 1.png" width="1300" height="700" alt="Halo Infinite Requiem Gameplay">
-        <figcaption>Halo Infinite Requiem</figcaption>
-    </figure>
-</div>
 
 
 

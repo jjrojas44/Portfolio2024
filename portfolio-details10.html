@@ -97,22 +97,19 @@
           <div class="tab-pane fade show active" id="disney" role="tabpanel">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                  <!-- Swiper Slide Images -->
-<div class="swiper-slide">
-  <img src="assets/img/csrs ;;+land.jpg" alt="Inventory UI - 1" class="portfolio-slider-img" onclick="openImageModal(this)">
-  
-</div>
-<div class="swiper-slide">
-  <img src="assets/img/villains land.jpg" alt="Inventory UI - 2" class="portfolio-slider-img" onclick="openImageModal(this)">
-</div>
-
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <img id="conceptDesignDisplayedImage" src="assets/img/csrs ;;+land.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeConceptImage('assets/img/csrs ;;+land.jpg')">
+                      <img src="assets/img/csrs ;;+land.jpg" alt="Thumbnail 1">
+                    </button>
+                    <button class="thumb" onclick="changeConceptImage('assets/img/villains land.jpg')">
+                      <img src="assets/img/villains land.jpg" alt="Thumbnail 2">
+                    </button>
+                  </div>
                 </div>
-                
               </div>
               <div class="col-lg-4">
                 <div class="portfolio-info">
@@ -133,20 +130,34 @@
           <div class="tab-pane fade" id="universal" role="tabpanel">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/jp vs jw.jpg" alt="Battle Pass UI - 1" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/Jacks.png" alt="Battle Pass UI - 2" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <img id="battlePassDisplayedImage" src="assets/img/jp vs jw.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeBattlePassImage('assets/img/jp vs jw.jpg')">
+                      <img src="assets/img/jp vs jw.jpg" alt="Thumbnail 1">
+                    </button>
+                    <button class="thumb" onclick="changeBattlePassImage('assets/img/Jacks.png')">
+                      <img src="assets/img/Jacks.png" alt="Thumbnail 2">
+                    </button>
+                  </div>
                 </div>
-               
               </div>
+              <div class="col-lg-4">
+                <div class="portfolio-info">
+                  <h3>Project Information</h3>
+                  <ul>
+                    <li><strong>Category:</strong> UI Concept Design</li>
+                  </ul>
+                </div>
+                <div class="portfolio-description">
+                  <h2>Battle Pass UI Concept</h2>
+                  <p>Concept UI layouts for an in-game battle pass system inspired by Jurassic Park and Jack the Clown — designed for a hypothetical crossover game interface.</p>
+                </div>
+              </div>
+            </div>
+            
               <div class="col-lg-4">
                 <div class="portfolio-info">
                   <h3>Project Information</h3>
@@ -206,31 +217,31 @@
           <div class="tab-pane fade" id="misc" role="tabpanel">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/floridaaa.jpg" alt="Home Page" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/project titanic postcard1final 1.png" alt="Medicare Page" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/florida man t-shirt front and back 1 (1).png" alt="Halo Front Cover" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/A4 - 1 (1)-1.png" alt="Halo Back Cover" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/guest listttt.png" alt="Halo Back Cover" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/A4 - 2 (1)-1.png" alt="Halo Back Cover" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
+                <div class="gallery-container">
+                  <div class="main-image">
+                    <img id="graphicDesignDisplayedImage" src="assets/img/floridaaa.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeGraphicImage('assets/img/floridaaa.jpg')">
+                      <img src="assets/img/floridaaa.jpg" alt="Thumbnail 1">
+                    </button>
+                    <button class="thumb" onclick="changeGraphicImage('assets/img/project titanic postcard1final 1.png')">
+                      <img src="assets/img/project titanic postcard1final 1.png" alt="Thumbnail 2">
+                    </button>
+                    <button class="thumb" onclick="changeGraphicImage('assets/img/florida man t-shirt front and back 1 (1).png')">
+                      <img src="assets/img/florida man t-shirt front and back 1 (1).png" alt="Thumbnail 3">
+                    </button>
+                    <button class="thumb" onclick="changeGraphicImage('assets/img/A4 - 1 (1)-1.png')">
+                      <img src="assets/img/A4 - 1 (1)-1.png" alt="Thumbnail 4">
+                    </button>
+                    <button class="thumb" onclick="changeGraphicImage('assets/img/guest listttt.png')">
+                      <img src="assets/img/guest listttt.png" alt="Thumbnail 5">
+                    </button>
+                    <button class="thumb" onclick="changeGraphicImage('assets/img/A4 - 2 (1)-1.png')">
+                      <img src="assets/img/A4 - 2 (1)-1.png" alt="Thumbnail 6">
+                    </button>
+                  </div>
                 </div>
-               
               </div>
               <div class="col-lg-4">
                 <div class="portfolio-info">

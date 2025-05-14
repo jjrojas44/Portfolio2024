@@ -798,3 +798,19 @@ function changeWebImage(imagePath) {
   document.getElementById('webDisplayedImage').src = imagePath;
 }
 
+function changeBrandingImage(imagePath) {
+  document.getElementById('brandingDisplayedImage').src = imagePath;
+}
+
+function changeGraphicImage(imagePath) {
+  document.getElementById('graphicDesignDisplayedImage').src = imagePath;
+}
+
+function changeConceptImage(imagePath) {
+  document.getElementById('conceptDesignDisplayedImage').src = imagePath;
+}
+
+function changeBattlePassImage(imagePath) {
+  document.getElementById('battlePassDisplayedImage').src = imagePath;
+}
+

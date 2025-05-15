@@ -2211,12 +2211,12 @@ div.pictures-container .pictures4 {
 
 div.pictures5 {
   width: 100%;
-  max-width: 1700px;
+  max-width: 1800px;
   background: linear-gradient(to bottom right, #8c8c8c, #b8a896);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   margin: 24px auto;
   font-family: "Helvetica Neue", sans-serif;
-  padding: 20px;
+  padding: 30px;
   position: relative;
   overflow: hidden;
   border-radius: 10px; /* Reduced border radius */
@@ -2229,11 +2229,11 @@ div.pictures5 {
 }
 
 div.pictures5 img {
-  width: 100%;
+  max-width: 1600px; 
   height: auto;
   object-fit: contain;
   border-radius: 8px;
-  border: 2px solid #ddd;
+  border: 3px solid #ddd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: transform 0.25s ease, filter 0.25s ease, opacity 0.4s ease;
   opacity: 0;

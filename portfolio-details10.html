@@ -166,26 +166,30 @@
           <div class="tab-pane fade" id="games" role="tabpanel">
             <div class="row gy-4">
               <div class="col-lg-8">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide">
-                      <img src="assets/img/Universal studios front cover.jpg" alt="Home Page" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/universal studios back cover.jpg" alt="Medicare Page" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/HALO INFINITE FRONT BBOX.jpg" alt="Halo Front Cover" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="assets/img/halo infinite back cover.jpg" alt="Halo Back Cover" class="portfolio-slider-img" onclick="openImageModal(this)">
-                    </div>
+                <div class="gallery-container">
+                  <!-- Main Image Display -->
+                  <div class="main-image">
+                    <img id="sliderDisplayedImage" src="assets/img/Universal studios front cover.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
                   </div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+              
+                  <!-- Thumbnail Navigation -->
+                  <div class="thumbnail-pagination mt-3">
+                    <button class="thumb" onclick="changeSliderImage('assets/img/Universal studios front cover.jpg')">
+                      <img src="assets/img/Universal studios front cover.jpg" alt="Thumbnail 1">
+                    </button>
+                    <button class="thumb" onclick="changeSliderImage('assets/img/universal studios back cover.jpg')">
+                      <img src="assets/img/universal studios back cover.jpg" alt="Thumbnail 2">
+                    </button>
+                    <button class="thumb" onclick="changeSliderImage('assets/img/HALO INFINITE FRONT BBOX.jpg')">
+                      <img src="assets/img/HALO INFINITE FRONT BBOX.jpg" alt="Thumbnail 3">
+                    </button>
+                    <button class="thumb" onclick="changeSliderImage('assets/img/halo infinite back cover.jpg')">
+                      <img src="assets/img/halo infinite back cover.jpg" alt="Thumbnail 4">
+                    </button>
+                  </div>
                 </div>
-               
               </div>
+              
               <div class="col-lg-4">
                 <div class="portfolio-info">
                   <h3>Project Information</h3>

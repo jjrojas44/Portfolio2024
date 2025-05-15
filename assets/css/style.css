@@ -2068,6 +2068,7 @@ div.pictures-container {
   flex-wrap: wrap;
   gap: 4px;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 div.pictures-container .pictures2 {

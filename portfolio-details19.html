@@ -86,19 +86,21 @@
                 <img id="displayedImage" src="assets/img/outpost.png" alt="Main Image">
               </div>
               <div class="thumbnail-pagination mt-3">
+                <button class="thumb" onclick="changeImage('assets/img/outpost.png')">
+                    <img src="assets/img/outpost.png" alt="Thumb 1">
+                  </button>
                 <button class="thumb" onclick="changeImage('assets/img/augments.png')">
                   <img src="assets/img/augments.png" alt="Thumb 1">
                 </button>
                 <button class="thumb" onclick="changeImage('assets/img/armory.png')">
                   <img src="assets/img/armory.png" alt="Thumb 2">
                 </button>
-                <button class="thumb" onclick="changeImage('assets/img/Desktop - 2.png')">
-                  <img src="assets/img/Desktop - 2.png" alt="Thumb 3">
-                </button>
                 <button class="thumb" onclick="changeImage('assets/img/OPERATIONS.png')">
                   <img src="assets/img/OPERATIONS.png" alt="Front Page 2">
                 </button>
-            
+             <button class="thumb" onclick="changeImage('assets/img/Mapt.png')">
+                  <img src="assets/img/Mapt.png" alt="Thumb 3">
+                </button>
                 
               </div>
             </div>
@@ -170,7 +172,7 @@
   <h9> Problem Statement</h9>
   <p> Challenges with the Existing UI from terminator: resistance:</p>
   <ul>
-      < <li><strong>Cluttered HUD and Menus:</strong> Players struggle to quickly access critical information and mission objectives.</li>
+     <li><strong>Cluttered HUD and Menus:</strong> Players struggle to quickly access critical information and mission objectives.</li>
       <li><strong>Weak Thematic Integration:</strong> UI elements lack cohesion with the franchise’s dystopian, tech-driven aesthetic.</li>
       <li><strong>Poor Visual Hierarchy:</strong> Important gameplay data gets lost among less relevant information.</li>
       <li><strong>Limited Accessibility Options:</strong> The current UI fails to accommodate various player needs and preferences.</li>
@@ -228,7 +230,7 @@
     <p><strong>Sources:</strong> Terminator: Dark Fate, Terminator: Salvation, Terminator resistance, T-800 HUD footage.</p>
     <p><strong>Outcome:</strong> A franchise-consistent UI style guide for Future War.</p>
   
-    <h4 class="section-title">Evaluation Summary</h4>
+    <h3 class="section-title">Evaluation Summary</h3>
     <ul>
       <li><strong>Visibility of System Status:</strong> Metro Exodus and Division 2 excel; Terminator lacks clear threat indicators.</li>
       <li><strong>Match Between System & Real World:</strong> Metro’s in-world UI is immersive; BO6 HUD too abstract at times.</li>
@@ -242,7 +244,7 @@
       <li><strong>Help & Documentation:</strong> Division 2 provides clear in-game tutorials; Metro lacks menu guidance.</li>
     </ul>
   
-    <h4 class="section-title">Key Takeaways</h4>
+    <h3 class="section-title">Key Takeaways</h3>
     <p><strong>Strengths:</strong> Division 2 excels in customization and error prevention. Metro delivers immersive story-driven UI. BO6 keeps controls familiar.</p>
     <p><strong>Weaknesses:</strong> Terminator lacks HUD flexibility and error transparency. BO6 HUD gets too cluttered during combat.</p>
     <p><strong>Opportunities:</strong> Add HUD customization in Terminator. Improve menu tutorials in Metro. Include a minimalist HUD preset in BO6. Use Division 2’s system as a UI model.</p>
@@ -259,71 +261,114 @@
 
 
 
-<div class="section centered">
-<h3>UI Improvements</h3>
-<div class="pictures-container">
-<hr class="new2">
-<ul>
-<p>Improved HUD and Accessibility:Customizable UI for better visibility and player preference. </p>
-<hr class="new2">
-<img src="assets/img/Desktop - 1 (2).png" alt="Improved HUD and Accessibility">
+  <div class="section centered">
+    <h3 class="section-title">UI Inspiration & Influence</h3>
+  
+    <div class="pictures-container">
+      <hr class="new2">
+      <p>Vendor/Store UI</p>
+      <hr class="new2">
+      <figure class="side-by-side">
+        <div>
+          <img src="assets/img/outpost.png" alt="My Improved HUD">
+          <figcaption>Left: My UI</figcaption>
+        </div>
+        <div>
+          <img src="assets/img/vendor.jpg" alt="Reference HUD Inspiration">
+          <figcaption>Right: Inspiration UI</figcaption>
+        </div>
+      </figure>
+  
+      <p>Mods/Upgrades</p>
+      <hr class="new2">
+      <figure class="side-by-side">
+        <div>
+          <img src="assets/img/augments.png" alt="My Navigation UI">
+          <figcaption>Left: My UI</figcaption>
+        </div>
+        <div>
+          <img src="assets/img/Control07152020-071911-13494.jpg" alt="Reference Navigation UI">
+          <figcaption>Right: Inspiration UI</figcaption>
+        </div>
+      </figure>
+  
+      <p>Armoury/Weapons cache</p>
+      <hr class="new2">
+      <figure class="side-by-side">
+        <div>
+          <img src="assets/img/armory.png" alt="My Multiplayer UI">
+          <figcaption>Left: My UI</figcaption>
+        </div>
+        <div>
+          <img src="assets/img/eft_alpha_interface_character_gear.jpg" alt="Reference Multiplayer UI">
+          <figcaption>Right: Inspiration UI</figcaption>
+        </div>
+      </figure>
+  
+      <p>Mission Select/Quest</p>
+      <hr class="new2">
+      <figure class="side-by-side">
+        <div>
+          <img src="assets/img/OPERATIONS.png" alt="My Store UI">
+          <figcaption>Left: My UI</figcaption>
+        </div>
+        <div>
+          <img src="assets/img/operatons quest.jpg" alt="Reference Store UI">
+          <figcaption>Right: Inspiration UI</figcaption>
+        </div>
+      </figure>
 
-<p>Enhanced Navigation: Improvements to UI navigation with a back-to-basics design.</p>
-<hr class="new2">
-<img src="assets/img/Desktop - 5.png" alt="Enhanced UI Navigation">
+      <p>Map</p>
+      <hr class="new2">
+      <figure class="side-by-side">
+        <div>
+          <img src="assets/img/Mapt.png" alt="My Store UI">
+          <figcaption>Left: My UI</figcaption>
+        </div>
+        <div>
+          <img src="assets/img/mapp.jpg" alt="Reference Store UI">
+          <figcaption>Right: Inspiration UI</figcaption>
+        </div>
+      </figure>
+  
 
-<p>Dynamic Multiplayer UI: A hybrid of Halo Reach and Halo 5’s UI system while keeping the core intact.</p>
-<hr class="new2">
-<img src="assets/img/Desktop - 10.png" alt="Dynamic Multiplayer UI">
-
-<p>Store Improvement: More intuitive navigation and an overhauled UI for item display and information accessibility.</p>
-<hr class="new2">
-<img src="assets/img/Desktop - 6.png" alt="Store Improvement UI">
-
-<li><strong>Customization Overhaul</strong>:  
-    <ul>
-        <li>More intimate UI navigation, removing the expansive multiple-menu system.</li>
-        <li>One-to-two screen options for easier customization.</li>
-        <li>Ability to name your Spartan and create Spartan classes.</li>
-        <li>All earned and purchased items (battle pass/store) accessible in one unified area.</li>
-    </ul>
-</li>
-<img src="assets/img/Desktop - 8.png" alt="Customization UI Overhaul">
-</ul>
-<figure class="full">
-<!-- Optional additional media or images -->
-</figure>
-</div>
+    </div>
+  </div>
+  
 
 <h2>Wireframe & Design Evolution</h2>
 
 
   <h3 class="section-title">High Fidelity</h3>
   <div class="pictures-container">
-    <div class="pictures2"><img src="assets/img/Desktop - 5.png"></div>
-    <div class="pictures2"><img src="assets/img/Desktop - 1 (2).png"></div>
+    <div class="pictures2"><img src="assets/img/armory.png"></div>
+    <div class="pictures2"><img src="assets/img/outpost.png"></div>
   </div>
 
 
   <div class="figma-embed-container">
     <iframe 
-  style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/Ts62sKhceTfgJ0Qw9pDb4G/HALO?node-id=38-1580&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3&embed-host=share" allowfullscreen>
+      style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+      width="800" 
+      height="450" 
+      src="https://embed.figma.com/proto/Ts62sKhceTfgJ0Qw9pDb4G/HALO?node-id=38-1580&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3&embed-host=share" 
+      allowfullscreen>
     </iframe>
   </div>
-
+  
 
 
   <h3 class="section-title">Iteration: First Iteration vs. Final Iteration</h3>
   <div class="pictures-container">
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/desktop 9 originla.png">
+        <img src="assets/img/OUTPOST (3).png">
         <figcaption>First Iteration: Initial Concept & Layout</figcaption>
       </figure>
     </div>
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/Desktop 10 originia.png">
+        <img src="assets/img/armory (1).png">
         <figcaption>First Iteration: Initial Concept & Layout</figcaption>
 
       </figure>
@@ -333,33 +378,33 @@
   <div class="pictures-container">
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/Desktop - 9.png">
+        <img src="assets/img/outpost.png">
         <figcaption>Final Iteration: Polished & Refined Design</figcaption>
 
       </figure>
     </div>
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/Desktop - 10.png">
+        <img src="assets/img/armory.png">
         <figcaption>Final Iteration: Polished & Refined Design</figcaption>
       </figure>
     </div>
   </div>
 
-  <h3 class="section-title">Universal Studios Website vs. My Redesign</h3>
-  <p class="center-text">A side-by-side comparison of the <span class="highlight">original Halo Infinite</span> and my <strong>hypothetical sequel, Halo Infinite Requiem</strong>.</p>
+  <h3 class="section-title">Terminator resistance vs. My Redesign</h3>
+  <p class="center-text">A side-by-side comparison of  <span class="highlight">terminator resistance</span> and my <strong>hypothetical sequel, terminator future war</strong>.</p>
 
   <div class="pictures-container">
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/download (35).jpg">
-        <figcaption>Halo Infinite</figcaption>
+        <img src="assets/img/gun.jpg">
+        <figcaption>terminator resistance</figcaption>
       </figure>
     </div>
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/choppy-stuttering-in-customization-menu-after-season-3-v0-PmaHKURBjgGMenTfCAjP_IfYSSo57cEK9Y44h-LkCVs.jpg">
-        <figcaption>Halo Infinite</figcaption>
+        <img src="assets/img/augmentssss.jpg">
+        <figcaption>terminator resistance</figcaption>
 
       </figure>
     </div>
@@ -368,15 +413,15 @@
   <div class="pictures-container">
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/Desktop - 7.png">
-        <figcaption>Halo Infinite Requiem</figcaption>
+        <img src="assets/img/armory.png">
+        <figcaption>terminator future war</figcaption>
 
       </figure>
     </div>
     <div class="pictures2">
       <figure class="full">
-        <img src="assets/img/Desktop - 8.png">
-        <figcaption>Halo Infinite Requiem</figcaption>
+        <img src="assets/img/augments.png">
+        <figcaption>terminator future war</figcaption>
       </figure>
     </div>
   </div>

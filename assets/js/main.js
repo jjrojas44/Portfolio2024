@@ -852,3 +852,17 @@ function changeSliderImage(newSrc) {
 function changeImage(imageSrc, imageId) {
   document.getElementById(imageId).src = imageSrc;
 }
+
+
+document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(tabButton => {
+  tabButton.addEventListener('shown.bs.tab', () => {
+    document.querySelectorAll('.portfolio-slider-img').forEach(img => {
+      img.style.height = 'auto'; // re-apply sizing on tab change
+    });
+  });
+});
+
+
+function changeImage(src, targetId) {
+  document.getElementById(targetId).src = src;
+}

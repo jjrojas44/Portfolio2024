@@ -56,107 +56,110 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li>Portfolio Details</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- Breadcrumbs Section -->
+  <!-- Breadcrumbs Section -->
 
     <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-    
-        <!-- Tab Navigation -->
-        <ul class="nav nav-tabs mb-4" id="portfolioTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventory" type="button" role="tab">Inventory UI</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="battlepass-tab" data-bs-toggle="tab" data-bs-target="#battlepass" type="button" role="tab">Battle Pass UI</button>
-          </li>
-        </ul>
-    
-        <!-- Tab Content -->
-        <div class="tab-content" id="portfolioTabsContent">
-    
-          <!-- Inventory UI Tab -->
-          <div class="tab-pane fade show active" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
-            <div class="row gy-4">
-              <div class="col-lg-8">
-                <div class="gallery-container">
-                    <div class="main-image">
-                        <img id="displayedImage" src="assets/img/Group 41 (1).png" alt="Main Image" class="portfolio-slider-img">
-                    </div>
-                    <div class="thumbnail-pagination mt-3">
-                        <button class="thumb" onclick="changeImage('assets/img/Group 41 (1).png')">
-                            <img src="assets/img/Group 41 (1).png" alt="Thumbnail 1">
-                        </button>
-                        <button class="thumb" onclick="changeImage('assets/img/Group 42.png')">
-                            <img src="assets/img/Group 42.png" alt="Thumbnail 2">
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-              <div class="col-lg-4">
-                <div class="portfolio-info">
-                  <h3>Project Information</h3>
-                  <ul>
-                    <li><strong>Category:</strong> Video Game UI</li>
-                  </ul>
-                </div>
-                <div class="portfolio-description">
-                  <h2>Inventory UI</h2>
-                  <p>Explore different <strong>Inventory UI</strong> designs, ranging from grid-based layouts to weight-based systems.</p>
-                </div>
+   <!-- ======= Portfolio Details Section ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs mb-4" id="videoGameTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="fighters-tab" data-bs-toggle="tab" data-bs-target="#fighters" type="button" role="tab">Fighters UI</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rpg-tab" data-bs-toggle="tab" data-bs-target="#rpg" type="button" role="tab">RPG UI</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="shooters-tab" data-bs-toggle="tab" data-bs-target="#shooters" type="button" role="tab">Shooters UI</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="videoGameTabsContent">
+
+      <!-- Fighters Tab -->
+      <div class="tab-pane fade show active" id="fighters" role="tabpanel">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="gallery-container">
+              <div class="main-image">
+                <img src="assets/img/naruto BP.jpg" alt="Fighters UI" class="portfolio-slider-img">
               </div>
             </div>
           </div>
-    
-          <!-- Battle Pass UI Tab -->
-          <div class="tab-pane fade" id="battlepass" role="tabpanel" aria-labelledby="battlepass-tab">
-            <div class="row gy-4">
-              <div class="col-lg-8">
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <img id="displayedImage" src="assets/img/naruto BP.jpg" alt="Battle Pass UI - 1" class="portfolio-slider-img">
-                  </div>
-                  <div class="thumbnail-pagination mt-3">
-                    <button class="thumb" onclick="changeImage('assets/img/naruto BP.jpg')">
-                      <img src="assets/img/naruto BP.jpg" alt="Thumbnail 1">
-                    </button>
-                    <!-- Add more thumbnail buttons here for additional images -->
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="portfolio-info">
-                  <h3>Project Information</h3>
-                  <ul>
-                    <li><strong>Category:</strong> Video Game UI</li>
-                  </ul>
-                </div>
-                <div class="portfolio-description">
-                  <h2>Battle Pass UI</h2>
-                  <p>Explore a collection of <strong>Battle Pass UI</strong> designs, focusing on progression, rewards, and player engagement.</p>
-                </div>
-              </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category:</strong> Video Game UI</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Fighters UI</h2>
+              <p>Explore different <strong>Fighter Game UI</strong> designs, from dynamic character select screens to battle pass layouts and in-game upgrade menus.</p>
             </div>
           </div>
-    
-        </div> <!-- End of tab-content -->
-    
+        </div>
       </div>
-    </section>
+
+      <!-- RPG Tab -->
+      <div class="tab-pane fade" id="rpg" role="tabpanel">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="gallery-container">
+              <div class="main-image">
+                <img src="assets/img/rpg-ui.jpg" alt="RPG UI" class="portfolio-slider-img">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category:</strong> Video Game UI</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>RPG UI</h2>
+              <p>Explore a collection of <strong>RPG UI</strong> designs, focusing on inventory management, character progression, and quest tracking systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shooters Tab -->
+      <div class="tab-pane fade" id="shooters" role="tabpanel">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="gallery-container">
+              <div class="main-image">
+                <img src="assets/img/star-wars-bf3.jpg" alt="Shooters UI" class="portfolio-slider-img">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category:</strong> Video Game UI</li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Shooters UI</h2>
+              <p>Explore immersive <strong>Shooter and Action FPS UI</strong> designs, featuring dynamic HUD layouts, loadout menus, and prototype battle screens tailored for fast-paced gameplay experiences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Tab Content -->
+
+  </div>
+</section>
+<!-- End Portfolio Details Section -->
+
     
     <!-- Modal for Enlarged Image -->
     

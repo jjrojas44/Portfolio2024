@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ROJAS PORTFOLIO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo"><img src="assets/img/logo (2).png" alt="" class="img-fluid"></a>
+     
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="#header">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link active  scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfolio Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li>Portfolio Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+    
+      <ul class="nav nav-tabs mb-4" id="portfolioTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="fighters-tab" data-bs-toggle="tab" data-bs-target="#fighters" type="button" role="tab">Fighters UI</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="rpg-tab" data-bs-toggle="tab" data-bs-target="#rpg" type="button" role="tab">RPG UI</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="shooters-tab" data-bs-toggle="tab" data-bs-target="#shooters" type="button" role="tab">Shooters UI</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="jrpg-tab" data-bs-toggle="tab" data-bs-target="#jrpg" type="button" role="tab">JRPG UI</button>
+      </li>
+    </ul>
+
+
+        
+        
+        <!-- Tab Content -->
+        <div class="tab-content" id="portfolioTabsContent">
+    
+          <!-- Disney Graphics Tab -->
+         <div class="tab-pane fade show active" id="fighters" role="tabpanel">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="gallery-container">
+          <div class="main-image">
+            <img id="fightersDisplayedImage" src="assets/img/Group 41 (1).png" alt="Main Image" class="portfolio-slider-img">
+          </div>
+          <div class="thumbnail-pagination mt-3">
+            <button class="thumb" onclick="changeImage('assets/img/Group 41 (1).png', 'fightersDisplayedImage')">
+              <img src="assets/img/Group 41 (1).png" alt="Thumbnail 1">
+            </button>
+            <button class="thumb" onclick="changeImage('assets/img/naruto BP.jpg', 'fightersDisplayedImage')">
+              <img src="assets/img/naruto BP.jpg" alt="Thumbnail 2">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project Information</h3>
+          <ul>
+            <li><strong>Category:</strong> Video Game UI</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>Fighters UI</h2>
+          <p>Dynamic fighter game menus, battle passes, character select screens, and upgrade systems.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RPG UI -->
+  <div class="tab-pane fade show active" id="rpg" role="tabpanel">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="gallery-container">
+          <div class="main-image">
+           <img id="rpgDisplayedImage" src="assets/img/Group 42.png" alt="Main Image" class="portfolio-slider-img">
+
+          </div>
+          <div class="thumbnail-pagination mt-3">
+           <button class="thumb" onclick="changeImage('assets/img/Group 42.png', 'rpgDisplayedImage')">
+  <img src="assets/img/Group 42.png" alt="Thumbnail 1">
+</button>
+<button class="thumb" onclick="changeImage('assets/img/Group 42.png', 'rpgDisplayedImage')">
+  <img src="assets/img/Group 42.png" alt="Thumbnail 2">
+</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project Information</h3>
+          <ul>
+            <li><strong>Category:</strong> Video Game UI</li>
+          </ul>
+        </div>
+       <div class="portfolio-description">
+          <h2>RPG UI</h2>
+          <p>Inventory systems, quest logs, stat menus, and in-depth player management screens for RPG games.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shooters UI -->
+ <div class="tab-pane fade show active" id="shooters" role="tabpanel">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="gallery-container">
+          <div class="main-image">
+            <img id="shootersDisplayedImage" src="assets/img/shooters1.jpg" alt="Main Image" class="portfolio-slider-img">
+          </div>
+          <div class="thumbnail-pagination mt-3">
+            <button class="thumb" onclick="changeImage('assets/img/coming_soon.jpg', 'shootersDisplayedImage')">
+              <img src="assets/img/coming_soon.jpg" alt="Thumbnail 1">
+            </button>
+            <button class="thumb" onclick="changeImage('assets/img/coming_soon.jpg', 'shootersDisplayedImage')">
+              <img src="assets/img/coming_soon.jpg" alt="Thumbnail 2">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project Information</h3>
+          <ul>
+            <li><strong>Category:</strong> Video Game UI</li>
+          </ul>
+        </div>
+         <div class="portfolio-description">
+          <h2>Shooters UI</h2>
+          <p>HUD overlays, loadout menus, multiplayer lobbies, and battle-ready screen interfaces for shooters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JRPG UI -->
+  <div class="tab-pane fade" id="jrpg" role="tabpanel">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="gallery-container">
+          <div class="main-image">
+            <img id="jrpgDisplayedImage" src="assets/img/jrpg1.jpg" alt="Main Image" class="portfolio-slider-img">
+          </div>
+          <div class="thumbnail-pagination mt-3">
+            <button class="thumb" onclick="changeImage('assets/img/coming_soon.jpg', 'jrpgDisplayedImage')">
+              <img src="assets/img/coming_soon.jpg" alt="Thumbnail 1">
+            </button>
+            <button class="thumb" onclick="changeImage('assets/img/coming_soon.jpg', 'jrpgDisplayedImage')">
+              <img src="assets/img/coming_soon.jpg" alt="Thumbnail 2">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project Information</h3>
+          <ul>
+            <li><strong>Category:</strong> Video Game UI</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>JRPG UI</h2>
+          <p>Classic turn-based combat menus, party management screens, item inventories and dialogue windows.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+    <!-- End Portfolio Details Section -->
+    
+   
+
+  </figure>
+  
+  </div>
+</div>
+</main>
+
+  </main><!-- End #main -->
+
+  
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+     
+        <ul class="list-unstyled">
+          <li><a href="https://medium.com/@juanrojas7812/about"><i class="bi bi-medium"></i></a></li>
+          <li><a href="https://dribbble.com/rojas_design"><i class="bi bi-dribbble"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/juan-rojas444/"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="https://www.behance.net/JUANROJAS44_"><i class="fab fa-behance"></i></a></li>
+
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyright Juan Rojas. All rights reserved.</p>
+
+      <div class="credits">
+
+    </div>
+  </div><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

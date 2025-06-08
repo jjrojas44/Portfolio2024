@@ -847,3 +847,8 @@ function changeSliderImage(newSrc) {
     mainImage.src = newSrc;
   }
 }
+
+
+function changeImage(imageSrc, imageId) {
+  document.getElementById(imageId).src = imageSrc;
+}

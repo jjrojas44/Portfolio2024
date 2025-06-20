@@ -853,3 +853,11 @@ document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(tabButton => {
     });
   });
 });
+
+
+function changeImage(imageSrc, imageId) {
+  const targetImage = document.getElementById(imageId);
+  if (targetImage) {
+    targetImage.src = imageSrc;
+  }
+}

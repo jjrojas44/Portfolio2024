@@ -773,6 +773,7 @@ function closeImageModal() {
 }
 
 // Optional: Close modal on outside click
+// Close modal when clicking outside
 window.onclick = function(event) {
   var modal = document.getElementById("imageModal");
   if (event.target === modal) {
@@ -780,12 +781,15 @@ window.onclick = function(event) {
   }
 }
 
+// ✅ The one and only correct changeImage() function for the gallery
 function changeImage(imageSrc) {
-  document.getElementById('displayedImage').src = imageSrc;
+  const displayedImage = document.getElementById("displayedImage");
+  if (displayedImage) {
+    displayedImage.src = imageSrc;
+  }
 }
 
-
-
+// These are fine — no changes needed
 function changeInventoryImage(imagePath) {
   document.getElementById('inventoryDisplayedImage').src = imagePath;
 }
@@ -814,33 +818,26 @@ function changeBattlePassImage(imagePath) {
   document.getElementById('battlePassDisplayedImage').src = imagePath;
 }
 
+// Tab click activation for Games and Misc tabs
 document.addEventListener('DOMContentLoaded', function() {
   const gamesTabButton = document.getElementById('games-tab');
   const miscTabButton = document.getElementById('misc-tab');
 
-  // Activate the respective tabs
   gamesTabButton.addEventListener('click', function() {
-      const gamesTab = new bootstrap.Tab(gamesTabButton);
-      gamesTab.show();
+    const gamesTab = new bootstrap.Tab(gamesTabButton);
+    gamesTab.show();
   });
 
   miscTabButton.addEventListener('click', function() {
-      const miscTab = new bootstrap.Tab(miscTabButton);
-      miscTab.show();
+    const miscTab = new bootstrap.Tab(miscTabButton);
+    miscTab.show();
   });
 
-  // Optionally, you can programmatically activate a tab when the page loads.
-  new bootstrap.Tab(gamesTabButton).show(); // Activate the "Video Game Box Covers" tab by default
+  // Default activate the "Video Game Box Covers" tab
+  new bootstrap.Tab(gamesTabButton).show();
 });
 
-function changeImage(imageSrc) {
-  var displayedImage = document.getElementById("displayedImage");
-  displayedImage.src = imageSrc;
-}
-
-function changeImage(imageSrc) {
-  document.getElementById("displayedImage").src = imageSrc;
-}
+// Additional helper for the slider
 function changeSliderImage(newSrc) {
   const mainImage = document.getElementById('sliderDisplayedImage');
   if (mainImage) {
@@ -848,21 +845,11 @@ function changeSliderImage(newSrc) {
   }
 }
 
-
-function changeImage(imageSrc, imageId) {
-  document.getElementById(imageId).src = imageSrc;
-}
-
-
+// On tab shown, resize portfolio slider images
 document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(tabButton => {
   tabButton.addEventListener('shown.bs.tab', () => {
     document.querySelectorAll('.portfolio-slider-img').forEach(img => {
-      img.style.height = 'auto'; // re-apply sizing on tab change
+      img.style.height = 'auto';
     });
   });
 });
-
-
-function changeImage(src, targetId) {
-  document.getElementById(targetId).src = src;
-}

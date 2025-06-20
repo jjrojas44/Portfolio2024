@@ -782,12 +782,12 @@ window.onclick = function(event) {
 }
 
 // ✅ The one and only correct changeImage() function for the gallery
-function changeImage(imageSrc) {
+function changeMainImage(imageSrc) {
   const displayedImage = document.getElementById("displayedImage");
   if (displayedImage) {
     displayedImage.src = imageSrc;
   }
-}
+} 
 
 // These are fine — no changes needed
 function changeInventoryImage(imagePath) {

@@ -362,6 +362,22 @@ div.container {
 /**
 * Desktop Navigation 
 */
+
+.case-study-list {
+  list-style: none;       /* optional: removes bullets */
+  padding-left: 0;        /* aligns with content */
+  margin-top: 20px;       /* space from previous section */
+  font-family: "Poppins", sans-serif;
+}
+
+.case-study-list li {
+  margin-bottom: 16px;    /* adds space between each list item */
+  line-height: 1.7;       /* improves readability */
+  color: #333;            /* ensures text is readable */
+}
+
+
+
 .navbar {
   padding: 0;
 }

@@ -81,8 +81,8 @@ p {
   border-radius: 0;
   color: #fff;
   font-size: 12px;
-  height: 50px;
-  line-height: 50px;
+  height: 56px;
+  line-height: 1px;
   padding: 0 30px;
   text-transform: uppercase;
   transition: transform 0.3s ease, background 0.3s ease; /* Smooth transitions */
@@ -375,6 +375,7 @@ div.container {
   line-height: 1.7;       /* improves readability */
   color: #333;            /* ensures text is readable */
 }
+
 
 
 
@@ -948,6 +949,10 @@ div.container {
 /* Portfolio Grid */
 
 
+
+
+
+
 #portfolio .portfolio-container {
   display: flex;
   flex-wrap: wrap;
@@ -977,7 +982,7 @@ div.container {
   border: 2px solid #e0d4b8;
   padding: 15px;
   background-color: #f9f9f9;
-  margin: 10px;
+  margin: 35px;
 }
 
 #portfolio .portfolio-item img {

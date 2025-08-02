@@ -109,6 +109,44 @@ p {
 }
 
 
+/* Style the form container */
+.php-email-form {
+  width: 100%;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* Style all form inputs and textarea */
+.php-email-form .form-control {
+  width: 100%;
+  padding: 14px 20px;
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease;
+}
+
+/* Style for textarea (override height) */
+.php-email-form textarea.form-control {
+  height: auto;
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.4;
+  padding: 14px 20px;
+}
+
+/* Optional: on focus style */
+.php-email-form .form-control:focus {
+  outline: none;
+  border: 2px solid #facc22; /* or any highlight color */
+}
 
 
 
@@ -3064,6 +3102,11 @@ button[type="submit"].btn-send {
   100% { background-position: 0% 50%; }
 }
 
+/* Left Side: Contact Info */
+.contact-contact {
+  padding: 20px;
+}
+
 .contact-contact h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -3071,13 +3114,27 @@ button[type="submit"].btn-send {
   margin-bottom: 20px;
 }
 
+.contact-contact .lead {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .contact-details li {
   font-size: 1.2rem;
-  color: #ffecb3;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: #ffffff;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .contact-details li:hover {
@@ -3086,27 +3143,56 @@ button[type="submit"].btn-send {
 }
 
 .contact-details i {
-  margin-right: 10px;
   font-size: 1.5rem;
-  color: #f7f7f7;
+  color: #ffffff;
+  min-width: 24px;
+  text-align: center;
 }
 
 /* Form Enhancements */
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
   width: 100%;
   padding: 12px 15px;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: all 0.3s ease;
+  color: #333;
 }
 
-#contact input:focus, #contact textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   transform: scale(1.02);
   outline: none;
 }
+
+/* Fix uneven spacing */
+#contact .form-group {
+  margin-bottom: 20px;
+}
+
+/* Center the "Send Message" button text perfectly */
+#contact .btn-send {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ffffff,);
+  color: #000;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#contact .btn-send:hover {
+  background: linear-gradient(to right, #ffffff);
+  color: #000;
+}
+
 
 /* Submit Button Animation */
 .btn-send {

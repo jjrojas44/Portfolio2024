@@ -77,16 +77,20 @@
     
         <ul class="nav nav-tabs mb-4" id="portfolioTabs" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="disney-tab" data-bs-toggle="tab" data-bs-target="#disney" type="button" role="tab">Disney Graphics</button>
+            <button class="nav-link active" id="disney-tab" data-bs-toggle="tab" data-bs-target="#disney" type="button" role="tab">theme park entertainment Graphics</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="universal-tab" data-bs-toggle="tab" data-bs-target="#universal" type="button" role="tab">Universal Studios Graphics</button>
+  <button class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab">TV & Movie Designs</button>
+</li>
+<li class="nav-item" role="presentation">
+  <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button" role="tab">Music Designs</button>
+</li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="universal-tab" data-bs-toggle="tab" data-bs-target="#universal" type="button" role="tab">Anime/Manga Graphic designs</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="games-tab" data-bs-toggle="tab" data-bs-target="#games" type="button" role="tab">Video Game Designs</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="misc-tab" data-bs-toggle="tab" data-bs-target="#misc" type="button" role="tab">Miscellaneous Designs</button>
           </li>
         </ul>
         
@@ -109,6 +113,12 @@
                     <button class="thumb" onclick="changeConceptImage('assets/img/villains land.jpg')">
                       <img src="assets/img/villains land.jpg" alt="Thumbnail 2">
                     </button>
+                     <button class="thumb" onclick="changeConceptImage('assets/img/jp vs jw.jpg')">
+  <img src="assets/img/jp vs jw.jpg" alt="Thumbnail 3">
+</button>
+<button class="thumb" onclick="changeConceptImage('assets/img/Jacks.png')">
+  <img src="assets/img/Jacks.png" alt="Thumbnail 4">
+</button>
                   </div>
                 </div>
               </div>
@@ -120,12 +130,78 @@
                   </ul>
                 </div>
                 <div class="portfolio-description">
-                  <h2>Disney Graphics</h2>
-                  <p>Different graphic designs centered around Disney IPs.</p>
+                  <h2>theme park entertainment Graphics</h2>
+                  <p>Different graphic designs centered around theme park entertainment, including IPS, attractions, rides, shows, seasonal events, and iconic park experiences.</p>
                 </div>
               </div>
             </div>
           </div>
+
+
+ <div class="tab-pane fade" id="tv" role="tabpanel">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="gallery-container">
+          <div class="main-image">
+            <img id="tvDisplayedImage" src="assets/img/TITANICUPDATE.png" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
+          </div>
+          <div class="thumbnail-pagination mt-3">
+                                 <button class="thumb" onclick="changeGraphicImage('assets/img/TITANICUPDATE.png')">
+                      <img src="assets/img/TITANICUPDATE.png" alt="Thumbnail 2">
+                    </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project Information</h3>
+          <ul>
+            <li><strong>Category:</strong> Graphic Design</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>TV & Movie Designs</h2>
+          <p>A collection of graphic design concepts inspired by films and television, including posters, promotional art, show branding, and fan art that captures cinematic and TV aesthetics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music Tab -->
+  <div class="tab-pane fade" id="music" role="tabpanel">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="gallery-container">
+          <div class="main-image">
+            <img id="musicDisplayedImage" src="assets/img/floridaaa.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
+          </div>
+          <div class="thumbnail-pagination mt-3">
+             <button class="thumb" onclick="changeGraphicImage('assets/img/floridaaa.jpg')">
+                      <img src="assets/img/floridaaa.jpg" alt="Thumbnail 1">
+                    </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="portfolio-info">
+          <h3>Project Information</h3>
+          <ul>
+            <li><strong>Category:</strong> Graphic Design</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h2>Music Designs</h2>
+          <p>A showcase of graphic design work inspired by music, including album covers, concert posters, festival branding, and artist promotional materials, emphasizing rhythm and visual style.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
     
           <!-- Universal Studios Tab -->
           <div class="tab-pane fade" id="universal" role="tabpanel">
@@ -133,14 +209,14 @@
               <div class="col-lg-8">
                 <div class="gallery-container">
                   <div class="main-image">
-                    <img id="battlePassDisplayedImage" src="assets/img/jp vs jw.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
+                    <img id="battlePassDisplayedImage" src="assets/img/coming_soon.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
                   </div>
                   <div class="thumbnail-pagination mt-3">
-                    <button class="thumb" onclick="changeBattlePassImage('assets/img/jp vs jw.jpg')">
-                      <img src="assets/img/jp vs jw.jpg" alt="Thumbnail 1">
+                    <button class="thumb" onclick="changeBattlePassImage('assets/img/coming_soon.jpg')">
+                      <img src="assets/img/coming_soon.jpg" alt="Thumbnail 1">
                     </button>
-                    <button class="thumb" onclick="changeBattlePassImage('assets/img/Jacks.png')">
-                      <img src="assets/img/Jacks.png" alt="Thumbnail 2">
+                    <button class="thumb" onclick="changeBattlePassImage('assets/img/coming_soon.jpg')">
+                      <img src="assets/img/coming_soon.jpg" alt="Thumbnail 2">
                     </button>
                   </div>
                 </div>
@@ -154,8 +230,8 @@
                   </ul>
                 </div>
                 <div class="portfolio-description">
-                  <h2>Universal Studios Graphic Designs</h2>
-                  <p>Different graphic designs centered around Universal Studios IPs.</p>
+                  <h2>Anime/Manga Graphic designs</h2>
+                  <p>Different graphic designs centered around anime and manga, including characters, story arcs, iconic scenes, opening themes, and cultural aesthetics.</p>
                 </div>
               </div>
             </div>
@@ -207,42 +283,6 @@
               </div>
             </div>
           </div>
-
-
-          <div class="tab-pane fade" id="misc" role="tabpanel">
-            <div class="row gy-4">
-              <div class="col-lg-8">
-                <div class="gallery-container">
-                  <div class="main-image">
-                    <img id="graphicDesignDisplayedImage" src="assets/img/floridaaa.jpg" alt="Main Image" class="portfolio-slider-img" onclick="openImageModal(this)">
-                  </div>
-                  <div class="thumbnail-pagination mt-3">
-                    <button class="thumb" onclick="changeGraphicImage('assets/img/floridaaa.jpg')">
-                      <img src="assets/img/floridaaa.jpg" alt="Thumbnail 1">
-                    </button>
-                    <button class="thumb" onclick="changeGraphicImage('assets/img/TITANICUPDATE.png')">
-                      <img src="assets/img/TITANICUPDATE.png" alt="Thumbnail 2">
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="portfolio-info">
-                  <h3>Project Information</h3>
-                  <ul>
-                    <li><strong>Category:</strong> Graphic Design</li>
-                  </ul>
-                </div>
-                <div class="portfolio-description">
-                  <h2>Miscellaneous Designs</h2>
-                  <p>A diverse collection of graphic design work that doesn’t fit into a single theme or project.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </div>
-      </div>
     </section>
     
     

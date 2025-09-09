@@ -862,4 +862,6 @@ function changeImage(imageSrc, imageId) {
   }
 }
 
-
+function changeConceptImage(src) {
+  document.getElementById("conceptDesignDisplayedImage").src = src;
+}

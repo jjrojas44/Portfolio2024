@@ -869,3 +869,7 @@ function changeConceptImage(src) {
 function changeGraphicImage(src) {
   document.getElementById("graphicDisplayedImage").src = src;
 }
+
+ function changeWearablesImage(imageSrc) {
+    document.getElementById('wearablesDisplayedImage').src = imageSrc;
+  }

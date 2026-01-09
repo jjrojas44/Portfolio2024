@@ -873,3 +873,12 @@ function changeGraphicImage(src) {
  function changeWearablesImage(imageSrc) {
     document.getElementById('wearablesDisplayedImage').src = imageSrc;
   }
+
+  
+  function swapMainImage(btn) {
+    const targetId = btn.getAttribute("data-target");
+    const newSrc = btn.getAttribute("data-src");
+    const mainImg = document.getElementById(targetId);
+    if (mainImg && newSrc) mainImg.src = newSrc;
+  }
+

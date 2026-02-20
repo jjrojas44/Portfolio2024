@@ -26,8 +26,10 @@ h1, h2, h3, h4, h5 {
 
 h2 {
   color: #b8a07e;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
-  font-family: "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  letter-spacing: -0.02em;   
 }
 
 h4 {
@@ -996,8 +998,8 @@ div.container {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px;
-  padding: 80px 20px;
+  gap: 60px;
+  padding: 60px 20px;
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
 }
@@ -1009,7 +1011,8 @@ div.container {
   position: relative;
   overflow: hidden;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 16px;
+   border: 1px solid rgba(224, 212, 184, 0.7);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
@@ -1022,6 +1025,12 @@ div.container {
   background-color: #f9f9f9;
   margin: 35px;
 }
+
+#portfolio .portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
 
 #portfolio .portfolio-item img {
   width: 100%;
@@ -1514,18 +1523,19 @@ div.container {
 }
 
 #portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
+ opacity: 0;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -10px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+
   padding: 20px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  text-align: center;
-  color: #fff;
+  text-align: left;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  transform: translateY(20px);
+  transition: all 0.25s ease;
 }
 
 #portfolio .portfolio-item:hover .portfolio-info {
@@ -1534,18 +1544,28 @@ div.container {
 }
 
 #portfolio .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
   margin-bottom: 8px;
-  color: #f8e4c2;
+  color: #f6e7cf;
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.9);
 }
 
 #portfolio .portfolio-info p {
-  font-size: 14px;
-  color: #ddd;
+   font-family: "Inter", sans-serif;
+ font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: none;  /* remove uppercase feel */
+  color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.85);
+
+  margin: 0 0 12px 0;
 }
 
 #portfolio .portfolio-info .details-link {
+    font-family: "Inter", sans-serif;
   font-size: 16px;
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.2);
@@ -1555,71 +1575,76 @@ div.container {
   transition: all 0.3s ease;
   display: inline-block;
   margin-top: 10px;
+    transition: background 0.2s ease, transform 0.2s ease;
+
 }
 
 #portfolio .portfolio-info .details-link:hover {
   background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
+
+/* =========================
+   Portfolio Filter Section
+   Modern Gold Aesthetic
+   ========================= */
 
 #portfolio #portfolio-flters {
   padding: 10px 20px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   list-style: none;
-  text-align: center;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
+/* Individual Filter Pills */
 #portfolio #portfolio-flters li {
-  cursor: pointer;
-  padding: 10px 15px;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #666;
-  transition: all 0.3s ease-in-out;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none; /* removed uppercase */
+  padding: 8px 18px;
+  border-radius: 999px; /* fully rounded modern pill */
+  background: rgba(184, 160, 126, 0.12); /* soft gold background */
+  color: #3b3737;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
+/* Hover State */
+#portfolio #portfolio-flters li:hover {
+ background: #b8a07e;
+  color: #fff;
+}
+
+/* Active State */
+#portfolio #portfolio-flters li.filter-active {
+  background: #b8a07e; /* your main gold */
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Remove outdated bounce effect */
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-  color: #fff;
-  background: #b89e72;
-  transform: translateY(-3px);
+  transform: none;
 }
 
-@media (max-width: 1024px) {
-  #portfolio .portfolio-container {
-    flex-wrap: wrap;
-  }
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  #portfolio .portfolio-item {
-    width: 100%;
-    height: auto;
-  }
-
-  #portfolio .portfolio-info h4 {
-    font-size: 16px;
-  }
-
-  #portfolio .portfolio-info p {
-    font-size: 12px;
-  }
 
   #portfolio #portfolio-flters {
-    flex-wrap: wrap;
+    gap: 8px;
   }
 
   #portfolio #portfolio-flters li {
-    padding: 8px 12px;
-    font-size: 12px;
+    font-size: 13px;
+    padding: 6px 14px;
   }
 }
-
 
 
 

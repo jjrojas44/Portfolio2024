@@ -901,82 +901,90 @@ div.container {
 # Services
 --------------------------------------------------------------*/
 #services {
-  background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
   position: relative;
-  padding-bottom: 80px;
-  overflow: hidden;
+  padding: 90px 0;
 }
 
-/* Boxed Service Block */
-.services-block {
-  text-align: center;
-  padding: 25px;
-  border: 2px solid #b8a07e;
-  border-radius: 12px;
+/* Optional subtitle */
+#services .services-subtitle {
+  max-width: 720px;
+  margin: 12px auto 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8f8f8f;
+}
+
+/* Grid */
+#services .services-grid {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+#services .services-card {
+  border-radius: 18px;
   background: #fff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 280px;
-  position: relative;
-  overflow: hidden;
+  border: 1px solid rgba(184, 160, 126, 0.30);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  padding: 22px 22px 20px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.services-block:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+#services .services-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.10);
 }
 
-/* Icon Styling */
-.services-block i {
-  font-size: 55px;
+/* Icon */
+#services .services-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(184, 160, 126, 0.14);
+  border: 1px solid rgba(184, 160, 126, 0.35);
+  margin-bottom: 14px;
+}
+
+#services .services-icon i {
+  font-size: 26px;
   color: #b8a07e;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  display: block;
-  margin: 0 auto 12px;
 }
 
-.services-block:hover i {
-  transform: scale(1.1);
-  color: #ff7f50;
+/* Title */
+#services .services-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #292929;
 }
 
-/* Boxed Title */
-.services-block span {
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 8px 18px;
-  border: 2px solid #b8a07e;
-  border-radius: 8px;
-  background: rgba(184, 160, 126, 0.1);
-  color: #333;
-  transition: background 0.3s ease-in-out;
+/* Text */
+#services .services-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: #7a7a7a;
 }
 
-.services-block:hover span {
-  background: rgba(255, 127, 80, 0.2);
+/* Responsive */
+@media (max-width: 992px) {
+  #services .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Swiper Pagination */
-.services-slider .swiper-pagination {
-  margin-top: 30px;
-  position: relative;
-}
-
-.services-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border: 2px solid #b8a07e;
-  border-radius: 50%;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.services-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background: #b8a07e;
-  transform: scale(1.4);
-  box-shadow: 0 0 8px rgba(184, 160, 126, 0.6);
+@media (max-width: 576px) {
+  #services .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1527,25 +1535,26 @@ div.container {
   position: absolute;
   left: 0;
   right: 0;
+   top: 0;
   bottom: 0;
-
+   height: 100%;   
   padding: 20px;
   text-align: left;
 
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.82);
 
-  transform: translateY(20px);
-  transition: all 0.25s ease;
+  
+  transition: opacity 0.25s ease;
 }
 
 #portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
-  transform: translateY(15px);
+ 
 }
 
 #portfolio .portfolio-info h4 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 21px;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 8px;
   color: #f6e7cf;
@@ -1555,8 +1564,9 @@ div.container {
 #portfolio .portfolio-info p {
    font-family: "Inter", sans-serif;
  font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0;
+   margin-bottom: 20px;
   text-transform: none;  /* remove uppercase feel */
   color: rgba(255, 255, 255, 0.8);
     text-shadow: 0px 2px 4px rgba(0,0,0,0.85);
@@ -3124,158 +3134,238 @@ button[type="submit"].btn-send {
 /*--------------------------------------------------------------
 # Journal
 --------------------------------------------------------------*/
+/* =========================
+   CONTACT (Modern Gold)
+   ========================= */
+
 #contact {
-  width: 100%;
-  padding: 50px 20px;
-  background: linear-gradient(-45deg, #292929, #b8a07e, #898989);
-  color: #fff;
-  animation: gradientBG 10s ease infinite;
+  padding: 90px 0;
+  background: #ffffff;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Left Side: Contact Info */
-.contact-contact {
-  padding: 20px;
-}
-
-.contact-contact h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #f7f7f7;
-  margin-bottom: 20px;
-}
-
-.contact-contact .lead {
-  font-size: 1.1rem;
-  color: #e0e0e0;
-  margin-bottom: 25px;
+#contact .contact-subtitle {
+  max-width: 720px;
+  margin: 12px auto 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
   line-height: 1.6;
+  color: #8f8f8f;
 }
 
-.contact-details {
+/* Wrapper layout */
+#contact .contact-wrap {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Cards */
+#contact .contact-card {
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(184, 160, 126, 0.28);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  padding: 26px;
+}
+
+/* Info side */
+#contact .contact-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #292929;
+}
+
+#contact .contact-lead {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #7a7a7a;
+  margin: 0 0 18px 0;
+}
+
+/* Contact list */
+#contact .contact-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 12px;
 }
 
-.contact-details li {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 14px;
+#contact .contact-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  gap: 12px;
 }
 
-.contact-details li:hover {
-  color: #ffffff;
-  transform: translateX(5px);
-}
-
-.contact-details i {
-  font-size: 1.5rem;
-  color: #ffffff;
-  min-width: 24px;
-  text-align: center;
-}
-
-/* Form Enhancements */
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 12px 15px;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  color: #333;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  transform: scale(1.02);
-  outline: none;
-}
-
-/* Fix uneven spacing */
-#contact .form-group {
-  margin-bottom: 20px;
-}
-
-/* Center the "Send Message" button text perfectly */
-#contact .btn-send {
-  padding: 12px 30px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(to right, #ffffff,);
-  color: #000;
-  font-weight: bold;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-}
-
-#contact .btn-send:hover {
-  background: linear-gradient(to right, #ffffff);
-  color: #000;
-}
-
-
-/* Submit Button Animation */
-.btn-send {
-  background: #fff;
-  color: #292929;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  
-  /* Center text inside button */
-  display: flex;
+#contact .contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  text-align: center; 
+  background: rgba(184, 160, 126, 0.14);
+  border: 1px solid rgba(184, 160, 126, 0.35);
+  color: #b8a07e;
 }
 
-.btn-send::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.5s ease;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.btn-send:active::after {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 0;
-}
-
-.btn-send:hover {
-  background: #e6e6e6;
+#contact .contact-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   color: #292929;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Socials */
+#contact .contact-social {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+#contact .contact-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.06);
+  color: #292929;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+#contact .contact-social a:hover {
+  transform: translateY(-3px);
+  background: rgba(184, 160, 126, 0.14);
+  border-color: rgba(184, 160, 126, 0.35);
+}
+
+/* Inputs */
+#contact .contact-input {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #292929;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+#contact .contact-input::placeholder {
+  color: rgba(41,41,41,0.45);
+}
+
+#contact .contact-input:focus {
+  border-color: rgba(184, 160, 126, 0.75);
+  box-shadow: 0 0 0 4px rgba(184, 160, 126, 0.18);
+}
+
+/* Textarea */
+#contact .contact-textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* Button */
+#contact .contact-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  color: #292929;
+  background: rgba(184, 160, 126, 0.28);
+  border: 1px solid rgba(184, 160, 126, 0.45);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+#contact .contact-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(184, 160, 126, 0.40);
+}
+
+#contact .contact-note {
+  margin: 10px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #8f8f8f;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #contact .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   THANK YOU SECTION (END CAP)
+   ========================= */
+
+#thank-you {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#thank-you .thankyou-card {
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(184, 160, 126, 0.28);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  padding: 40px 28px;
+}
+
+#thank-you .thankyou-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #292929; /* keep your current text color */
+}
+
+#thank-you .thankyou-text {
+  margin: 0 auto;
+  max-width: 760px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #999999; /* matches your paragraph styling */
+}
+
+#thank-you .thankyou-divider {
+  height: 1px;
+  width: 110px;
+  margin: 22px auto 16px;
+  background: rgba(184, 160, 126, 0.55); /* your gold */
+}
+
+#thank-you .thankyou-note {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(41, 41, 41, 0.55);
+}
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Blog

@@ -1113,60 +1113,53 @@ div.container {
 
 
 /* THUMBNAIL ROW */
-.gallery-container .thumbnail-pagination {
-  display: flex;
-  flex-wrap: nowrap;
+.gallery-container .thumbnail-pagination{
+  display:flex;
+  flex-wrap:nowrap;
 
-  overflow-x: auto;     /* enables horizontal scroll */
-  overflow-y: hidden;
+  width:100%;
+  max-width:900px;     /* ✅ forces overflow if thumbs exceed 900px */
+  margin:18px auto 0;
 
-  gap: 16px;
-  width: 100%;
-  max-width: 100%;
+  overflow-x:scroll;   /* ✅ ALWAYS show scroll capability */
+  overflow-y:hidden;
 
-  padding: 14px 8px 22px;
-  margin-top: 18px;
+  gap:16px;
+  padding:14px 8px 22px;
 
   scrollbar-gutter: stable;
   -webkit-overflow-scrolling: touch;
+
 }
 
-/* Scrollbar styling */
-.gallery-container .thumbnail-pagination::-webkit-scrollbar {
-  height: 10px;
+/* prevent buttons from shrinking */
+.gallery-container .thumbnail-pagination .thumb{
+  flex:0 0 auto;
+  border:none;
+  background:none;
+  padding:0;
+  cursor:pointer;
 }
 
-.gallery-container .thumbnail-pagination::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.08);
-  border-radius: 999px;
+/* FORCE each thumbnail to have real width (this creates overflow) */
+.gallery-container .thumbnail-pagination .thumb img{
+  width:320px;         /* ✅ fixed width forces overflow */
+  height:auto;
+  display:block;
+  border-radius:8px;
 }
 
-.gallery-container .thumbnail-pagination::-webkit-scrollbar-thumb {
-  background: rgba(184,160,126,0.8);
-  border-radius: 999px;
+/* Scrollbar style (Chrome/Edge) */
+.gallery-container .thumbnail-pagination::-webkit-scrollbar{
+  height:10px;
 }
-
-/* Each thumbnail button */
-.gallery-container .thumbnail-pagination .thumb {
-  flex: 0 0 auto;      /* prevents shrinking */
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
+.gallery-container .thumbnail-pagination::-webkit-scrollbar-track{
+  background: rgba(255,255,255,0.12);
+  border-radius:999px;
 }
-
-/* Thumbnail image */
-.gallery-container .thumbnail-pagination .thumb img {
-  width: 260px;        /* force overflow */
-  height: auto;
-  display: block;
-
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-}
-
-.gallery-container .thumbnail-pagination .thumb img:hover {
-  transform: scale(1.05);
+.gallery-container .thumbnail-pagination::-webkit-scrollbar-thumb{
+  background: rgba(184,160,126,0.85);
+  border-radius:999px;
 }
 
 /* General Styling for Portfolio Section */
@@ -1176,6 +1169,60 @@ div.container {
   object-fit: contain;
   cursor: pointer;
 }
+
+
+.prototype-section{
+  padding: 80px 0;
+}
+
+.section-heading{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:60px;
+}
+
+.prototype-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap:60px;
+}
+
+.prototype-card h3{
+  margin-bottom:20px;
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+.prototype-frame{
+  position:relative;
+  width:100%;
+  padding-top:56.25%; /* 16:9 ratio */
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.25);
+  background:#111;
+  transition:transform 0.3s ease;
+}
+
+.prototype-frame iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.prototype-frame:hover{
+  transform:translateY(-6px);
+}
+
+
+
+
+
+
+
 
 /* Manual Slider Container */
 .custom-slider {

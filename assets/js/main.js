@@ -882,3 +882,97 @@ function changeGraphicImage(src) {
     if (mainImg && newSrc) mainImg.src = newSrc;
   }
 
+
+
+ document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+    const mainImg = gallery.querySelector(".gallery-main");
+    const thumbs = Array.from(gallery.querySelectorAll(".thumb"));
+    const prevBtn = gallery.querySelector(".gallery-arrow.prev");
+    const nextBtn = gallery.querySelector(".gallery-arrow.next");
+    const strip = gallery.querySelector(".thumbnail-strip");
+
+    if (!mainImg || !thumbs.length || !prevBtn || !nextBtn || !strip) return;
+
+    const sources = thumbs.map(t => t.dataset.src).filter(Boolean);
+    let currentIndex = Math.max(0, thumbs.findIndex(t => t.classList.contains("is-active")));
+    if (!sources.length) return;
+
+    function setActive(index) {
+      currentIndex = (index + sources.length) % sources.length;
+
+      mainImg.src = sources[currentIndex];
+
+      thumbs.forEach(t => t.classList.remove("is-active"));
+      const activeThumb = thumbs[currentIndex];
+      activeThumb.classList.add("is-active");
+
+      activeThumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+
+    // Thumb click
+    thumbs.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => setActive(index));
+    });
+
+    // Arrow nav
+    prevBtn.addEventListener("click", () => setActive(currentIndex - 1));
+    nextBtn.addEventListener("click", () => setActive(currentIndex + 1));
+
+    // Drag-to-scroll (don’t hijack thumb clicks)
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    strip.addEventListener("mousedown", (e) => {
+      // ✅ If clicking a thumb, do NOT start drag
+      if (e.target.closest(".thumb")) return;
+
+      isDown = true;
+      strip.classList.add("is-dragging");
+      startX = e.pageX;
+      scrollLeft = strip.scrollLeft;
+    });
+
+    window.addEventListener("mouseup", () => {
+      isDown = false;
+      strip.classList.remove("is-dragging");
+    });
+
+    strip.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const walk = (e.pageX - startX) * 1.2;
+      strip.scrollLeft = scrollLeft - walk;
+    });
+
+    // Wheel => horizontal scroll
+    strip.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        strip.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
+    // Touch swipe
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
+
+    strip.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].pageX;
+      touchScrollLeft = strip.scrollLeft;
+    }, { passive: true });
+
+    strip.addEventListener("touchmove", (e) => {
+      const dx = e.touches[0].pageX - touchStartX;
+      strip.scrollLeft = touchScrollLeft - dx;
+    }, { passive: true });
+
+    setActive(currentIndex);
+  });
+});
+
+function changeMainImage(src) {
+  const mainImage = document.getElementById("displayedImage");
+  if (mainImage) mainImage.src = src;
+}

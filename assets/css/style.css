@@ -1057,118 +1057,68 @@ div.container {
   color: white !important;
 }
 
-
-#portfolio-details .portfolio-slider-img {
+.gallery-container {
   width: 100%;
-  max-height: 650px;
-  object-fit: contain;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-#portfolio-details .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 750px; /* Ensures uniform slide height */
-}
-
-.case-study-gallery {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.case-study-gallery .main-image {
+.main-image {
+  width: 100%;
   text-align: center;
 }
 
-.case-study-gallery .main-image img {
-  width: 35%;
-  max-height: 610px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.case-study-gallery .thumbnail-pagination {
-   display:flex;
-  flex-wrap:nowrap;
-  overflow-x: scroll;            /* force scrollbar behavior */
-  overflow-y: hidden;
-  gap: 12px;
-
-  max-width: 100%;
-  width: 100%;
-
-  padding: 12px 6px 18px;        /* bottom padding so bar has room */
-  margin-top: 18px;
-
-  scrollbar-gutter: stable;      /* keeps space for scrollbar (Chrome/Edge) */
-  -webkit-overflow-scrolling: touch;
-}
-
-.thumbnail-pagination::-webkit-scrollbar { height: 10px; }
-.thumbnail-pagination::-webkit-scrollbar-track { background: rgba(255,255,255,0.08); border-radius: 999px; }
-.thumbnail-pagination::-webkit-scrollbar-thumb { background: rgba(184,160,126,0.75); border-radius: 999px; }
-
-
-/* THUMBNAIL ROW */
-.gallery-container .thumbnail-pagination{
-  display:flex;
-  flex-wrap:nowrap;
-
-  width:100%;
-  max-width:900px;     /* ✅ forces overflow if thumbs exceed 900px */
-  margin:18px auto 0;
-
-  overflow-x:scroll;   /* ✅ ALWAYS show scroll capability */
-  overflow-y:hidden;
-
-  gap:16px;
-  padding:14px 8px 22px;
-
-  scrollbar-gutter: stable;
-  -webkit-overflow-scrolling: touch;
-
-}
-
-/* prevent buttons from shrinking */
-.gallery-container .thumbnail-pagination .thumb{
-  flex:0 0 auto;
-  border:none;
-  background:none;
-  padding:0;
-  cursor:pointer;
-}
-
-/* FORCE each thumbnail to have real width (this creates overflow) */
-.gallery-container .thumbnail-pagination .thumb img{
-  width:320px;         /* ✅ fixed width forces overflow */
-  height:auto;
-  display:block;
-  border-radius:8px;
-}
-
-/* Scrollbar style (Chrome/Edge) */
-.gallery-container .thumbnail-pagination::-webkit-scrollbar{
-  height:10px;
-}
-.gallery-container .thumbnail-pagination::-webkit-scrollbar-track{
-  background: rgba(255,255,255,0.12);
-  border-radius:999px;
-}
-.gallery-container .thumbnail-pagination::-webkit-scrollbar-thumb{
-  background: rgba(184,160,126,0.85);
-  border-radius:999px;
-}
-
-/* General Styling for Portfolio Section */
-#portfolio-details .portfolio-video {
+.main-image img {
   width: 100%;
   max-height: 650px;
-  object-fit: contain;
+  object-fit: contain; /* prevents cut-off */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+  display: block;
+}
+
+/* Thumbnails row */
+.thumbnail-pagination {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-top: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 14px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* scrollbar (optional) */
+.thumbnail-pagination::-webkit-scrollbar {
+  height: 10px;
+}
+.thumbnail-pagination::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.25);
+  border-radius: 999px;
+}
+
+.thumb {
+  flex: 0 0 auto;
+  border: none;
+  background: none;
+  padding: 0;
   cursor: pointer;
 }
+
+.thumb img {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease;
+}
+
+.thumb img:hover {
+  transform: translateY(-2px);
+}
+
+
+
 
 
 .prototype-section{
@@ -3081,100 +3031,83 @@ ul.custom-tabs > li > .nav-link:focus {
 }
 
 
+/* ========= SIMPLE NEW GALLERY CSS (NO ARROWS) ========= */
+.uxg { width: 100%; }
 
-/* =========================
-   Portfolio Details Gallery
-   ========================= */
-
-#portfolio-details .gallery-container {
-  text-align: center;
+.uxg__stage{
+  background:#0f1115;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.18);
 }
 
-#portfolio-details .main-image {
+.uxg__main{
   width: 100%;
-}
-
-#portfolio-details .main-image img {
-  width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  height: 560px;          /* uniform stage height */
+  object-fit: contain;    /* no cut-off */
   display: block;
+  border-radius: 14px;
+  user-select: none;
 }
 
-/* Thumbnails wrapper */
-#portfolio-details .thumbnail-pagination{
+/* Thumbnails strip */
+.uxg__strip{
+  margin-top: 14px;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   gap: 12px;
-  margin-top: 18px;
-
+  padding: 12px 8px 18px;
   overflow-x: auto;
-  padding: 6px 4px 12px;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  scrollbar-gutter: stable;
   -webkit-overflow-scrolling: touch;
 }
 
-#portfolio-details .thumb{
-  flex: 0 0 auto;
-  scroll-snap-align: start;
+/* Scrollbar */
+.uxg__strip::-webkit-scrollbar{ height: 10px; }
+.uxg__strip::-webkit-scrollbar-track{
+  background: rgba(0,0,0,0.10);
+  border-radius: 999px;
 }
-
-#portfolio-details .thumbnail-pagination::-webkit-scrollbar{
-  height: 10px;
-}
-#portfolio-details .thumbnail-pagination::-webkit-scrollbar-thumb{
-  background: rgba(0,0,0,0.25);
+.uxg__strip::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.28);
   border-radius: 999px;
 }
 
+/* Thumbs */
+.uxg__thumb{
+  flex: 0 0 auto;
+  border: 2px solid transparent;
+  background: transparent;
+  padding: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  scroll-snap-align: start;
+  opacity: 0.88;
+  transition: transform .15s ease, border-color .15s ease, opacity .15s ease;
+}
 
-
-/* Thumb image */
-#portfolio-details .thumb img {
-  width: 110px;
-  height: 70px;
+.uxg__thumb img{
+  width: 190px;
+  height: 110px;
   object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
-/* Hover */
-#portfolio-details .thumb img:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+.uxg__thumb:hover{ transform: translateY(-2px); opacity: 1; }
+.uxg__thumb.is-active{ border-color: rgba(80,160,255,0.95); opacity: 1; }
+
+/* Drag feel */
+.uxg__strip.is-dragging{ cursor: grabbing; }
+
+/* Mobile */
+@media (max-width: 576px){
+  .uxg__main{ height: 420px; }
+  .uxg__thumb img{ width: 150px; height: 92px; }
 }
-
-/* Optional: active thumbnail (add .active to the button in JS) */
-#portfolio-details .thumb.active img {
-  box-shadow: 0 0 0 2px rgba(184, 160, 126, 0.9), 0 8px 18px rgba(0,0,0,0.25);
-  transform: translateY(-2px);
-}
-
-/* Mobile tweaks */
-@media (max-width: 576px) {
-  #portfolio-details .main-image img {
-    max-height: 420px;
-  }
-
-  #portfolio-details .thumb img {
-    width: 88px;
-    height: 56px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
 
 /*--------------------------------------------------------------
 # Journal

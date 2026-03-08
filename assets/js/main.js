@@ -302,25 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Filter portfolio items based on category
-document.querySelectorAll('#portfolio-flters li').forEach((filter) => {
-  filter.addEventListener('click', () => {
-    const filterValue = filter.textContent.toLowerCase();
-    document.querySelectorAll('.portfolio-item').forEach((item) => {
-      const itemCategory = item.querySelector('img').getAttribute('alt').toLowerCase();
-      if (filterValue === 'all' || itemCategory.includes(filterValue)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
 
-    document.querySelectorAll('#portfolio-flters li').forEach((el) => {
-      el.classList.remove('filter-active');
-    });
-    filter.classList.add('filter-active');
-  });
-});
 
 // Additional carousel logic for handling next/prev buttons and auto-scrolling
 document.addEventListener("DOMContentLoaded", function() {
@@ -598,7 +580,7 @@ function showUI(type) {
 }
 
 
-ddocument.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".ui-tab").forEach(button => {
       button.addEventListener("click", function(event) {
           event.preventDefault(); // Prevent default link behavior

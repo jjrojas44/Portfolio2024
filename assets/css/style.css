@@ -1167,7 +1167,48 @@ div.container {
   transform:translateY(-6px);
 }
 
+.scroll-notice{
+  text-align:center;
+  margin:30px 0;
+}
 
+.scroll-notice-link{
+  background:#b8a07e;
+  color:white;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+}
+
+.scroll-notice-link:hover{
+  background:#b8a07e;
+}
+
+.scroll-notice-text {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.scroll-notice-arrow {
+  font-size: 24px;
+  line-height: 1;
+  animation: bounceDown 1.6s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
 
 
 

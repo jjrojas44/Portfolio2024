@@ -958,3 +958,53 @@ function changeMainImage(src) {
   const mainImage = document.getElementById("displayedImage");
   if (mainImage) mainImage.src = src;
 }
+  function changeProductImage(imageSrc) {
+    document.getElementById("productDisplayedImage").src = imageSrc;
+  }
+
+
+
+  const prototypeToggles = document.querySelectorAll(".prototype-toggle");
+
+  prototypeToggles.forEach(toggle => {
+    toggle.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      const frameContainer = content.querySelector(".prototype-frame");
+      const src = this.getAttribute("data-src");
+
+      const isOpen = content.classList.contains("open");
+
+      // Close all other open items
+      document.querySelectorAll(".prototype-content").forEach(item => {
+        if (item !== content) {
+          item.classList.remove("open");
+        }
+      });
+
+      document.querySelectorAll(".prototype-toggle").forEach(btn => {
+        if (btn !== this) {
+          btn.classList.remove("active");
+        }
+      });
+
+      // Toggle current item
+      if (isOpen) {
+        content.classList.remove("open");
+        this.classList.remove("active");
+      } else {
+        content.classList.add("open");
+        this.classList.add("active");
+
+        // Lazy load iframe only once
+        if (!frameContainer.querySelector("iframe")) {
+          frameContainer.innerHTML = `
+            <iframe 
+              src="${src}" 
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          `;
+        }
+      }
+    });
+  });

@@ -100,15 +100,28 @@
   <div class="row gy-4">
     <div class="col-lg-8">
       <div class="gallery-container">
-        <div class="main-image">
-          <img id="inventoryDisplayedImage" src="assets/img/DASHBAORD (1).png" alt="Main Image" class="portfolio-slider-img">
-        </div>
+        <figure class="main-image hover-figure">
+  <img id="inventoryDisplayedImage"
+       src="assets/img/DASHBAORD (1).png"
+       alt="Questrackr"
+       class="portfolio-slider-img">
+
+  <figcaption class="hover-caption">
+    <h4>Questrackr</h4>
+    <p>
+      A video game progress and achievement tracker to view achievements,
+      story progression, and stats across all platforms.
+    </p>
+  </figcaption>
+</figure>
+        
         <div class="thumbnail-pagination mt-3">
           <button class="thumb" onclick="changeInventoryImage('assets/img/DASHBAORD (1).png')">
             <img src="assets/img/DASHBAORD (1).png" alt="Thumb 1">
           </button>
           <!-- Add more thumbnail buttons as needed -->
         </div>
+        
       </div>
     </div>
     <div class="col-lg-4">
@@ -131,21 +144,47 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <img id="wearablesDisplayedImage" src="assets/img/tunes 1.png" alt="Wearables Main Image" class="portfolio-slider-img">
-              </div>
+             <figure class="main-image hover-figure">
+  <img id="wearablesDisplayedImage"
+       src="assets/img/tunes 1.png"
+       alt="Wearables"
+       class="portfolio-slider-img">
+
+  <figcaption id="wearablesCaption" class="hover-caption">
+    <h4>Tunes</h4>
+    <p>A music player designed for your smartwatch.</p>
+  </figcaption>
+</figure>
               <div class="thumbnail-pagination mt-3">
-                <button class="thumb" onclick="changeWearablesImage('assets/img/tunes 1.png')">
-                  <img src="assets/img/tunes 1.png" alt="Thumb 1">
-                </button>
-                  <button class="thumb" onclick="changeWearablesImage('assets/img/linguago.png')">
-                  <img src="assets/img/linguago.png" alt="Thumb 1">
-                </button>
-                 <button class="thumb" onclick="changeWearablesImage('assets/img/smaertrise.png')">
-                  <img src="assets/img/smaertrise.png" alt="Thumb 1">
-                </button>
-            
-              </div>
+
+  <button class="thumb"
+    onclick="changeWearablesImage(
+      'assets/img/tunes 1.png',
+      'Tunes',
+      'A music player designed for your smartwatch.'
+    )">
+    <img src="assets/img/tunes 1.png" alt="Tunes">
+  </button>
+
+  <button class="thumb"
+    onclick="changeWearablesImage(
+      'assets/img/linguago.png',
+      'Linguago',
+      'A real-time translator designed for your smartwatch.'
+    )">
+    <img src="assets/img/linguago.png" alt="Linguago">
+  </button>
+
+  <button class="thumb"
+    onclick="changeWearablesImage(
+      'assets/img/smaertrise.png',
+      'Smartrise',
+      'A world map stopwatch, timer, and alarm system for your smartwatch.'
+    )">
+    <img src="assets/img/smaertrise.png" alt="Smartrise">
+  </button>
+
+</div>
             </div>
           </div>
           <div class="col-lg-4">
@@ -169,9 +208,20 @@
   <div class="row gy-4">
     <div class="col-lg-8">
       <div class="gallery-container">
-        <div class="main-image">
-          <img id="productDisplayedImage" src="assets/img/sage mode (2).png" alt="Product UI Main" class="portfolio-slider-img">
-        </div>
+       <figure class="main-image hover-figure">
+  <img id="productDisplayedImage"
+       src="assets/img/sage mode (2).png"
+       alt="Naruto Shippuden TCG"
+       class="portfolio-slider-img">
+
+  <figcaption class="hover-caption">
+    <h4>Naruto Shippuden TCG</h4>
+    <p>
+      A tabletop card game concept inspired by the Naruto universe, featuring strategic combat,
+      character abilities, and collectible card mechanics.
+    </p>
+  </figcaption>
+</figure>
        <div class="thumbnail-pagination mt-3">
   <button class="thumb" onclick="changeProductImage('assets/img/sage mode (2).png')">
     <img src="assets/img/sage mode (2).png" alt="Thumb 1">
@@ -208,20 +258,41 @@
   <div class="row gy-4">
     <div class="col-lg-8">
       <div class="gallery-container">
-        <div class="main-image">
-          <img id="webDisplayedImage" src="assets/img/intro.png" alt="Main Image" class="portfolio-slider-img">
-        </div>
+        <figure class="main-image hover-figure">
+  <img id="webDisplayedImage"
+       src="assets/img/intro.png"
+       alt="Web Project"
+       class="portfolio-slider-img">
+
+  <figcaption id="webCaption" class="hover-caption">
+    <h4>Buzz Lightyear Wiki</h4>
+    <p>
+      A redesigned wiki experience for Buzz Lightyear of Star Command,
+      focused on improved readability, navigation, and structured content.
+    </p>
+  </figcaption>
+</figure>
         <div class="thumbnail-pagination mt-3">
-          <button class="thumb" onclick="changeWebImage('assets/img/intro.png')">
-            <img src="assets/img/intro.png" alt="Thumb 1">
-          </button>
-          <button class="thumb" onclick="changeWebImage('assets/img/marr beg.png')">
-            <img src="assets/img/marr beg.png" alt="Thumb 2">
-          </button>
-         
-  
-          <!-- Add more thumbnails here as needed -->
-        </div>
+
+  <button class="thumb"
+    onclick="changeWebImage(
+      'assets/img/intro.png',
+      'Buzz Lightyear Wiki',
+      'A redesigned wiki experience for Buzz Lightyear of Star Command, focused on improved readability, navigation, and structured content.'
+    )">
+    <img src="assets/img/intro.png" alt="Intro">
+  </button>
+
+  <button class="thumb"
+    onclick="changeWebImage(
+      'assets/img/marr beg.png',
+      'Marriott Bonvoy Redesign',
+      'A modern redesign of the Marriott Bonvoy website, improving booking flow, UI clarity, and user experience.'
+    )">
+    <img src="assets/img/marr beg.png" alt="Marriott">
+  </button>
+
+</div>
       </div>
     </div>
     <div class="col-lg-4">

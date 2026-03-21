@@ -1322,6 +1322,65 @@ div.container {
 }
 
 
+.hover-figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hover-figure .portfolio-slider-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hover-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  background: #0d0d0d;
+  color: #fff;
+
+  padding: 14px 20px;
+  box-sizing: border-box;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hover-figure:hover .hover-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-caption h4 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #b8a07e;
+}
+
+.hover-caption p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ffffffc7;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

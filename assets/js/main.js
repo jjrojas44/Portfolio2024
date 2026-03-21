@@ -1009,4 +1009,13 @@ function changeMainImage(src) {
     });
   });
 
-  
+  function changeWearablesImage(src, title, description) {
+  // change image
+  document.getElementById("wearablesDisplayedImage").src = src;
+
+  // change caption
+  document.getElementById("wearablesCaption").innerHTML = `
+    <h4>${title}</h4>
+    <p>${description}</p>
+  `;
+}

@@ -1302,8 +1302,24 @@ div.container {
   }
 }
 
+.main-image-info {
+  margin-bottom: 16px; /* more space before image */
+  padding: 10px 12px; /* adds breathing room */
+}
 
+.main-image-info strong {
+  display: block; /* puts title on its own line */
+  font-size: 18px;
+  font-weight: 700;
+  color: #111; /* strong black title */
+  margin-bottom: 4px; /* space between title & description */
+}
 
+.main-image-info span {
+  font-size: 14px;
+  color: #666; /* softer grey for description */
+  line-height: 1.4;
+}
 
 
 

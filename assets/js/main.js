@@ -1087,3 +1087,13 @@ function changeShootersImage(src, title, description) {
     <p>${description}</p>
   `;
 }
+
+function changeWebImage(src, title, description) {
+  document.getElementById("webDisplayedImage").src = src;
+  document.getElementById("webDisplayedImage").alt = title;
+
+  document.getElementById("webCaption").innerHTML = `
+    <h4>${title}</h4>
+    <p>${description}</p>
+  `;
+}

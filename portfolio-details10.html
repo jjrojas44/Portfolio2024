@@ -114,45 +114,85 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <!-- IMPORTANT: rename this file to remove spaces/symbols if needed -->
-                <img id="disneyDisplayedImage"
-                     src="assets/img/csrs ;;+land.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+              <figure class="main-image hover-figure">
+  <img id="disneyDisplayedImage"
+       src="assets/img/csrs ;;+land.jpg"
+       alt="Main Image"
+       class="portfolio-slider-img"
+       onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/wdw christmas card final.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/wdw christmas card final.png" alt="Thumbnail">
-                </button>
+  <figcaption id="disneyCaption" class="hover-caption">
+    <h4>Cars Land at Magic Kingdom</h4>
+    <p>
+      Promotional graphic design concept for a Cars Land expansion at Magic Kingdom.
+    </p>
+  </figcaption>
+</figure>
 
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/csrs ;;+land.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/csrs ;;+land.jpg" alt="Thumbnail">
-                </button>
+            <div class="thumbnail-pagination mt-3">
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/csrs ;;+land.jpg"
+          data-title="Cars Land at Magic Kingdom"
+          data-description="Promotional graphic design concept for a Cars Land expansion at Magic Kingdom."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/csrs ;;+land.jpg" alt="Cars Land at Magic Kingdom">
+  </button>
+  
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/wdw christmas card final.png"
+          data-title="Walt Disney World Christmas Card 2025"
+          data-description="A 2025 holiday card concept created for Walt Disney World."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/wdw christmas card final.png" alt="Walt Disney World Christmas Card 2025">
+  </button>
 
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/villains land.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/villains land.jpg" alt="Thumbnail">
-                </button>
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/villains land.jpg"
+          data-title="Villains Land at Magic Kingdom"
+          data-description="Promotional graphic design concept for the upcoming Villains Land expansion at Magic Kingdom."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/villains land.jpg" alt="Villains Land at Magic Kingdom">
+  </button>
 
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/jp vs jw.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/jp vs jw.jpg" alt="Thumbnail">
-                </button>
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/jp vs jw.jpg"
+          data-title="Jurassic Park vs Jurassic World"
+          data-description="A graphic design piece exploring color, dinosaurs, and the visual battle between Jurassic Park and Jurassic World."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/jp vs jw.jpg" alt="Jurassic Park vs Jurassic World">
+  </button>
 
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/Jacks.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/Jacks.png" alt="Thumbnail">
-                </button>
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/Jacks.png"
+          data-title="Jack the Clown and the Icons"
+          data-description="Promotional graphic concept featuring Jack the Clown from Halloween Horror Nights alongside icons like the Caretaker, Undertaker, Director, and Usher."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/Jacks.png" alt="Jack the Clown and the Icons">
+  </button>
 
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/halloweenhaunted.png"
+          data-title="Disney Halloween Graphic"
+          data-description="A Disney Halloween-themed graphic celebrating the spooky season."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/halloweenhaunted.png" alt="Disney Halloween Graphic">
+  </button>
 
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/halloweenhaunted.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/halloweenhaunted.png" alt="Thumbnail">
-                </button>
-
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/HHN36.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/HHN36.png" alt="Thumbnail">
-                </button>
-              </div>
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/HHN36.png"
+          data-title="Halloween Horror Nights 36 Concept"
+          data-description="A hypothetical HHN 36 graphic concept featuring Jack the Clown, Art the Clown, and Pennywise on a stage for a horror event campaign."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/HHN36.png" alt="Halloween Horror Nights 36 Concept">
+  </button>
+</div>
 
             </div>
           </div>
@@ -177,27 +217,43 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <img id="tvDisplayedImage"
-                     src="assets/img/coming_soon.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+             <figure class="main-image hover-figure">
+  <img id="tvDisplayedImage"
+       src="assets/img/DRACULA POSTER.png"
+       alt="Dracula Poster"
+       class="portfolio-slider-img"
+       onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="tvDisplayedImage" data-src="assets/img/coming_soon.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/coming_soon.jpg" alt="Thumbnail">
-                </button>
+  <figcaption id="tvCaption" class="hover-caption">
+    <h4>Dracula (1931) Poster Redesign</h4>
+    <p>
+      A modern recreation of the classic 1931 Dracula film poster starring Bela Lugosi,
+      reimagined with updated typography and cinematic styling.
+    </p>
+  </figcaption>
+</figure>
 
-                <button class="thumb" data-target="tvDisplayedImage" data-src="assets/img/DRACULA POSTER.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/DRACULA POSTER.png" alt="Thumbnail">
-                </button>
+            <div class="thumbnail-pagination mt-3">
 
-                <button class="thumb" data-target="tvDisplayedImage" data-src="assets/img/THE WOLFMAN.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/THE WOLFMAN.png" alt="Thumbnail">
-                </button>
-              </div>
+  <button class="thumb"
+          data-target="tvDisplayedImage"
+          data-src="assets/img/DRACULA POSTER.png"
+          data-title="Dracula (1931) Poster Redesign"
+          data-description="A modern recreation of the classic 1931 Dracula film poster starring Bela Lugosi, reimagined with updated typography and cinematic styling."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/DRACULA POSTER.png" alt="Dracula Poster">
+  </button>
+
+  <button class="thumb"
+          data-target="tvDisplayedImage"
+          data-src="assets/img/THE WOLFMAN.png"
+          data-title="The Wolfman (1941) Poster Redesign"
+          data-description="A redesigned poster for Universal Pictures' The Wolfman, inspired by the classic film starring Lon Chaney Jr., with a darker and more modern visual tone."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/THE WOLFMAN.png" alt="The Wolfman Poster">
+  </button>
+
+</div>
 
             </div>
           </div>
@@ -296,33 +352,49 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <img id="gamesDisplayedImage"
-                     src="assets/img/Universal studios front cover.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+             <figure class="main-image hover-figure">
+  <img id="gameDisplayedImage"
+       src="assets/img/Universal studios front cover.jpg"
+       alt="Universal Studios: Worlds of Wonder Front Cover"
+       class="portfolio-slider-img"
+       onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="gamesDisplayedImage" data-src="assets/img/Universal studios front cover.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/Universal studios front cover.jpg" alt="Thumbnail">
-                </button>
+  <figcaption id="gameCaption" class="hover-caption">
+    <h4>Universal Studios: Worlds of Wonder</h4>
+    <p>
+      Front cover box art concept for a hypothetical Xbox video game set in the world of Universal Studios attractions.
+    </p>
+  </figcaption>
+</figure>
+<div class="thumbnail-pagination mt-3">
+  <button class="thumb"
+          data-target="gameDisplayedImage"
+          data-src="assets/img/Universal studios front cover.jpg"
+          data-title="Universal Studios: Worlds of Wonder"
+          data-description="Front cover box art concept for a hypothetical Xbox video game set in the world of Universal Studios attractions."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/Universal studios front cover.jpg" alt="Universal Studios Front Cover">
+  </button>
 
-                <button class="thumb" data-target="gamesDisplayedImage" data-src="assets/img/universal studios back cover.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/universal studios back cover.jpg" alt="Thumbnail">
-                </button>
+           <button class="thumb"
+          data-target="gameDisplayedImage"
+          data-src="assets/img/halonew.jpg"
+          data-title="Halo Infinite: Requiem"
+          data-description="Hypothetical physical Xbox box art concept for a sequel to Halo Infinite, titled Halo Infinite: Requiem."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/halonew.jpg" alt="Halo Infinite Requiem">
+  </button>
+            
 
-                <button class="thumb" data-target="gamesDisplayedImage" data-src="assets/img/halonew.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/halonew.jpg" alt="Thumbnail">
-                </button>
-
-               
-
-                <button class="thumb" data-target="gamesDisplayedImage" data-src="assets/img/helldivers 1.png" onclick="swapMainImage(this)">
-                  <img src="assets/img/helldivers 1.png" alt="Thumbnail">
-                </button>
-              </div>
+ <button class="thumb"
+          data-target="gameDisplayedImage"
+          data-src="assets/img/helldivers 1.png"
+          data-title="Helldivers x G G Energy"
+          data-description="A hypothetical advertising graphic concept for a Helldivers collaboration with G G Energy, created as a promotional campaign piece."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/helldivers 1.png" alt="Helldivers GG Energy">
+  </button>
+</div>
 
             </div>
           </div>

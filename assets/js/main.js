@@ -1078,3 +1078,12 @@ function swapMainImage(button) {
     `;
   }
 }
+
+function changeShootersImage(src, title, description) {
+  document.getElementById("shootersDisplayedImage").src = src;
+
+  document.getElementById("shootersCaption").innerHTML = `
+    <h4>${title}</h4>
+    <p>${description}</p>
+  `;
+}

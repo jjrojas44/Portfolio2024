@@ -267,21 +267,31 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <img id="gamesDisplayedImage"
-                     src="assets/img/coming_soon.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+             <figure class="main-image hover-figure">
+  <img id="gamesDisplayedImage"
+       src="assets/img/devovler redesign (4).png"
+       alt="Devolver Digital Logo Redesign"
+       class="portfolio-slider-img"
+       onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="gamesDisplayedImage" data-src="assets/img/coming_soon.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/coming_soon.jpg" alt="Thumbnail">
-                </button>
+  <figcaption id="gameCaption" class="hover-caption">
+    <h4>Devolver Digital Logo Redesign</h4>
+    <p>
+      Logo redesign concept exploring a bold, stylized glitch-inspired direction while maintaining the rebellious identity of Devolver Digital.
+    </p>
+  </figcaption>
+</figure>
 
-               
-              </div>
+<div class="thumbnail-pagination mt-3">
+  <button class="thumb"
+          data-target="gamesDisplayedImage"
+          data-src="assets/img/devovler redesign (4).png"
+          data-title="Devolver Digital Logo Redesign"
+          data-description="Logo redesign concept exploring a bold, stylized glitch-inspired direction while maintaining the rebellious identity of Devolver Digital."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/devovler redesign (4).png" alt="Devolver Logo Redesign Thumbnail">
+  </button>
+</div>
 
             </div>
           </div>

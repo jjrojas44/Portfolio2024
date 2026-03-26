@@ -114,22 +114,31 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <!-- IMPORTANT: rename this file to remove spaces/symbols if needed -->
-                <img id="disneyDisplayedImage"
-                     src="assets/img/coming_soon.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+              <figure class="main-image hover-figure">
+  <img id="disneyDisplayedImage"
+       src="assets/img/my disney experience.png"
+       alt="My Disney Experience App Redesign"
+       class="portfolio-slider-img"
+       onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="disneyDisplayedImage" data-src="assets/img/coming_soon.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/coming_soon.jpg" alt="Thumbnail">
-                </button>
+  <figcaption id="disneyCaption" class="hover-caption">
+    <h4>My Disney Experience App Redesign</h4>
+    <p>
+      App redesign concept focused on creating a more modern, intuitive, and visually immersive mobile experience while maintaining Disney’s recognizable identity.
+    </p>
+  </figcaption>
+</figure>
 
-               
-              </div>
+<div class="thumbnail-pagination mt-3">
+  <button class="thumb"
+          data-target="disneyDisplayedImage"
+          data-src="assets/img/my disney experience.png"
+          data-title="My Disney Experience App Redesign"
+          data-description="App redesign concept for My Disney Experience focused on improving usability, hierarchy, and visual cohesion. The layout was restructured into a cleaner, card-based system, with refined blue gradients and subtle glow effects to enhance depth while preserving the Disney aesthetic."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/my disney experience.png" alt="My Disney Experience Redesign Thumbnail">
+  </button>
+</div>
 
             </div>
           </div>

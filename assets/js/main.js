@@ -1097,3 +1097,18 @@ function changeWebImage(src, title, description) {
     <p>${description}</p>
   `;
 }
+
+function swapMainImage(button) {
+  const targetId = button.getAttribute("data-target");
+  const newSrc = button.getAttribute("data-src");
+  const newTitle = button.getAttribute("data-title");
+  const newDescription = button.getAttribute("data-description");
+
+  const mainImage = document.getElementById(targetId);
+  mainImage.src = newSrc;
+  mainImage.alt = newTitle;
+
+  const caption = document.getElementById("gameCaption");
+  caption.querySelector("h4").textContent = newTitle;
+  caption.querySelector("p").textContent = newDescription;
+}

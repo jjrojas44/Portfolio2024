@@ -1129,3 +1129,27 @@ function swapMainImage(button) {
     <p>${newDesc}</p>
   `;
 }
+
+function swapMainImage(button) {
+  const targetId = button.getAttribute("data-target");
+  const newSrc = button.getAttribute("data-src");
+  const newTitle = button.getAttribute("data-title") || "";
+  const newDescription = button.getAttribute("data-description") || "";
+
+  const mainImage = document.getElementById(targetId);
+  if (mainImage) {
+    mainImage.src = newSrc;
+    mainImage.alt = newTitle;
+  }
+
+  // FIXED: safer caption targeting
+  const captionId = targetId.replace("DisplayedImage", "Caption");
+  const caption = document.getElementById(captionId);
+
+  if (caption && newTitle && newDescription) {
+    caption.innerHTML = `
+      <h4>${newTitle}</h4>
+      <p>${newDescription}</p>
+    `;
+  }
+}

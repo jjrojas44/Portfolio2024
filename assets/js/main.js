@@ -1112,3 +1112,20 @@ function swapMainImage(button) {
   caption.querySelector("h4").textContent = newTitle;
   caption.querySelector("p").textContent = newDescription;
 }
+
+function swapMainImage(button) {
+  const targetId = button.getAttribute("data-target");
+  const newSrc = button.getAttribute("data-src");
+  const newTitle = button.getAttribute("data-title");
+  const newDesc = button.getAttribute("data-description");
+
+  const mainImage = document.getElementById(targetId);
+  const caption = document.getElementById("defjamCaption");
+
+  mainImage.src = newSrc;
+
+  caption.innerHTML = `
+    <h4>${newTitle}</h4>
+    <p>${newDesc}</p>
+  `;
+}

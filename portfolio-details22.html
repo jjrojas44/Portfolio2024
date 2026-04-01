@@ -212,19 +212,31 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <img id="musicDisplayedImage"
-                     src="assets/img/coming_soon.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+             <figure class="main-image hover-figure">
+    <img id="defjamDisplayedImage"
+         src="assets/img/def jam 1.png"
+         alt="Def Jam Recordings Logo Redesign"
+         class="portfolio-slider-img"
+         onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="musicDisplayedImage" data-src="assets/img/coming_soon.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/coming_soon.jpg" alt="Thumbnail">
-                </button>
-              </div>
+    <figcaption id="defjamCaption" class="hover-caption">
+      <h4>Def Jam Recordings Logo Redesign</h4>
+      <p>
+        Logo redesign concept focused on elevating the iconic Def Jam identity through refined typography, stronger hierarchy, and a more premium modern aesthetic. The design maintains the brand’s legacy while introducing cleaner structure, improved balance, and a stylized record player element to reinforce its music roots.
+      </p>
+    </figcaption>
+  </figure>
+
+  <!-- THUMBNAILS -->
+  <div class="thumbnail-pagination">
+    <button class="thumb"
+            data-target="defjamDisplayedImage"
+            data-src="assets/img/def jam 1.png"
+            data-title="Def Jam Recordings Logo Redesign"
+            data-description="Logo redesign focused on improving typography, spacing, and hierarchy while adding a premium feel. Includes a refined record player element to connect back to music culture and elevate the brand visually."
+            onclick="swapMainImage(this)">
+      <img src="assets/img/def jam 1.png" alt="Def Jam Logo Redesign Thumbnail">
+    </button>
 
             </div>
           </div>

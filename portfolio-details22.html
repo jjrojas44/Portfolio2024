@@ -261,18 +261,38 @@
         <div class="row gy-4">
           <div class="col-lg-8">
             <div class="gallery-container">
-              <div class="main-image">
-                <img id="animeDisplayedImage"
-                     src="assets/img/coming_soon.jpg"
-                     alt="Main Image"
-                     class="portfolio-slider-img"
-                     onclick="openImageModal(this)">
-              </div>
+             <figure class="main-image hover-figure">
+  <img id="uaDisplayedImage"
+       src="assets/img/under armour.png"
+       alt="Under Armour Logo Redesign"
+       class="portfolio-slider-img"
+       onclick="openImageModal(this)">
 
-              <div class="thumbnail-pagination mt-3">
-                <button class="thumb" data-target="animeDisplayedImage" data-src="assets/img/coming_soon.jpg" onclick="swapMainImage(this)">
-                  <img src="assets/img/coming_soon.jpg" alt="Thumbnail">
-                </button>
+  <figcaption id="uaCaption" class="hover-caption">
+    <h4>Under Armour Logo Redesign</h4>
+    <p>
+      Redesigning iconic brands is one of the best ways to push design skills beyond visuals and into real brand systems. This concept focuses on elevating the Under Armour identity while preserving its core mark.
+
+      The redesign introduces a futuristic, digital-first direction through a neon blue and deep navy palette, creating a high-performance, tech-driven feel. Structural top and bottom bars were added to reinforce balance and engineered precision, subtly framing the logo like a performance interface.
+
+      The integration of the “U” and “A” within the center adds a layered, intentional detail, while glow effects and line work push the identity toward a more cyberpunk, UI-friendly aesthetic.
+
+      The original design represents strength through simplicity, while this redesign explores how the brand could evolve within a modern, digital performance space.
+    </p>
+  </figcaption>
+</figure>
+
+<!-- THUMBNAILS -->
+<div class="thumbnail-pagination">
+  <button class="thumb"
+          data-target="uaDisplayedImage"
+          data-src="assets/img/under armour.png"
+          data-title="Under Armour Logo Redesign"
+          data-description="Futuristic redesign of the Under Armour logo focused on preserving the core mark while introducing a neon blue and deep navy palette, structured framing elements, and a digital-first, performance-driven aesthetic inspired by UI systems and cyberpunk design."
+          onclick="swapMainImage(this)">
+    <img src="assets/img/under armour.png" alt="Under Armour Logo Redesign Thumbnail">
+  </button>
+
               </div>
 
             </div>

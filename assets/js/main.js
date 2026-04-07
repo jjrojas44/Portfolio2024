@@ -1153,3 +1153,37 @@ function swapMainImage(button) {
     `;
   }
 }
+
+function changeInventoryImage(imageSrc) {
+  const mainImage = document.getElementById("inventoryDisplayedImage");
+  const caption = document.getElementById("inventoryCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = "One-Card";
+  }
+
+  if (caption && imageSrc === "assets/img/Main Entrance (8).png") {
+    caption.innerHTML = `
+      <h4>One-Card</h4>
+      <p>An all-in-one digital profile hub that combines social links, contact info, business card features, and personal branding into one simple mobile experience.</p>
+    `;
+  }
+}
+
+function changeInventoryImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("inventoryDisplayedImage");
+  const caption = document.getElementById("inventoryCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

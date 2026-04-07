@@ -100,13 +100,13 @@
   <div class="row gy-4">
     <div class="col-lg-8">
       <div class="gallery-container">
-        <figure class="main-image hover-figure">
+       <figure class="main-image hover-figure">
   <img id="inventoryDisplayedImage"
        src="assets/img/DASHBAORD (1).png"
        alt="Questrackr"
        class="portfolio-slider-img">
 
-  <figcaption class="hover-caption">
+  <figcaption id="inventoryCaption" class="hover-caption">
     <h4>Questrackr</h4>
     <p>
       A video game progress and achievement tracker to view achievements,
@@ -114,13 +114,26 @@
     </p>
   </figcaption>
 </figure>
-        
-        <div class="thumbnail-pagination mt-3">
-          <button class="thumb" onclick="changeInventoryImage('assets/img/DASHBAORD (1).png')">
-            <img src="assets/img/DASHBAORD (1).png" alt="Thumb 1">
-          </button>
-          <!-- Add more thumbnail buttons as needed -->
-        </div>
+
+<div class="thumbnail-pagination mt-3">
+  <button class="thumb"
+    onclick="changeInventoryImage(
+      'assets/img/DASHBAORD (1).png',
+      'Questrackr',
+      'A video game progress and achievement tracker to view achievements, story progression, and stats across all platforms.'
+    )">
+    <img src="assets/img/DASHBAORD (1).png" alt="Questrackr Thumbnail">
+  </button>
+
+  <button class="thumb"
+    onclick="changeInventoryImage(
+      'assets/img/Main Entrance (8).png',
+      'One-Card',
+      'An all-in-one digital profile hub that combines social links, contact info, business card features, and personal branding into one simple mobile experience.'
+    )">
+    <img src="assets/img/Main Entrance (8).png" alt="One-Card Thumbnail">
+  </button>
+</div>
         
       </div>
     </div>
@@ -333,6 +346,23 @@
 
 
     <!-- 3 -->
+
+
+<div class="prototype-item">
+  <button class="prototype-toggle" type="button"
+    data-src="https://embed.figma.com/proto/o82OG64VJbplaA3IASZXKm/One-card?node-id=29-2&t=bICkQs08PyEpdhn9-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=67%3A7&embed-host=share">
+    
+    <span>One-Card</span>
+    <span class="arrow">+</span>
+  </button>
+
+  <div class="prototype-content">
+    <div class="prototype-frame"></div>
+  </div>
+</div>
+
+
+
     <div class="prototype-item">
       <button class="prototype-toggle" type="button" data-src="https://embed.figma.com/proto/loNDk2h10MrLG52iSeP90c/buzzlightyear-of-star-command?node-id=109-2414&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=109%3A2414&embed-host=share">
         <span>Buzz Lightyear of Star Command</span>

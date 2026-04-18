@@ -1187,3 +1187,20 @@ function changeInventoryImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changeWebImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("webDisplayedImage");
+  const caption = document.getElementById("webCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

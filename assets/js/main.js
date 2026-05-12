@@ -1204,3 +1204,20 @@ function changeWebImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changeProductImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("productDisplayedImage");
+  const caption = document.querySelector(".hover-caption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

@@ -1223,8 +1223,8 @@ function changeProductImage(imageSrc, title, description) {
 }
 
 function changeCarsLandImage(imageSrc, title, description) {
-  const mainImage = document.getElementById("productDisplayedImage");
-  const caption = document.querySelector(".hover-caption");
+  const mainImage = document.getElementById("carsLandDisplayedImage");
+  const caption = document.getElementById("carsLandCaption");
 
   if (mainImage) {
     mainImage.src = imageSrc;

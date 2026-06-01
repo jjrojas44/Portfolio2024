@@ -1238,3 +1238,20 @@ function changeCarsLandImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changeMagicMakerImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("magicMakerDisplayedImage");
+  const caption = document.getElementById("magicMakerCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

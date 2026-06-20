@@ -1255,3 +1255,20 @@ function changeMagicMakerImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changePokemonImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("pokemonDisplayedImage");
+  const caption = document.getElementById("pokemonCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

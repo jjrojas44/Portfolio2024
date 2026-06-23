@@ -1272,3 +1272,20 @@ function changePokemonImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changeMidnightImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("midnightDisplayedImage");
+  const caption = document.getElementById("midnightCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

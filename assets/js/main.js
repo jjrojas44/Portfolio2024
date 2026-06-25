@@ -1289,3 +1289,20 @@ function changeMidnightImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changeDragonBallImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("tvDisplayedImage");
+  const caption = document.getElementById("tvCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

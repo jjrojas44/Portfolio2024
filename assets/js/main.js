@@ -1306,3 +1306,54 @@ function changeDragonBallImage(imageSrc, title, description) {
     `;
   }
 }
+
+function changeHaloImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("gameDisplayedImage");
+  const caption = document.getElementById("gameCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}
+
+function changeGTAImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("gameDisplayedImage");
+  const caption = document.getElementById("gameCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}
+
+function changeGearsImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("gameDisplayedImage");
+  const caption = document.getElementById("gameCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}

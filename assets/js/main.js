@@ -1341,9 +1341,44 @@ function changeGTAImage(imageSrc, title, description) {
   }
 }
 
-function changeGearsImage(imageSrc, title, description) {
-  const mainImage = document.getElementById("gameDisplayedImage");
-  const caption = document.getElementById("gameCaption");
+function changeBandaiNamcoImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("bandaiNamcoDisplayedImage");
+  const caption = document.getElementById("bandaiNamcoCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}
+
+function changeBandaiNamcoImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("bandaiNamcoDisplayedImage");
+  const caption = document.getElementById("bandaiNamcoCaption");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}
+
+
+function changeNarutoImage(imageSrc, title, description) {
+  const mainImage = document.getElementById("narutoDisplayedImage");
+  const caption = document.getElementById("narutoCaption");
 
   if (mainImage) {
     mainImage.src = imageSrc;

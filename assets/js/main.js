@@ -1392,3 +1392,30 @@ function changeNarutoImage(imageSrc, title, description) {
     `;
   }
 }
+
+function swapMainImage(button) {
+  const targetId = button.dataset.target;
+  const imageSrc = button.dataset.src;
+  const title = button.dataset.title;
+  const description = button.dataset.description;
+
+  const mainImage = document.getElementById(targetId);
+  const caption = document.getElementById("gameCaption");
+
+  if (!mainImage) {
+    console.error(`Main image with ID "${targetId}" was not found.`);
+    return;
+  }
+
+  mainImage.src = imageSrc;
+  mainImage.alt = title;
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  } else {
+    console.error('Caption with ID "gameCaption" was not found.');
+  }
+}

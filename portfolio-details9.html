@@ -84,6 +84,14 @@
     <div class="main-image">
       <img id="displayedImage" src="assets/img/Desktop - 3.png" alt="Main Image">
     </div>
+ <div style="text-align: center; margin-top: 12px;">
+            <button type="button"
+                    onclick="window.open(document.getElementById('displayedImage').src, '_blank')"
+                    style="padding: 10px 20px; background: #BFA47A; color: white; border: none; border-radius: 6px; cursor: pointer;">
+              🔍 Click to Enlarge Image
+            </button>
+          </div>
+
     <div class="thumbnail-pagination mt-3">
       <button class="thumb" onclick="changeMainImage('assets/img/Desktop - 3.png')">
         <img src="assets/img/Desktop - 3.png" alt="Thumb 1">

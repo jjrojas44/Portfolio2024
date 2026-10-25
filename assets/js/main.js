@@ -1446,3 +1446,164 @@ function swapNintendoImage(button) {
     console.error('Caption with ID "gameCaption" was not found.');
   }
 }
+
+
+
+
+function swapNarutoImage(button) {
+  const targetId = button.dataset.target;
+  const imageSrc = button.dataset.src;
+  const title = button.dataset.title;
+  const description = button.dataset.description;
+
+  const mainImage = document.getElementById(targetId);
+  const caption = document.getElementById("narutoCaption");
+
+  if (!mainImage) {
+    console.error(`Main image with ID "${targetId}" was not found.`);
+    return;
+  }
+
+  mainImage.src = imageSrc;
+  mainImage.alt = title;
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  } else {
+    console.error('Caption with ID "narutoCaption" was not found.');
+  }
+}
+
+
+function swapDisneyImage(button) {
+  const targetId = button.dataset.target;
+  const imageSrc = button.dataset.src;
+  const title = button.dataset.title;
+  const description = button.dataset.description;
+
+  const mainImage = document.getElementById(targetId);
+  const caption = document.getElementById("disneyCaption");
+
+  if (!mainImage) {
+    console.error(`Main image with ID "${targetId}" was not found.`);
+    return;
+  }
+
+  mainImage.src = imageSrc;
+  mainImage.alt = title;
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}
+
+
+function swapMainImage(button) {
+  const targetId = button.dataset.target;
+  const imageSrc = button.dataset.src;
+  const title = button.dataset.title;
+  const description = button.dataset.description;
+
+  const mainImage = document.getElementById(targetId);
+  const caption = document.getElementById("disneyCaption");
+
+  if (!mainImage) {
+    console.error(`Main image with ID "${targetId}" was not found.`);
+    return;
+  }
+
+  mainImage.src = imageSrc;
+  mainImage.alt = title;
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+}
+
+
+
+
+window.swapMainImage = function(button) {
+  const gallery = button.closest(".gallery-container");
+
+  if (!gallery) {
+    console.error("Gallery not found");
+    return;
+  }
+
+  const mainImage = gallery.querySelector(".main-image img");
+  const caption = gallery.querySelector(".main-image figcaption");
+
+  if (!mainImage || !caption) {
+    console.error("Image or caption not found");
+    return;
+  }
+
+  mainImage.src = button.getAttribute("data-src");
+  mainImage.alt = button.getAttribute("data-title");
+
+  caption.querySelector("h4").textContent =
+    button.getAttribute("data-title");
+
+  caption.querySelector("p").textContent =
+    button.getAttribute("data-description");
+};
+
+
+
+window.swapMainImage = function(button) {
+  const gallery = button.closest(".gallery-container");
+
+  if (!gallery) return;
+
+  const mainImage = gallery.querySelector(".main-image img");
+  const caption = gallery.querySelector(".main-image figcaption");
+
+  if (!mainImage || !caption) return;
+
+  const imageSrc = button.dataset.src;
+  const title = button.dataset.title || "";
+  const description = button.dataset.description || "";
+
+  if (imageSrc) {
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+  }
+
+  const heading = caption.querySelector("h4");
+  const paragraph = caption.querySelector("p");
+
+  if (heading) heading.textContent = title;
+  if (paragraph) paragraph.textContent = description;
+};
+
+
+
+window.changeGearsImage = function(imageSrc, title, description) {
+  const mainImage = document.getElementById("gameDisplayedImage");
+  const caption = document.getElementById("gameCaption");
+
+  if (!mainImage) {
+    console.error("Gears of War main image not found.");
+    return;
+  }
+
+  mainImage.src = imageSrc;
+  mainImage.alt = title;
+
+  if (caption) {
+    caption.innerHTML = `
+      <h4>${title}</h4>
+      <p>${description}</p>
+    `;
+  }
+};

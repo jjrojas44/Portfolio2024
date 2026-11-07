@@ -1607,3 +1607,133 @@ window.changeGearsImage = function(imageSrc, title, description) {
     `;
   }
 };
+
+
+function swapMainImage(button) {
+
+  const targetId = button.getAttribute("data-target");
+  const mainImage = document.getElementById(targetId);
+
+  if (!mainImage) {
+    console.error("Main image not found:", targetId);
+    return;
+  }
+
+  const gallery = button.closest(".gallery-container");
+
+  if (!gallery) return;
+
+  const imageSrc = button.getAttribute("data-src");
+  const imageTitle = button.getAttribute("data-title");
+  const imageDescription = button.getAttribute("data-description");
+
+  // Change main image
+  mainImage.src = imageSrc;
+  mainImage.alt = imageTitle || "Portfolio Design";
+
+  // Update hover caption
+  const caption = gallery.querySelector(".hover-caption");
+
+  if (caption) {
+    const title = caption.querySelector("h4");
+    const description = caption.querySelector("p");
+
+    if (title) {
+      title.textContent = imageTitle || "";
+    }
+
+    if (description) {
+      description.textContent = imageDescription || "";
+    }
+  }
+
+  // Update thumbnail selection within this gallery only
+  const thumbnails = gallery.querySelectorAll(".thumb");
+
+  thumbnails.forEach(function(thumb) {
+    thumb.classList.remove("active");
+    thumb.setAttribute("aria-pressed", "false");
+  });
+
+  button.classList.add("active");
+  button.setAttribute("aria-pressed", "true");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  document.querySelectorAll(".gallery-container").forEach(function(gallery) {
+
+    const thumbnails = gallery.querySelectorAll(".thumbnail-pagination .thumb");
+
+    thumbnails.forEach(function(thumb, index) {
+      thumb.classList.toggle("active", index === 0);
+      thumb.setAttribute("aria-pressed", index === 0 ? "true" : "false");
+    });
+
+  });
+
+});
+
+
+window.swapMainImage = function(button) {
+  const targetId = button.getAttribute("data-target");
+  const mainImage = document.getElementById(targetId);
+
+  if (!mainImage) {
+    console.error("Main image not found:", targetId);
+    return;
+  }
+
+  const gallery = button.closest(".gallery-container");
+
+  // Use data-src if valid, otherwise use the thumbnail image.
+  const thumbnail = button.querySelector("img");
+  const requestedSrc = button.getAttribute("data-src");
+  const fallbackSrc = thumbnail ? thumbnail.getAttribute("src") : "";
+
+  const title = button.getAttribute("data-title") || "";
+  const description = button.getAttribute("data-description") || "";
+
+  const testImage = new Image();
+
+  testImage.onload = function() {
+    mainImage.src = requestedSrc;
+  };
+
+  testImage.onerror = function() {
+    console.warn("Image not found:", requestedSrc);
+    mainImage.src = fallbackSrc;
+  };
+
+  if (requestedSrc) {
+    testImage.src = requestedSrc;
+  } else {
+    mainImage.src = fallbackSrc;
+  }
+
+  mainImage.alt = title;
+
+  // Update the caption.
+  const caption = gallery
+    ? gallery.querySelector(".hover-caption")
+    : document.getElementById("tvCaption");
+
+  if (caption) {
+    const heading = caption.querySelector("h4");
+    const paragraph = caption.querySelector("p");
+
+    if (heading) heading.textContent = title;
+    if (paragraph) paragraph.textContent = description;
+  }
+
+  // Highlight selected thumbnail.
+  if (gallery) {
+    gallery.querySelectorAll(".thumb").forEach(function(thumb) {
+      thumb.classList.remove("active");
+      thumb.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  }
+};

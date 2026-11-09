@@ -1737,3 +1737,81 @@ window.swapMainImage = function(button) {
     button.setAttribute("aria-pressed", "true");
   }
 };
+
+
+
+
+
+window.swapMainImage = function(button) {
+  const targetId = button.getAttribute("data-target");
+  const mainImage = document.getElementById(targetId);
+
+  if (!mainImage) {
+    console.error("Main image not found:", targetId);
+    return;
+  }
+
+  const gallery = button.closest(".gallery-container");
+
+  if (!gallery) {
+    console.error("Gallery container not found.");
+    return;
+  }
+
+  const imageSrc = button.getAttribute("data-src");
+  const imageTitle = button.getAttribute("data-title");
+  const imageDescription = button.getAttribute("data-description");
+
+  // Update the displayed image
+  mainImage.src = imageSrc;
+  mainImage.alt = imageTitle || "Sports Graphic Design";
+
+  // Update the gallery caption
+  const caption = gallery.querySelector(".hover-caption");
+
+  if (caption) {
+    const title = caption.querySelector("h4");
+    const description = caption.querySelector("p");
+
+    if (title) {
+      title.textContent = imageTitle || "";
+    }
+
+    if (description) {
+      description.textContent = imageDescription || "";
+    }
+  }
+
+  // Remove active status from other thumbnails
+  const thumbnails = gallery.querySelectorAll(".thumb");
+
+  thumbnails.forEach(function(thumb) {
+    thumb.classList.remove("active");
+    thumb.setAttribute("aria-pressed", "false");
+  });
+
+  // Highlight selected thumbnail
+  button.classList.add("active");
+  button.setAttribute("aria-pressed", "true");
+};
+
+// Initialize thumbnail pagination
+document.addEventListener("DOMContentLoaded", function() {
+
+  document.querySelectorAll(".gallery-container").forEach(function(gallery) {
+
+    const thumbnails = gallery.querySelectorAll(
+      ".thumbnail-pagination .thumb"
+    );
+
+    thumbnails.forEach(function(thumb, index) {
+      thumb.classList.toggle("active", index === 0);
+      thumb.setAttribute(
+        "aria-pressed",
+        index === 0 ? "true" : "false"
+      );
+    });
+
+  });
+
+});

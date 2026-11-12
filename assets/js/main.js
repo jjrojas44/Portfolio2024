@@ -1886,3 +1886,78 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+window.swapMainImage = function(button) {
+  const targetId = button.dataset.target;
+  const mainImage = document.getElementById(targetId);
+  const gallery = button.closest(".gallery-container");
+
+  const imageSrc = button.dataset.src;
+  const imageTitle = button.dataset.title || "";
+  const imageDescription = button.dataset.description || "";
+
+  if (!mainImage) {
+    console.error("Main image not found:", targetId);
+    return;
+  }
+
+  if (!imageSrc) {
+    console.error("No image source provided.");
+    return;
+  }
+
+  // Display selected poster
+  mainImage.src = imageSrc;
+  mainImage.alt = imageTitle;
+
+  // Update caption
+  if (gallery) {
+    const caption = gallery.querySelector(".hover-caption");
+
+    if (caption) {
+      const heading = caption.querySelector("h4");
+      const paragraph = caption.querySelector("p");
+
+      if (heading) {
+        heading.textContent = imageTitle;
+      }
+
+      if (paragraph) {
+        paragraph.textContent = imageDescription;
+      }
+    }
+
+    // Update selected thumbnail
+    gallery.querySelectorAll(".thumb").forEach(function(thumb) {
+      thumb.classList.remove("active");
+      thumb.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  }
+
+  // Image loading error handling
+  mainImage.onerror = function() {
+    console.error("Failed to load image:", imageSrc);
+  };
+};
+
+// Initialize thumbnails when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".gallery-container").forEach(function(gallery) {
+    const thumbnails = gallery.querySelectorAll(
+      ".thumbnail-pagination .thumb"
+    );
+
+    thumbnails.forEach(function(thumb, index) {
+      const isActive = index === 0;
+
+      thumb.classList.toggle("active", isActive);
+      thumb.setAttribute(
+        "aria-pressed",
+        isActive ? "true" : "false"
+      );
+    });
+  });
+});

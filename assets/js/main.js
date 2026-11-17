@@ -1961,3 +1961,245 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+window.swapMainImage = function(button) {
+  const targetId = button.dataset.target;
+  const mainImage = document.getElementById(targetId);
+  const gallery = button.closest(".gallery-container");
+
+  const imageSrc = button.dataset.src;
+  const imageTitle = button.dataset.title || "";
+  const imageDescription = button.dataset.description || "";
+
+  if (!mainImage) {
+    console.error("Main image not found:", targetId);
+    return;
+  }
+
+  if (!imageSrc) {
+    console.error("Image source missing.");
+    return;
+  }
+
+  // Update main image
+  mainImage.src = imageSrc;
+  mainImage.alt = imageTitle;
+
+  // Update title and description
+  if (gallery) {
+    const caption = gallery.querySelector(".hover-caption");
+
+    if (caption) {
+      const heading = caption.querySelector("h4");
+      const paragraph = caption.querySelector("p");
+
+      if (heading) {
+        heading.textContent = imageTitle;
+      }
+
+      if (paragraph) {
+        paragraph.textContent = imageDescription;
+      }
+    }
+
+    // Update active thumbnail
+    gallery.querySelectorAll(".thumb").forEach(function(thumb) {
+      thumb.classList.remove("active");
+      thumb.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  }
+
+  mainImage.onerror = function() {
+    console.error("Failed to load:", imageSrc);
+  };
+};
+
+
+window.swapMainImage = function(button) {
+  const targetId = button.dataset.target;
+  const mainImage = document.getElementById(targetId);
+  const gallery = button.closest(".gallery-container");
+
+  const imageSrc = button.dataset.src;
+
+  const imageTitle = button.dataset.title ||
+    "Sony Walkman Sports | 1989 Vintage Advertisement";
+
+  const imageDescription = button.dataset.description ||
+    "An independent Sony Walkman Sports advertisement inspired by late-1980s magazine design. Created in Adobe Photoshop using nostalgic typography, aged paper textures, halftone effects, retro colors, and classic print advertising techniques.";
+
+  if (!mainImage) {
+    console.error("Main image not found:", targetId);
+    return;
+  }
+
+  if (!imageSrc) {
+    console.error("Image source missing.");
+    return;
+  }
+
+  // Update main image
+  mainImage.src = imageSrc;
+  mainImage.alt = imageTitle;
+
+  // Update title and description
+  if (gallery) {
+    const caption = gallery.querySelector(".hover-caption");
+
+    if (caption) {
+      const heading = caption.querySelector("h4");
+      const paragraph = caption.querySelector("p");
+
+      if (heading) {
+        heading.textContent = imageTitle;
+      }
+
+      if (paragraph) {
+        paragraph.textContent = imageDescription;
+      }
+    }
+
+    // Update active thumbnail
+    gallery.querySelectorAll(".thumb").forEach(function(thumb) {
+      thumb.classList.remove("active");
+      thumb.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  }
+
+  mainImage.onerror = function() {
+    console.error("Failed to load:", imageSrc);
+  };
+};
+
+
+window.swapWalkmanImage = function(button) {
+  const mainImage = document.getElementById("tvDisplayedImage");
+  const gallery = button.closest(".gallery-container");
+
+  const imageSrc = "assets/img/walkman.png";
+  const imageTitle = "Sony Walkman Sports – 1989 Vintage Advertisement";
+  const imageDescription = "An independent Sony Walkman Sports magazine advertisement inspired by late-1980s music culture. Created in Adobe Photoshop using vintage typography, aged paper textures, halftone effects, retro colors, and classic print advertising techniques.";
+
+  if (!mainImage) {
+    console.error("Main image not found: tvDisplayedImage");
+    return;
+  }
+
+  // Update Walkman image
+  mainImage.src = imageSrc;
+  mainImage.alt = imageTitle;
+
+  // Update Walkman caption
+  if (gallery) {
+    const caption = gallery.querySelector(".hover-caption");
+
+    if (caption) {
+      const heading = caption.querySelector("h4");
+      const paragraph = caption.querySelector("p");
+
+      if (heading) {
+        heading.textContent = imageTitle;
+      }
+
+      if (paragraph) {
+        paragraph.textContent = imageDescription;
+      }
+    }
+
+    // Update active thumbnail
+    gallery.querySelectorAll(".thumb").forEach(function(thumb) {
+      thumb.classList.remove("active");
+      thumb.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  }
+
+  mainImage.onerror = function() {
+    console.error("Failed to load:", imageSrc);
+  };
+};
+
+
+(function () {
+  function switchMusicImage(button) {
+    const gallery = button.closest(".gallery-container");
+
+    if (!gallery) return;
+
+    const mainImage = gallery.querySelector("#tvDisplayedImage");
+    const caption = gallery.querySelector("#tvCaption");
+
+    if (!mainImage) {
+      console.error("Music main image not found");
+      return;
+    }
+
+    const imageSrc = button.getAttribute("data-src");
+    const title = button.getAttribute("data-title") || "";
+    const description = button.getAttribute("data-description") || "";
+
+    if (!imageSrc) return;
+
+    // Change the displayed image
+    mainImage.src = imageSrc;
+    mainImage.alt = title;
+
+    // Change the displayed title and description
+    if (caption) {
+      const heading = caption.querySelector("h4");
+      const paragraph = caption.querySelector("p");
+
+      if (heading) heading.textContent = title;
+      if (paragraph) paragraph.textContent = description;
+    }
+
+    // Highlight the selected thumbnail
+    gallery.querySelectorAll(".thumb").forEach(function (thumb) {
+      thumb.classList.remove("active");
+      thumb.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+  }
+
+  // Override music thumbnail clicks, including older inline handlers
+  document.addEventListener("click", function (event) {
+    const button = event.target.closest(
+      '.gallery-container .thumb[data-target="tvDisplayedImage"]'
+    );
+
+    if (!button) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    switchMusicImage(button);
+  }, true);
+
+  // Restore The Midnight as the default music image
+  function initializeMusicGallery() {
+    const midnightButton = document.querySelector(
+      '.gallery-container .thumb[data-target="tvDisplayedImage"][data-src*="mdinight"]'
+    );
+
+    if (midnightButton) {
+      switchMusicImage(midnightButton);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeMusicGallery);
+  } else {
+    initializeMusicGallery();
+  }
+})();

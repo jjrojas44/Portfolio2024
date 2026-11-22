@@ -1034,6 +1034,16 @@ div.container {
   margin: 30px 0;
 }
 
+/* Desktop portfolio spacing only */
+@media (min-width: 992px) {
+  #portfolio .portfolio-item {
+    margin: 15px;
+  }
+}
+
+
+
+
 #portfolio .portfolio-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);

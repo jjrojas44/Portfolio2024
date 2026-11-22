@@ -1007,7 +1007,7 @@ div.container {
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  padding: 15px 10px;
+  padding: 60px 20px;
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
 }
@@ -1031,7 +1031,7 @@ div.container {
   border: 2px solid #e0d4b8;
   padding: 15px;
   background-color: #f9f9f9;
-  margin: 35px;
+  margin: 30px 0;
 }
 
 #portfolio .portfolio-item:hover {

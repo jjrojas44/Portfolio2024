@@ -371,6 +371,10 @@ div.container {
   top: -100%;
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
 }
+
+
+
+
 #header.header-scrolled, #header.header-inner-pages {
   top: 0;
 }
@@ -528,6 +532,7 @@ div.container {
     display: none;
   }
 }
+
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -543,19 +548,29 @@ div.container {
   top: 15px;
   right: 15px;
 }
+
+
 .navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  position: fixed !important;
+  top: 75px !important;
+  left: 15px !important;
+  right: 15px !important;
+  bottom: auto !important;
+  width: auto !important;
+  height: auto !important;
+  max-height: calc(100dvh - 95px);
+  margin: 0;
+  padding: 15px 0;
+  background: white;
   border-radius: 10px;
-  background-color: #fff;
   overflow-y: auto;
-  transition: 0.3s;
+  z-index: 10001;
 }
+
+
 .navbar-mobile a, .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
